@@ -1,0 +1,1685 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS Excel - Lesson 1 | Computer Siksha</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:5px;
+}
+
+header p{
+    font-size:16px;
+}
+
+nav{
+    background:#ffffff;
+    padding:12px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav a{
+    text-decoration:none;
+    color:#0f2a5f;
+    font-weight:bold;
+    margin:0 10px;
+}
+
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:25px auto;
+}
+
+.hero{
+    background:linear-gradient(135deg,#2563eb,#0f2a5f);
+    color:white;
+    padding:35px 25px;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.hero h2{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:17px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:22px;
+    border-radius:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.07);
+}
+
+.card h2{
+    color:#0f2a5f;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.card h3{
+    color:#2563eb;
+    margin:18px 0 8px;
+}
+
+.info{
+    background:#eaf2ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.important{
+    background:#fff6d9;
+    border-left:5px solid #f0ad00;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.success{
+    background:#e9f9ee;
+    border-left:5px solid #28a745;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+ul,ol{
+    margin-left:25px;
+    margin-top:10px;
+}
+
+li{
+    margin-bottom:7px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+    background:white;
+}
+
+th{
+    background:#0f2a5f;
+    color:white;
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+td{
+    padding:11px;
+    border:1px solid #ddd;
+}
+
+tr:nth-child(even){
+    background:#f7f9fc;
+}
+
+.formula{
+    background:#172033;
+    color:#7ee787;
+    padding:14px;
+    border-radius:8px;
+    font-family:"Courier New",monospace;
+    font-size:17px;
+    margin:12px 0;
+    overflow-x:auto;
+}
+
+.example{
+    background:#f8fafc;
+    border:1px solid #dce3ef;
+    padding:18px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.excel-window{
+    border:2px solid #555;
+    border-radius:8px;
+    overflow:hidden;
+    margin:20px 0;
+    background:white;
+}
+
+.excel-title{
+    background:#217346;
+    color:white;
+    padding:10px 15px;
+    font-weight:bold;
+}
+
+.excel-toolbar{
+    background:#eeeeee;
+    padding:9px;
+    color:#333;
+    font-size:14px;
+}
+
+.excel-grid{
+    overflow-x:auto;
+}
+
+.excel-grid table{
+    margin:0;
+    min-width:650px;
+}
+
+.excel-grid th{
+    background:#d9ead3;
+    color:#222;
+    font-size:14px;
+    padding:8px;
+}
+
+.excel-grid td{
+    padding:8px;
+    font-size:14px;
+}
+
+.cell-selected{
+    background:#e8f4ff !important;
+    outline:2px solid #217346;
+    font-weight:bold;
+}
+
+.shortcut{
+    font-family:"Courier New",monospace;
+    background:#222;
+    color:white;
+    padding:3px 7px;
+    border-radius:4px;
+}
+
+.badge{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:13px;
+    margin:4px;
+}
+
+.question{
+    background:#f8f9fc;
+    border:1px solid #e0e4ec;
+    padding:14px;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+.mcq{
+    background:#f8f9fc;
+    padding:15px;
+    margin:10px 0;
+    border-radius:8px;
+    border-left:4px solid #2563eb;
+}
+
+.answer{
+    color:#198754;
+    font-weight:bold;
+}
+
+.nav-buttons{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.nav-buttons a{
+    text-decoration:none;
+    background:#2563eb;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+footer{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:35px;
+}
+
+@media(max-width:700px){
+    header h1{
+        font-size:25px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📈 Computer Siksha</h1>
+    <p>Learn. Practice. Grow.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="computer-basics.html">Computer Basics</a>
+    <a href="ms-word-lesson2.html">MS Word</a>
+    <a href="powerpoint-lesson2.html">PowerPoint</a>
+    <a href="ms-excel-lesson1.html">MS Excel</a>
+</nav>
+
+<div class="container">
+
+<div class="hero">
+    <h2>📈 MS Excel – Lesson 1</h2>
+    <p>Introduction, Basic Operations, Formulas, Formatting & Exam Practice</p>
+</div>
+
+
+<!-- SECTION 1 -->
+
+<div class="card">
+<h2>1. MS Excel Kya Hai?</h2>
+
+<p>
+Microsoft Excel ek spreadsheet software hai jiska use data ko rows aur columns
+mein store, calculate, organize aur analyze karne ke liye kiya jata hai.
+</p>
+
+<div class="info">
+<b>Simple Definition:</b> Excel ek aisa software hai jisme hum data enter karke
+formulas ki madad se calculation kar sakte hain.
+</div>
+
+<h3>Excel ka use kahan hota hai?</h3>
+
+<ul>
+<li>Student Marksheet banane mein</li>
+<li>Salary Statement banane mein</li>
+<li>Attendance Sheet banane mein</li>
+<li>Budget banane mein</li>
+<li>Sales Report banane mein</li>
+<li>Result calculate karne mein</li>
+<li>Data analysis mein</li>
+<li>Charts aur graphs banane mein</li>
+</ul>
+</div>
+
+
+<!-- SECTION 2 -->
+
+<div class="card">
+<h2>2. Workbook aur Worksheet</h2>
+
+<h3>Workbook</h3>
+<p>
+Excel ki poori file ko <b>Workbook</b> kaha jata hai.
+Excel file ka extension aam taur par <b>.xlsx</b> hota hai.
+</p>
+
+<h3>Worksheet</h3>
+<p>
+Workbook ke andar jo individual sheet hoti hai use <b>Worksheet</b> kehte hain.
+Ek workbook mein multiple worksheets ho sakti hain.
+</p>
+
+<div class="example">
+<b>Example:</b><br>
+Computer Siksha.xlsx = Workbook<br>
+Sheet1 = Worksheet<br>
+Sheet2 = Worksheet
+</div>
+</div>
+
+
+<!-- SECTION 3 -->
+
+<div class="card">
+<h2>3. Row, Column aur Cell</h2>
+
+<h3>Row</h3>
+<p>
+Excel mein horizontal line ko <b>Row</b> kehte hain. Rows numbers se identify hoti hain:
+1, 2, 3, 4...
+</p>
+
+<h3>Column</h3>
+<p>
+Excel mein vertical line ko <b>Column</b> kehte hain. Columns letters se identify hote hain:
+A, B, C, D...
+</p>
+
+<h3>Cell</h3>
+<p>
+Row aur Column ke intersection ko <b>Cell</b> kehte hain.
+</p>
+
+<div class="success">
+<b>Example:</b> Column B + Row 5 = <b>Cell B5</b>
+</div>
+
+<div class="excel-window">
+
+<div class="excel-title">
+Microsoft Excel – Student Data
+</div>
+
+<div class="excel-toolbar">
+Home &nbsp; Insert &nbsp; Page Layout &nbsp; Formulas &nbsp; Data &nbsp; Review &nbsp; View
+</div>
+
+<div class="excel-grid">
+<table>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+</tr>
+
+<tr>
+<th>1</th>
+<td>Name</td>
+<td>English</td>
+<td>Maths</td>
+<td>Total</td>
+</tr>
+
+<tr>
+<th>2</th>
+<td>Aman</td>
+<td>75</td>
+<td class="cell-selected">80</td>
+<td>155</td>
+</tr>
+
+<tr>
+<th>3</th>
+<td>Rahul</td>
+<td>68</td>
+<td>72</td>
+<td>140</td>
+</tr>
+
+<tr>
+<th>4</th>
+<td>Neha</td>
+<td>90</td>
+<td>85</td>
+<td>175</td>
+</tr>
+</table>
+</div>
+</div>
+
+<p>
+Upar example mein selected cell <b>C2</b> hai.
+</p>
+</div>
+
+
+<!-- SECTION 4 -->
+
+<div class="card">
+<h2>4. Excel mein Data Enter Kaise Karein?</h2>
+
+<ol>
+<li>Excel open karein.</li>
+<li>Kisi cell par click karein.</li>
+<li>Data type karein.</li>
+<li>Enter press karein.</li>
+</ol>
+
+<h3>Data ke common types</h3>
+
+<table>
+<tr>
+<th>Data Type</th>
+<th>Example</th>
+</tr>
+<tr>
+<td>Text</td>
+<td>Aman</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>500</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>12/09/2026</td>
+</tr>
+<tr>
+<td>Percentage</td>
+<td>85%</td>
+</tr>
+<tr>
+<td>Formula</td>
+<td>=SUM(B2:B5)</td>
+</tr>
+</table>
+</div>
+
+
+<!-- SECTION 5 -->
+
+<div class="card">
+<h2>5. Excel Formula Kya Hai?</h2>
+
+<p>
+Excel mein calculation karne ke liye formula ka use kiya jata hai.
+Excel mein formula aam taur par <b>=</b> sign se start hota hai.
+</p>
+
+<div class="formula">
+=10+20
+</div>
+
+<p>Result hoga: <b>30</b></p>
+
+<div class="important">
+<b>Exam Point:</b> Excel ka formula generally <b>=</b> sign se start hota hai.
+</div>
+</div>
+
+
+<!-- SECTION 6 -->
+
+<div class="card">
+<h2>6. Basic Mathematical Operators</h2>
+
+<table>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+
+<tr>
+<td>+</td>
+<td>Addition</td>
+<td>=10+5</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+<td>=10-5</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td>=10*5</td>
+<td>50</td>
+</tr>
+
+<tr>
+<td>/</td>
+<td>Division</td>
+<td>=10/5</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>^</td>
+<td>Power</td>
+<td>=2^3</td>
+<td>8</td>
+</tr>
+</table>
+
+<div class="example">
+<b>Important:</b> Excel mein multiplication ke liye × nahi, balki <b>*</b> use hota hai.
+Division ke liye <b>/</b> use hota hai.
+</div>
+</div>
+
+
+<!-- SECTION 7 -->
+
+<div class="card">
+<h2>7. Cell Reference ke Saath Formula</h2>
+
+<p>
+Excel ki sabse important baat hai ki hum cells ko reference karke calculation kar sakte hain.
+</p>
+
+<div class="excel-window">
+
+<div class="excel-title">Student Calculation</div>
+
+<div class="excel-grid">
+<table>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+
+<tr>
+<th>1</th>
+<td>Student</td>
+<td>Marks 1</td>
+<td>Marks 2</td>
+</tr>
+
+<tr>
+<th>2</th>
+<td>Aman</td>
+<td>70</td>
+<td>80</td>
+</tr>
+</table>
+</div>
+</div>
+
+<p>Total nikalne ke liye:</p>
+
+<div class="formula">
+=B2+C2
+</div>
+
+<p>
+Excel B2 aur C2 ki value ko add karega.
+</p>
+</div>
+
+
+<!-- SECTION 8 -->
+
+<div class="card">
+<h2>8. SUM Function</h2>
+
+<p>
+SUM function ka use numbers ko add karne ke liye hota hai.
+</p>
+
+<div class="formula">
+=SUM(B2:B6)
+</div>
+
+<p>
+Iska matlab B2 se B6 tak ki sabhi values ko add karna.
+</p>
+
+<h3>Example</h3>
+
+<table>
+<tr>
+<th>Cell</th>
+<th>Marks</th>
+</tr>
+<tr><td>B2</td><td>70</td></tr>
+<tr><td>B3</td><td>80</td></tr>
+<tr><td>B4</td><td>75</td></tr>
+<tr><td>B5</td><td>90</td></tr>
+<tr><td>B6</td><td>85</td></tr>
+</table>
+
+<div class="formula">
+=SUM(B2:B6)
+</div>
+
+<p><b>Answer = 400</b></p>
+
+<div class="important">
+<b>Exam Shortcut:</b> AutoSum ke liye <b>Alt + =</b> use kar sakte hain.
+</div>
+</div>
+
+
+<!-- SECTION 9 -->
+
+<div class="card">
+<h2>9. AVERAGE Function</h2>
+
+<p>
+AVERAGE function numbers ka average nikalta hai.
+</p>
+
+<div class="formula">
+=AVERAGE(B2:B6)
+</div>
+
+<p>
+Agar marks 70, 80, 75, 90 aur 85 hain to average:
+</p>
+
+<div class="formula">
+=(70+80+75+90+85)/5
+</div>
+
+<p><b>Answer = 80</b></p>
+
+<div class="success">
+Excel mein direct formula:
+<br><br>
+<b>=AVERAGE(B2:B6)</b>
+</div>
+</div>
+
+
+<!-- SECTION 10 -->
+
+<div class="card">
+<h2>10. MAX Function</h2>
+
+<p>
+MAX function selected range mein sabse badi value find karta hai.
+</p>
+
+<div class="formula">
+=MAX(B2:B6)
+</div>
+
+<p>
+70, 80, 75, 90, 85 mein highest value <b>90</b> hai.
+</p>
+</div>
+
+
+<!-- SECTION 11 -->
+
+<div class="card">
+<h2>11. MIN Function</h2>
+
+<p>
+MIN function selected range mein sabse chhoti value find karta hai.
+</p>
+
+<div class="formula">
+=MIN(B2:B6)
+</div>
+
+<p>
+70, 80, 75, 90, 85 mein lowest value <b>70</b> hai.
+</p>
+</div>
+
+
+<!-- SECTION 12 -->
+
+<div class="card">
+<h2>12. COUNT Function</h2>
+
+<p>
+COUNT function selected range mein numerical values ki counting karta hai.
+</p>
+
+<div class="formula">
+=COUNT(B2:B10)
+</div>
+
+<div class="info">
+<b>Exam Point:</b> COUNT mainly numbers ko count karta hai.
+</div>
+</div>
+
+
+<!-- SECTION 13 -->
+
+<div class="card">
+<h2>13. Percentage Calculation</h2>
+
+<p>
+Percentage marksheet aur exams mein bahut important hai.
+</p>
+
+<h3>Formula</h3>
+
+<div class="formula">
+=(Obtained Marks/Total Marks)*100
+</div>
+
+<h3>Example</h3>
+
+<p>
+Agar student ne 500 mein se 425 marks score kiye:
+</p>
+
+<div class="formula">
+=(425/500)*100
+</div>
+
+<p><b>Percentage = 85%</b></p>
+
+<h3>Excel mein</h3>
+
+<div class="formula">
+=(F2/G2)*100
+</div>
+
+<p>
+Yahan F2 obtained marks aur G2 total marks ko represent kar sakta hai.
+</p>
+</div>
+
+
+<!-- SECTION 14 -->
+
+<div class="card">
+<h2>14. Simple Student Marksheet Practice</h2>
+
+<p>
+Ye Lesson 1 ka important practical example hai.
+</p>
+
+<div class="excel-window">
+
+<div class="excel-title">Student Marksheet – Practice</div>
+
+<div class="excel-grid">
+<table>
+<tr>
+<th>Roll No.</th>
+<th>Name</th>
+<th>Hindi</th>
+<th>English</th>
+<th>Maths</th>
+<th>Total</th>
+<th>Average</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Aman</td>
+<td>75</td>
+<td>80</td>
+<td>85</td>
+<td>240</td>
+<td>80</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Neha</td>
+<td>90</td>
+<td>88</td>
+<td>92</td>
+<td>270</td>
+<td>90</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Rahul</td>
+<td>65</td>
+<td>70</td>
+<td>72</td>
+<td>207</td>
+<td>69</td>
+</tr>
+</table>
+</div>
+</div>
+
+<h3>Total Formula</h3>
+
+<div class="formula">
+=SUM(C2:E2)
+</div>
+
+<h3>Average Formula</h3>
+
+<div class="formula">
+=AVERAGE(C2:E2)
+</div>
+
+<div class="important">
+Lesson 2 mein isi concept ko use karke hum <b>full professional marksheet</b>
+banayenge jisme Total, Percentage, Grade aur Pass/Fail automatic hoga.
+</div>
+</div>
+
+
+<!-- SECTION 15 -->
+
+<div class="card">
+<h2>15. Cell Formatting</h2>
+
+<p>
+Excel mein data ko attractive aur readable banane ke liye formatting ka use hota hai.
+</p>
+
+<ul>
+<li>Bold</li>
+<li>Italic</li>
+<li>Underline</li>
+<li>Font Size</li>
+<li>Font Color</li>
+<li>Cell Background</li>
+<li>Border</li>
+<li>Alignment</li>
+<li>Number Format</li>
+</ul>
+
+<h3>Useful Formatting Example</h3>
+
+<table>
+<tr>
+<th>Student Name</th>
+<th>Marks</th>
+<th>Percentage</th>
+</tr>
+
+<tr>
+<td>Aman</td>
+<td>425</td>
+<td>85%</td>
+</tr>
+
+<tr>
+<td>Neha</td>
+<td>450</td>
+<td>90%</td>
+</tr>
+</table>
+
+<div class="success">
+Professional spreadsheet mein heading ko bold, proper alignment aur borders
+ke saath rakhna chahiye.
+</div>
+</div>
+
+
+<!-- SECTION 16 -->
+
+<div class="card">
+<h2>16. Merge & Center</h2>
+
+<p>
+Multiple cells ko ek cell jaisa combine karne ke liye <b>Merge & Center</b>
+ka use hota hai.
+</p>
+
+<div class="example">
+<b>Example:</b><br><br>
+A1, B1, C1 aur D1 ko merge karke heading likh sakte hain:
+<br><br>
+<b>STUDENT MARKSHEET</b>
+</div>
+
+<div class="important">
+Marksheet ki heading banane mein Merge & Center ka use bahut useful hai.
+</div>
+</div>
+
+
+<!-- SECTION 17 -->
+
+<div class="card">
+<h2>17. Fill Handle</h2>
+
+<p>
+Excel mein ek formula ya series ko quickly neeche copy karne ke liye
+<b>Fill Handle</b> ka use kiya jata hai.
+</p>
+
+<div class="example">
+<b>Example:</b><br><br>
+A1 = 1<br>
+A2 = 2<br>
+Dono cells ko select karke Fill Handle drag karne par:
+<br><br>
+3, 4, 5, 6, 7... automatically aa sakte hain.
+</div>
+
+<p>
+Formula ko multiple students par apply karne ke liye bhi Fill Handle bahut useful hai.
+</p>
+</div>
+
+
+<!-- SECTION 18 -->
+
+<div class="card">
+<h2>18. Relative Cell Reference</h2>
+
+<p>
+Jab formula ko doosri cell mein copy karte hain aur cell references automatically
+change ho jate hain, ise <b>Relative Reference</b> kehte hain.
+</p>
+
+<div class="formula">
+=B2+C2
+</div>
+
+<p>
+Agar is formula ko next row mein copy karein to Excel ise automatically:
+</p>
+
+<div class="formula">
+=B3+C3
+</div>
+
+<p>kar dega.</p>
+</div>
+
+
+<!-- SECTION 19 -->
+
+<div class="card">
+<h2>19. Absolute Cell Reference – Basic Introduction</h2>
+
+<p>
+Kisi particular cell ko fixed rakhne ke liye <b>$</b> sign ka use kiya jata hai.
+</p>
+
+<div class="formula">
+=$B$2
+</div>
+
+<p>
+Is reference ko formula copy karne par fixed cell reference ke roop mein use kiya ja sakta hai.
+</p>
+
+<div class="info">
+Lesson 2 mein is concept ka practical use salary calculation aur percentage
+calculation mein dekhenge.
+</div>
+</div>
+
+
+<!-- SECTION 20 -->
+
+<div class="card">
+<h2>20. Important Excel Functions – Exam Table</h2>
+
+<table>
+<tr>
+<th>Function</th>
+<th>Use</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>SUM</td>
+<td>Total</td>
+<td>=SUM(B2:B10)</td>
+</tr>
+
+<tr>
+<td>AVERAGE</td>
+<td>Average</td>
+<td>=AVERAGE(B2:B10)</td>
+</tr>
+
+<tr>
+<td>MAX</td>
+<td>Highest Value</td>
+<td>=MAX(B2:B10)</td>
+</tr>
+
+<tr>
+<td>MIN</td>
+<td>Lowest Value</td>
+<td>=MIN(B2:B10)</td>
+</tr>
+
+<tr>
+<td>COUNT</td>
+<td>Numbers Count</td>
+<td>=COUNT(B2:B10)</td>
+</tr>
+</table>
+
+<div class="important">
+<b>Exam ke liye yaad rakhein:</b><br>
+SUM = Total<br>
+AVERAGE = Average<br>
+MAX = Maximum / Highest<br>
+MIN = Minimum / Lowest<br>
+COUNT = Number Counting
+</div>
+</div>
+
+
+<!-- SECTION 21 -->
+
+<div class="card">
+<h2>21. Excel mein Sorting ka Basic Concept</h2>
+
+<p>
+Sorting ka use data ko kisi order mein arrange karne ke liye hota hai.
+</p>
+
+<ul>
+<li>A to Z – Alphabetical order</li>
+<li>Z to A – Reverse alphabetical order</li>
+<li>Smallest to Largest – Number order</li>
+<li>Largest to Smallest – Reverse number order</li>
+</ul>
+
+<div class="example">
+<b>Example:</b><br><br>
+Marks: 45, 90, 60, 75<br><br>
+Smallest to Largest:<br>
+45, 60, 75, 90
+</div>
+</div>
+
+
+<!-- SECTION 22 -->
+
+<div class="card">
+<h2>22. Excel mein Filter ka Basic Concept</h2>
+
+<p>
+Filter ka use large data mein se required information ko quickly display karne ke liye hota hai.
+</p>
+
+<div class="example">
+<b>Example:</b><br><br>
+Agar marksheet mein 100 students hain aur sirf "Pass" students dekhne hain,
+to Filter ka use karke required records dekhe ja sakte hain.
+</div>
+</div>
+
+
+<!-- SECTION 23 -->
+
+<div class="card">
+<h2>23. Excel File Save Kaise Karein?</h2>
+
+<ol>
+<li>File menu open karein.</li>
+<li>Save par click karein.</li>
+<li>File ka naam enter karein.</li>
+<li>Location select karein.</li>
+<li>Save par click karein.</li>
+</ol>
+
+<div class="success">
+<b>Shortcut:</b> <span class="shortcut">Ctrl + S</span>
+</div>
+</div>
+
+
+<!-- SECTION 24 -->
+
+<div class="card">
+<h2>24. Excel ke Important Shortcut Keys</h2>
+
+<table>
+<tr>
+<th>Shortcut</th>
+<th>Kaam</th>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + N</span></td>
+<td>New Workbook</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + O</span></td>
+<td>Open File</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + S</span></td>
+<td>Save</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + P</span></td>
+<td>Print</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + C</span></td>
+<td>Copy</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + X</span></td>
+<td>Cut</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + V</span></td>
+<td>Paste</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + Z</span></td>
+<td>Undo</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + Y</span></td>
+<td>Redo</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + F</span></td>
+<td>Find</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + A</span></td>
+<td>Select All</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + B</span></td>
+<td>Bold</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + I</span></td>
+<td>Italic</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + U</span></td>
+<td>Underline</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">F2</span></td>
+<td>Active Cell Edit</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Alt + =</span></td>
+<td>AutoSum</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + 1</span></td>
+<td>Format Cells</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + ;</span></td>
+<td>Current Date</td>
+</tr>
+
+<tr>
+<td><span class="shortcut">Ctrl + Arrow Key</span></td>
+<td>Data Range ke End par jaana</td>
+</tr>
+</table>
+</div>
+
+
+<!-- SECTION 25 -->
+
+<div class="card">
+<h2>25. Exam Formula Practice</h2>
+
+<div class="question">
+<b>Q1.</b> A1 aur B1 ko add karne ka formula kya hoga?
+<br>
+<span class="answer">Answer: =A1+B1</span>
+</div>
+
+<div class="question">
+<b>Q2.</b> B2 se B10 tak total ka formula?
+<br>
+<span class="answer">Answer: =SUM(B2:B10)</span>
+</div>
+
+<div class="question">
+<b>Q3.</b> C2 se C10 tak average ka formula?
+<br>
+<span class="answer">Answer: =AVERAGE(C2:C10)</span>
+</div>
+
+<div class="question">
+<b>Q4.</b> D2 se D20 tak highest value?
+<br>
+<span class="answer">Answer: =MAX(D2:D20)</span>
+</div>
+
+<div class="question">
+<b>Q5.</b> D2 se D20 tak lowest value?
+<br>
+<span class="answer">Answer: =MIN(D2:D20)</span>
+</div>
+
+<div class="question">
+<b>Q6.</b> Numbers count karne ke liye kaunsa function?
+<br>
+<span class="answer">Answer: COUNT</span>
+</div>
+
+<div class="question">
+<b>Q7.</b> Formula kis sign se start hota hai?
+<br>
+<span class="answer">Answer: =</span>
+</div>
+
+<div class="question">
+<b>Q8.</b> Multiplication ke liye Excel mein kaunsa operator use hota hai?
+<br>
+<span class="answer">Answer: *</span>
+</div>
+
+<div class="question">
+<b>Q9.</b> Division ke liye kaunsa operator use hota hai?
+<br>
+<span class="answer">Answer: /</span>
+</div>
+
+<div class="question">
+<b>Q10.</b> AutoSum ka shortcut kya hai?
+<br>
+<span class="answer">Answer: Alt + =</span>
+</div>
+
+<div class="question">
+<b>Q11.</b> File save karne ka shortcut?
+<br>
+<span class="answer">Answer: Ctrl + S</span>
+</div>
+
+<div class="question">
+<b>Q12.</b> Active cell edit karne ki key?
+<br>
+<span class="answer">Answer: F2</span>
+</div>
+
+<div class="question">
+<b>Q13.</b> Excel file ka common extension kya hai?
+<br>
+<span class="answer">Answer: .xlsx</span>
+</div>
+
+<div class="question">
+<b>Q14.</b> Row aur Column ke intersection ko kya kehte hain?
+<br>
+<span class="answer">Answer: Cell</span>
+</div>
+
+<div class="question">
+<b>Q15.</b> Workbook ke andar individual sheet ko kya kehte hain?
+<br>
+<span class="answer">Answer: Worksheet</span>
+</div>
+
+<div class="question">
+<b>Q16.</b> Sabse badi value find karne ke liye kaunsa function?
+<br>
+<span class="answer">Answer: MAX</span>
+</div>
+
+<div class="question">
+<b>Q17.</b> Sabse chhoti value find karne ke liye kaunsa function?
+<br>
+<span class="answer">Answer: MIN</span>
+</div>
+
+<div class="question">
+<b>Q18.</b> Average calculate karne ke liye kaunsa function?
+<br>
+<span class="answer">Answer: AVERAGE</span>
+</div>
+
+<div class="question">
+<b>Q19.</b> Data ko order mein arrange karne ko kya kehte hain?
+<br>
+<span class="answer">Answer: Sorting</span>
+</div>
+
+<div class="question">
+<b>Q20.</b> Specific records ko display karne ke liye kya use hota hai?
+<br>
+<span class="answer">Answer: Filter</span>
+</div>
+</div>
+
+
+<!-- SECTION 26 -->
+
+<div class="card">
+<h2>26. MCQs – Exam Practice</h2>
+
+<div class="mcq">
+<b>1. MS Excel kis type ka software hai?</b><br>
+A) Presentation Software<br>
+B) Spreadsheet Software<br>
+C) Drawing Software<br>
+D) Browser<br>
+<span class="answer">Correct Answer: B) Spreadsheet Software</span>
+</div>
+
+<div class="mcq">
+<b>2. Excel formula kis symbol se start hota hai?</b><br>
+A) +<br>
+B) #<br>
+C) =<br>
+D) @<br>
+<span class="answer">Correct Answer: C) =</span>
+</div>
+
+<div class="mcq">
+<b>3. Total nikalne ke liye kaunsa function use hota hai?</b><br>
+A) MAX<br>
+B) SUM<br>
+C) MIN<br>
+D) COUNT<br>
+<span class="answer">Correct Answer: B) SUM</span>
+</div>
+
+<div class="mcq">
+<b>4. Average ke liye kaunsa function hai?</b><br>
+A) SUM<br>
+B) COUNT<br>
+C) AVERAGE<br>
+D) MAX<br>
+<span class="answer">Correct Answer: C) AVERAGE</span>
+</div>
+
+<div class="mcq">
+<b>5. Highest value ke liye?</b><br>
+A) MAX<br>
+B) MIN<br>
+C) SUM<br>
+D) COUNT<br>
+<span class="answer">Correct Answer: A) MAX</span>
+</div>
+
+<div class="mcq">
+<b>6. Lowest value ke liye?</b><br>
+A) MAX<br>
+B) MIN<br>
+C) SUM<br>
+D) AVERAGE<br>
+<span class="answer">Correct Answer: B) MIN</span>
+</div>
+
+<div class="mcq">
+<b>7. Excel mein multiplication operator kya hai?</b><br>
+A) x<br>
+B) *<br>
+C) %<br>
+D) #<br>
+<span class="answer">Correct Answer: B) *</span>
+</div>
+
+<div class="mcq">
+<b>8. Excel file ka common extension kya hai?</b><br>
+A) .docx<br>
+B) .pptx<br>
+C) .xlsx<br>
+D) .txt<br>
+<span class="answer">Correct Answer: C) .xlsx</span>
+</div>
+
+<div class="mcq">
+<b>9. Save ka shortcut?</b><br>
+A) Ctrl + A<br>
+B) Ctrl + S<br>
+C) Ctrl + P<br>
+D) Ctrl + F<br>
+<span class="answer">Correct Answer: B) Ctrl + S</span>
+</div>
+
+<div class="mcq">
+<b>10. AutoSum shortcut?</b><br>
+A) Ctrl + =<br>
+B) Alt + =<br>
+C) Shift + =<br>
+D) Ctrl + S<br>
+<span class="answer">Correct Answer: B) Alt + =</span>
+</div>
+
+<div class="mcq">
+<b>11. Cell kis ka combination hota hai?</b><br>
+A) Two rows<br>
+B) Row and Column<br>
+C) Two columns<br>
+D) Workbook and Sheet<br>
+<span class="answer">Correct Answer: B) Row and Column</span>
+</div>
+
+<div class="mcq">
+<b>12. Active cell edit karne ke liye?</b><br>
+A) F1<br>
+B) F2<br>
+C) F5<br>
+D) F12<br>
+<span class="answer">Correct Answer: B) F2</span>
+</div>
+</div>
+
+
+<!-- SECTION 27 -->
+
+<div class="card">
+<h2>27. Practical Task – Khud Excel Mein Banayein</h2>
+
+<p>
+Ab apne computer mein Excel open karke ye table banane ki practice karein:
+</p>
+
+<table>
+<tr>
+<th>Roll No.</th>
+<th>Name</th>
+<th>Hindi</th>
+<th>English</th>
+<th>Maths</th>
+<th>Total</th>
+<th>Average</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Aman</td>
+<td>75</td>
+<td>80</td>
+<td>85</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Neha</td>
+<td>90</td>
+<td>88</td>
+<td>92</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Rahul</td>
+<td>65</td>
+<td>70</td>
+<td>72</td>
+<td>?</td>
+<td>?</td>
+</tr>
+</table>
+
+<h3>Task 1 – Total</h3>
+
+<div class="formula">
+=SUM(C2:E2)
+</div>
+
+<h3>Task 2 – Average</h3>
+
+<div class="formula">
+=AVERAGE(C2:E2)
+</div>
+
+<h3>Task 3 – Highest Marks</h3>
+
+<div class="formula">
+=MAX(C2:C4)
+</div>
+
+<h3>Task 4 – Lowest Marks</h3>
+
+<div class="formula">
+=MIN(C2:C4)
+</div>
+
+<div class="success">
+Agar ye 4 formulas samajh gaye, to Excel ke practical exam ke liye
+strong basic foundation ban jayegi.
+</div>
+</div>
+
+
+<!-- SECTION 28 -->
+
+<div class="card">
+<h2>28. Lesson 1 Important Points</h2>
+
+<ul>
+<li>Excel ek spreadsheet software hai.</li>
+<li>Excel file ko Workbook kaha jata hai.</li>
+<li>Workbook ke andar Worksheet hoti hai.</li>
+<li>Horizontal lines = Rows.</li>
+<li>Vertical lines = Columns.</li>
+<li>Row + Column = Cell.</li>
+<li>Formula = sign se start hota hai.</li>
+<li>SUM total ke liye use hota hai.</li>
+<li>AVERAGE average ke liye use hota hai.</li>
+<li>MAX highest value ke liye use hota hai.</li>
+<li>MIN lowest value ke liye use hota hai.</li>
+<li>COUNT numbers count karne ke liye use hota hai.</li>
+<li>Alt + = AutoSum shortcut hai.</li>
+<li>Ctrl + S Save ke liye use hota hai.</li>
+<li>F2 active cell edit karne ke liye use hota hai.</li>
+<li>Fill Handle formula/data ko quickly copy karne mein useful hai.</li>
+<li>Sorting data ko order mein arrange karta hai.</li>
+<li>Filter required records ko quickly display karta hai.</li>
+</ul>
+</div>
+
+
+<!-- SECTION 29 -->
+
+<div class="card">
+<h2>29. Lesson 1 Summary</h2>
+
+<div class="success">
+
+<b>🎯 Aaj humne kya seekha?</b>
+
+<br><br>
+
+✔ MS Excel kya hai<br>
+✔ Workbook aur Worksheet<br>
+✔ Row, Column aur Cell<br>
+✔ Data Entry<br>
+✔ Mathematical Operators<br>
+✔ Formula<br>
+✔ SUM<br>
+✔ AVERAGE<br>
+✔ MAX<br>
+✔ MIN<br>
+✔ COUNT<br>
+✔ Percentage ka basic concept<br>
+✔ Cell Reference<br>
+✔ Formatting<br>
+✔ Merge & Center<br>
+✔ Fill Handle<br>
+✔ Sorting aur Filter<br>
+✔ Excel Shortcuts<br>
+✔ Exam Questions & MCQs
+
+</div>
+
+<div class="important">
+<b>🚀 Next Lesson:</b><br><br>
+
+MS Excel – Lesson 2 mein hum practical projects banayenge:
+
+<br><br>
+
+🎓 <b>Full Student Marksheet</b><br>
+💰 <b>Salary Statement</b><br>
+📊 <b>Automatic Result & Grade</b><br>
+📈 <b>Charts</b><br>
+🧮 <b>IF Formula</b><br>
+🔢 <b>Percentage & Calculations</b><br>
+📋 <b>Professional Excel Sheet</b>
+</div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav-buttons">
+    <a href="index.html">⬅ Home</a>
+    <a href="powerpoint-lesson2.html">⬅ PowerPoint</a>
+    <a href="ms-excel-lesson2.html">Lesson 2 ➜</a>
+</div>
+
+</div>
+
+
+<footer>
+    <h3>💻 Computer Siksha</h3>
+    <p>Learn. Practice. Grow.</p>
+    <p>© 2026 Computer Siksha. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

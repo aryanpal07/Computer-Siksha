@@ -1,0 +1,1864 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS Excel - Lesson 2 | Computer Siksha</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:34px;
+}
+
+header p{
+    margin:6px 0 0;
+    font-size:16px;
+}
+
+nav{
+    background:#17458f;
+    text-align:center;
+    padding:12px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+.card{
+    background:white;
+    margin-bottom:22px;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+h2{
+    color:#0f2a5f;
+    border-left:5px solid #2563eb;
+    padding-left:12px;
+}
+
+h3{
+    color:#17458f;
+}
+
+.info{
+    background:#eaf3ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    border-radius:7px;
+    margin:15px 0;
+}
+
+.important{
+    background:#fff4d6;
+    border-left:5px solid #f59e0b;
+    padding:15px;
+    border-radius:7px;
+    margin:15px 0;
+}
+
+.success{
+    background:#e9f8ed;
+    border-left:5px solid #22a447;
+    padding:15px;
+    border-radius:7px;
+    margin:15px 0;
+}
+
+.danger{
+    background:#ffecec;
+    border-left:5px solid #e53935;
+    padding:15px;
+    border-radius:7px;
+    margin:15px 0;
+}
+
+.code{
+    background:#172033;
+    color:#fff;
+    padding:14px;
+    border-radius:7px;
+    font-family:Consolas,monospace;
+    overflow-x:auto;
+}
+
+.formula{
+    background:#eef2ff;
+    border:1px solid #c7d2fe;
+    padding:12px;
+    border-radius:7px;
+    font-family:Consolas,monospace;
+    font-weight:bold;
+    color:#173b8f;
+    margin:10px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+}
+
+th{
+    background:#17458f;
+    color:white;
+}
+
+th,td{
+    border:1px solid #bbb;
+    padding:9px;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f7f9fc;
+}
+
+/* Excel visual */
+
+.excel-window{
+    background:#e8e8e8;
+    border:3px solid #777;
+    border-radius:8px;
+    overflow:hidden;
+    margin:20px 0;
+}
+
+.excel-title{
+    background:#217346;
+    color:white;
+    padding:10px;
+    font-weight:bold;
+}
+
+.excel-toolbar{
+    background:#f4f4f4;
+    padding:10px;
+    border-bottom:1px solid #aaa;
+}
+
+.excel-formula{
+    background:white;
+    border-bottom:1px solid #aaa;
+    padding:8px;
+    font-family:Consolas,monospace;
+}
+
+.sheet{
+    overflow-x:auto;
+    background:white;
+}
+
+.sheet table{
+    margin:0;
+    min-width:750px;
+}
+
+.sheet th{
+    background:#d9e2f3;
+    color:#111;
+}
+
+.green-cell{
+    background:#d9f2d9 !important;
+    font-weight:bold;
+}
+
+.yellow-cell{
+    background:#fff2cc !important;
+    font-weight:bold;
+}
+
+.red-cell{
+    background:#f4cccc !important;
+    font-weight:bold;
+}
+
+/* Bars */
+
+.bar-chart{
+    background:white;
+    border:1px solid #ccc;
+    padding:20px;
+    margin-top:15px;
+    border-radius:8px;
+}
+
+.bar-row{
+    display:flex;
+    align-items:center;
+    margin:12px 0;
+}
+
+.bar-name{
+    width:100px;
+    font-weight:bold;
+}
+
+.bar{
+    height:28px;
+    background:#2563eb;
+    color:white;
+    text-align:right;
+    padding-right:8px;
+    line-height:28px;
+    border-radius:4px;
+}
+
+.bar-90{width:90%;}
+.bar-80{width:80%;}
+.bar-70{width:70%;}
+.bar-60{width:60%;}
+.bar-50{width:50%;}
+
+/* Step */
+
+.step{
+    display:flex;
+    align-items:center;
+    margin:15px 0;
+}
+
+.step-number{
+    min-width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    margin-right:12px;
+}
+
+.practice{
+    background:#f8fafc;
+    border:1px solid #d8dee9;
+    padding:15px;
+    border-radius:8px;
+    margin:10px 0;
+}
+
+.nav-buttons{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:30px;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#17458f;
+}
+
+footer{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+    }
+
+    .card{
+        padding:17px;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+    .nav-buttons{
+        flex-direction:column;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📈 MS Excel</h1>
+    <p>Lesson 2 - Practical Excel, Marksheet, Salary & Formulas</p>
+    <p>Computer Siksha | Learn. Practice. Grow.</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="computer-basics.html">Computer Basics</a>
+    <a href="ms-word-lesson2.html">MS Word</a>
+    <a href="powerpoint-lesson2.html">PowerPoint</a>
+    <a href="ms-excel-lesson1.html">Excel Lesson 1</a>
+</nav>
+
+<div class="container">
+
+<!-- INTRO -->
+
+<div class="card">
+
+<h2>📘 Lesson 2 Mein Kya Seekhenge?</h2>
+
+<p>
+MS Excel ka sabse important part hai practical work.
+Is lesson mein hum Excel ka use karke real-life examples banayenge.
+</p>
+
+<ul>
+<li>🎓 Student Marksheet</li>
+<li>🧮 Total aur Percentage</li>
+<li>🏆 Grade</li>
+<li>✅ Pass / Fail</li>
+<li>💰 Salary Statement</li>
+<li>🎁 Bonus Calculation</li>
+<li>📊 Chart</li>
+<li>🎨 Conditional Formatting</li>
+<li>⌨️ Important Shortcut Keys</li>
+</ul>
+
+<div class="success">
+<b>Exam Tip:</b> Excel practical exam mein formulas ko samajhna bahut important hai.
+Sirf formula yaad karne ke bajay ye samjho ki formula kis situation mein use hota hai.
+</div>
+
+</div>
+
+
+<!-- FORMULA REVISION -->
+
+<div class="card">
+
+<h2>🧮 Important Formulas Revision</h2>
+
+<table>
+
+<tr>
+<th>Formula</th>
+<th>Use</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>SUM</td>
+<td>Total karne ke liye</td>
+<td>=SUM(B2:F2)</td>
+</tr>
+
+<tr>
+<td>AVERAGE</td>
+<td>Average nikalne ke liye</td>
+<td>=AVERAGE(B2:F2)</td>
+</tr>
+
+<tr>
+<td>MAX</td>
+<td>Sabse badi value</td>
+<td>=MAX(B2:F2)</td>
+</tr>
+
+<tr>
+<td>MIN</td>
+<td>Sabse chhoti value</td>
+<td>=MIN(B2:F2)</td>
+</tr>
+
+<tr>
+<td>COUNT</td>
+<td>Numbers count karne ke liye</td>
+<td>=COUNT(B2:F2)</td>
+</tr>
+
+<tr>
+<td>IF</td>
+<td>Condition ke liye</td>
+<td>=IF(B2>=33,"PASS","FAIL")</td>
+</tr>
+
+<tr>
+<td>ROUND</td>
+<td>Decimal ko round karne ke liye</td>
+<td>=ROUND(B2,2)</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- IF FUNCTION -->
+
+<div class="card">
+
+<h2>🔀 IF Function</h2>
+
+<p>
+IF function ka use kisi condition ke according result dikhane ke liye hota hai.
+</p>
+
+<div class="formula">
+=IF(A1>=33,"PASS","FAIL")
+</div>
+
+<p>
+Iska matlab hai:
+</p>
+
+<ul>
+<li>Agar A1 ki value 33 ya usse zyada hai → PASS</li>
+<li>Agar A1 ki value 33 se kam hai → FAIL</li>
+</ul>
+
+<div class="info">
+<b>Example:</b> Agar B2 mein marks 75 hain:
+<br><br>
+=IF(B2>=33,"PASS","FAIL")
+<br><br>
+Result: <b>PASS</b>
+</div>
+
+</div>
+
+
+<!-- GRADE -->
+
+<div class="card">
+
+<h2>🏆 Grade Formula</h2>
+
+<p>
+Percentage ke according Grade automatically nikala ja sakta hai.
+</p>
+
+<div class="formula">
+=IF(I2>=90,"A+",IF(I2>=80,"A",IF(I2>=70,"B",IF(I2>=60,"C",IF(I2>=50,"D","E")))))
+</div>
+
+<table>
+
+<tr>
+<th>Percentage</th>
+<th>Grade</th>
+</tr>
+
+<tr>
+<td>90% or above</td>
+<td>A+</td>
+</tr>
+
+<tr>
+<td>80% - 89%</td>
+<td>A</td>
+</tr>
+
+<tr>
+<td>70% - 79%</td>
+<td>B</td>
+</tr>
+
+<tr>
+<td>60% - 69%</td>
+<td>C</td>
+</tr>
+
+<tr>
+<td>50% - 59%</td>
+<td>D</td>
+</tr>
+
+<tr>
+<td>Below 50%</td>
+<td>E</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- MARKSHEET INTRO -->
+
+<div class="card">
+
+<h2>🎓 Practical 1 - Complete Student Marksheet</h2>
+
+<p>
+Ab hum ek complete student marksheet banayenge.
+Is example mein 5 subjects hain.
+</p>
+
+<div class="step">
+<div class="step-number">1</div>
+<div>
+Excel open karein aur headings likhein:
+Roll No, Name, Hindi, English, Maths, Science, Computer, Total, Percentage, Grade, Result.
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<div>
+Students ke marks enter karein.
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<div>
+Total ke liye SUM formula lagayein.
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<div>
+Percentage calculate karein.
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">5</div>
+<div>
+Grade aur Result automatically calculate karein.
+</div>
+</div>
+
+</div>
+
+
+<!-- MARKSHEET VISUAL -->
+
+<div class="card">
+
+<h2>🖥️ Marksheet - Excel Visual Example</h2>
+
+<div class="excel-window">
+
+<div class="excel-title">
+Microsoft Excel - Student Marksheet
+</div>
+
+<div class="excel-toolbar">
+Home &nbsp; Insert &nbsp; Page Layout &nbsp; Formulas &nbsp; Data &nbsp; Review &nbsp; View
+</div>
+
+<div class="excel-formula">
+fx &nbsp; =SUM(C2:G2)
+</div>
+
+<div class="sheet">
+
+<table>
+
+<tr>
+<th>Roll No</th>
+<th>Name</th>
+<th>Hindi</th>
+<th>English</th>
+<th>Maths</th>
+<th>Science</th>
+<th>Computer</th>
+<th>Total</th>
+<th>%</th>
+<th>Grade</th>
+<th>Result</th>
+</tr>
+
+<tr>
+<td>101</td>
+<td>Rahul</td>
+<td>78</td>
+<td>82</td>
+<td>91</td>
+<td>76</td>
+<td>88</td>
+<td class="green-cell">415</td>
+<td class="green-cell">83%</td>
+<td class="yellow-cell">A</td>
+<td class="green-cell">PASS</td>
+</tr>
+
+<tr>
+<td>102</td>
+<td>Amit</td>
+<td>65</td>
+<td>71</td>
+<td>68</td>
+<td>74</td>
+<td>80</td>
+<td class="green-cell">358</td>
+<td class="green-cell">71.6%</td>
+<td class="yellow-cell">B</td>
+<td class="green-cell">PASS</td>
+</tr>
+
+<tr>
+<td>103</td>
+<td>Neha</td>
+<td>92</td>
+<td>89</td>
+<td>95</td>
+<td>90</td>
+<td>94</td>
+<td class="green-cell">460</td>
+<td class="green-cell">92%</td>
+<td class="yellow-cell">A+</td>
+<td class="green-cell">PASS</td>
+</tr>
+
+<tr>
+<td>104</td>
+<td>Ravi</td>
+<td>45</td>
+<td>38</td>
+<td>51</td>
+<td>42</td>
+<td>48</td>
+<td class="green-cell">224</td>
+<td class="green-cell">44.8%</td>
+<td class="yellow-cell">E</td>
+<td class="green-cell">PASS</td>
+</tr>
+
+<tr>
+<td>105</td>
+<td>Vikas</td>
+<td>28</td>
+<td>55</td>
+<td>62</td>
+<td>49</td>
+<td>58</td>
+<td class="green-cell">252</td>
+<td class="green-cell">50.4%</td>
+<td class="yellow-cell">D</td>
+<td class="red-cell">FAIL</td>
+</tr>
+
+</table>
+
+</div>
+</div>
+
+</div>
+
+
+<!-- MARKSHEET FORMULAS -->
+
+<div class="card">
+
+<h2>📌 Marksheet Mein Formulas</h2>
+
+<h3>1️⃣ Total Marks</h3>
+
+<div class="formula">
+=SUM(C2:G2)
+</div>
+
+<p>
+C2 se G2 tak ke marks ka total nikalega.
+</p>
+
+<h3>2️⃣ Percentage</h3>
+
+<div class="formula">
+=H2/500*100
+</div>
+
+<p>
+Yahan 5 subjects hain aur har subject 100 marks ka hai.
+Total maximum marks = 500.
+</p>
+
+<h3>3️⃣ Result</h3>
+
+<div class="formula">
+=IF(MIN(C2:G2)>=33,"PASS","FAIL")
+</div>
+
+<p>
+Agar sabhi subjects mein minimum 33 marks hain to PASS,
+warna FAIL.
+</p>
+
+<h3>4️⃣ Grade</h3>
+
+<div class="formula">
+=IF(I2>=90,"A+",IF(I2>=80,"A",IF(I2>=70,"B",IF(I2>=60,"C",IF(I2>=50,"D","E")))))
+</div>
+
+</div>
+
+
+<!-- COPY FORMULA -->
+
+<div class="card">
+
+<h2>🔄 Formula Ko Neeche Copy Kaise Karein?</h2>
+
+<p>
+Agar ek student ke liye formula laga diya hai to har student ke liye manually formula type karna zaroori nahi hai.
+</p>
+
+<div class="step">
+<div class="step-number">1</div>
+<div>Formula wale cell ko select karein.</div>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<div>Cell ke bottom-right corner par chhota square dekhein.</div>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<div>Use mouse se neeche drag karein.</div>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<div>Formula automatically next rows mein apply ho jayega.</div>
+</div>
+
+<div class="important">
+<b>Important:</b> Is feature ko Fill Handle kaha jata hai.
+</div>
+
+</div>
+
+
+<!-- AVERAGE -->
+
+<div class="card">
+
+<h2>📊 Average Marks</h2>
+
+<p>
+Average nikalne ke liye AVERAGE function use hota hai.
+</p>
+
+<div class="formula">
+=AVERAGE(C2:G2)
+</div>
+
+<p>
+Example:
+Agar marks 80, 70, 90, 60, 100 hain to Excel automatically average calculate karega.
+</p>
+
+</div>
+
+
+<!-- MAX MIN -->
+
+<div class="card">
+
+<h2>🔝 Highest aur Lowest Marks</h2>
+
+<h3>Highest Marks</h3>
+
+<div class="formula">
+=MAX(C2:G2)
+</div>
+
+<h3>Lowest Marks</h3>
+
+<div class="formula">
+=MIN(C2:G2)
+</div>
+
+<div class="info">
+<b>Exam Tip:</b> MAX ka matlab maximum aur MIN ka matlab minimum.
+</div>
+
+</div>
+
+
+<!-- COUNT -->
+
+<div class="card">
+
+<h2>🔢 COUNT Function</h2>
+
+<p>
+COUNT function kisi range mein numbers ki counting karta hai.
+</p>
+
+<div class="formula">
+=COUNT(C2:G2)
+</div>
+
+<p>
+Agar C2:G2 mein 5 marks hain to result 5 hoga.
+</p>
+
+</div>
+
+
+<!-- CONDITIONAL FORMATTING -->
+
+<div class="card">
+
+<h2>🎨 Conditional Formatting</h2>
+
+<p>
+Conditional Formatting ka use condition ke according cells ko highlight karne ke liye kiya jata hai.
+</p>
+
+<h3>Example</h3>
+
+<ul>
+<li>80 se zyada marks → highlight</li>
+<li>33 se kam marks → red highlight</li>
+<li>PASS → green</li>
+<li>FAIL → red</li>
+</ul>
+
+<div class="excel-window">
+
+<div class="excel-title">
+Conditional Formatting Example
+</div>
+
+<div class="sheet">
+
+<table>
+
+<tr>
+<th>Student</th>
+<th>Marks</th>
+<th>Result</th>
+</tr>
+
+<tr>
+<td>Rahul</td>
+<td class="green-cell">88</td>
+<td class="green-cell">PASS</td>
+</tr>
+
+<tr>
+<td>Amit</td>
+<td>67</td>
+<td class="green-cell">PASS</td>
+</tr>
+
+<tr>
+<td>Ravi</td>
+<td class="red-cell">28</td>
+<td class="red-cell">FAIL</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<p>
+Excel mein:
+<b>Home → Conditional Formatting</b>
+se ye feature use kiya ja sakta hai.
+</p>
+
+</div>
+
+
+<!-- SALARY -->
+
+<div class="card">
+
+<h2>💰 Practical 2 - Employee Salary Statement</h2>
+
+<p>
+Excel ka use company mein salary calculation ke liye bhi kiya jata hai.
+Ab hum ek simple salary statement banayenge.
+</p>
+
+<table>
+
+<tr>
+<th>Employee ID</th>
+<th>Name</th>
+<th>Basic Salary</th>
+<th>HRA</th>
+<th>DA</th>
+<th>TA</th>
+<th>Gross Salary</th>
+<th>PF</th>
+<th>Net Salary</th>
+</tr>
+
+<tr>
+<td>E101</td>
+<td>Rahul</td>
+<td>25000</td>
+<td>5000</td>
+<td>2500</td>
+<td>1250</td>
+<td>33750</td>
+<td>3000</td>
+<td>30750</td>
+</tr>
+
+<tr>
+<td>E102</td>
+<td>Amit</td>
+<td>30000</td>
+<td>6000</td>
+<td>3000</td>
+<td>1500</td>
+<td>40500</td>
+<td>3600</td>
+<td>36900</td>
+</tr>
+
+<tr>
+<td>E103</td>
+<td>Neha</td>
+<td>35000</td>
+<td>7000</td>
+<td>3500</td>
+<td>1750</td>
+<td>47250</td>
+<td>4200</td>
+<td>43050</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- SALARY FORMULAS -->
+
+<div class="card">
+
+<h2>🧮 Salary Statement Formulas</h2>
+
+<h3>HRA = Basic Salary ka 20%</h3>
+
+<div class="formula">
+=D2 = C2*20%
+</div>
+
+<h3>DA = Basic Salary ka 10%</h3>
+
+<div class="formula">
+=E2 = C2*10%
+</div>
+
+<h3>TA = Basic Salary ka 5%</h3>
+
+<div class="formula">
+=F2 = C2*5%
+</div>
+
+<h3>Gross Salary</h3>
+
+<div class="formula">
+=SUM(C2:F2)
+</div>
+
+<h3>PF = Basic Salary ka 12%</h3>
+
+<div class="formula">
+=H2 = C2*12%
+</div>
+
+<h3>Net Salary</h3>
+
+<div class="formula">
+=G2-H2
+</div>
+
+<div class="important">
+Ye example learning purpose ke liye hai. Real company mein salary components aur deduction rules company aur applicable policies ke according different ho sakte hain.
+</div>
+
+</div>
+
+
+<!-- SALARY VISUAL -->
+
+<div class="card">
+
+<h2>🖥️ Salary Sheet - Excel Visual</h2>
+
+<div class="excel-window">
+
+<div class="excel-title">
+Microsoft Excel - Salary Statement
+</div>
+
+<div class="excel-formula">
+fx &nbsp; =G2-H2
+</div>
+
+<div class="sheet">
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Employee</th>
+<th>Basic</th>
+<th>HRA</th>
+<th>DA</th>
+<th>TA</th>
+<th>Gross</th>
+<th>PF</th>
+<th>Net Salary</th>
+</tr>
+
+<tr>
+<td>E101</td>
+<td>Rahul</td>
+<td>25000</td>
+<td>5000</td>
+<td>2500</td>
+<td>1250</td>
+<td>33750</td>
+<td>3000</td>
+<td class="green-cell">30750</td>
+</tr>
+
+<tr>
+<td>E102</td>
+<td>Amit</td>
+<td>30000</td>
+<td>6000</td>
+<td>3000</td>
+<td>1500</td>
+<td>40500</td>
+<td>3600</td>
+<td class="green-cell">36900</td>
+</tr>
+
+<tr>
+<td>E103</td>
+<td>Neha</td>
+<td>35000</td>
+<td>7000</td>
+<td>3500</td>
+<td>1750</td>
+<td>47250</td>
+<td>4200</td>
+<td class="green-cell">43050</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BONUS -->
+
+<div class="card">
+
+<h2>🎁 Practical 3 - Sales Bonus Calculation</h2>
+
+<p>
+IF function ka ek aur practical example bonus calculation hai.
+</p>
+
+<table>
+
+<tr>
+<th>Employee</th>
+<th>Sales</th>
+<th>Bonus Rule</th>
+<th>Bonus</th>
+</tr>
+
+<tr>
+<td>Rahul</td>
+<td>60000</td>
+<td>10%</td>
+<td>6000</td>
+</tr>
+
+<tr>
+<td>Amit</td>
+<td>40000</td>
+<td>5%</td>
+<td>2000</td>
+</tr>
+
+<tr>
+<td>Neha</td>
+<td>25000</td>
+<td>0%</td>
+<td>0</td>
+</tr>
+
+</table>
+
+<h3>Formula:</h3>
+
+<div class="formula">
+=IF(B2>=50000,B2*10%,IF(B2>=30000,B2*5%,0))
+</div>
+
+<p>
+Is formula mein:
+</p>
+
+<ul>
+<li>₹50,000 ya zyada sales → 10% bonus</li>
+<li>₹30,000 se ₹49,999 → 5% bonus</li>
+<li>₹30,000 se kam → 0 bonus</li>
+</ul>
+
+</div>
+
+
+<!-- CHART -->
+
+<div class="card">
+
+<h2>📊 Practical 4 - Chart Banana</h2>
+
+<p>
+Excel mein data ko visually samajhne ke liye charts ka use kiya jata hai.
+</p>
+
+<div class="step">
+<div class="step-number">1</div>
+<div>Apna data select karein.</div>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<div>Insert tab par click karein.</div>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<div>Charts section mein jayein.</div>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<div>Column, Bar, Line ya Pie Chart choose karein.</div>
+</div>
+
+<div class="step">
+<div class="step-number">5</div>
+<div>Chart ko apne according format karein.</div>
+</div>
+
+<div class="bar-chart">
+
+<h3>📈 Student Marks Chart - Visual Example</h3>
+
+<div class="bar-row">
+<div class="bar-name">Rahul</div>
+<div class="bar bar-80">80%</div>
+</div>
+
+<div class="bar-row">
+<div class="bar-name">Amit</div>
+<div class="bar bar-70">70%</div>
+</div>
+
+<div class="bar-row">
+<div class="bar-name">Neha</div>
+<div class="bar bar-90">90%</div>
+</div>
+
+<div class="bar-row">
+<div class="bar-name">Ravi</div>
+<div class="bar bar-60">60%</div>
+</div>
+
+</div>
+
+<div class="info">
+<b>Exam Tip:</b> Chart banane ke liye pehle correct data select karna bahut important hai.
+</div>
+
+</div>
+
+
+<!-- PIE CHART CONCEPT -->
+
+<div class="card">
+
+<h2>🥧 Pie Chart Kya Hai?</h2>
+
+<p>
+Pie Chart data ko ek circle ke parts ke form mein dikhata hai.
+Ye percentage ya proportion samajhne ke liye useful hai.
+</p>
+
+<table>
+
+<tr>
+<th>Expense</th>
+<th>Amount</th>
+</tr>
+
+<tr>
+<td>Food</td>
+<td>₹5,000</td>
+</tr>
+
+<tr>
+<td>Travel</td>
+<td>₹2,000</td>
+</tr>
+
+<tr>
+<td>Education</td>
+<td>₹3,000</td>
+</tr>
+
+</table>
+
+<div class="important">
+Excel mein Pie Chart banane ke liye data select karein → Insert → Pie Chart.
+</div>
+
+</div>
+
+
+<!-- SORT FILTER -->
+
+<div class="card">
+
+<h2>🔎 Sort aur Filter</h2>
+
+<h3>Sort</h3>
+
+<p>
+Sort ka use data ko ascending ya descending order mein arrange karne ke liye hota hai.
+</p>
+
+<ul>
+<li>A to Z</li>
+<li>Z to A</li>
+<li>Smallest to Largest</li>
+<li>Largest to Smallest</li>
+</ul>
+
+<h3>Filter</h3>
+
+<p>
+Filter ka use sirf required data ko dikhane ke liye hota hai.
+</p>
+
+<div class="info">
+Example: Marksheet mein sirf PASS students dikhane ke liye Result column par Filter laga sakte hain.
+</div>
+
+</div>
+
+
+<!-- FREEZE PANES -->
+
+<div class="card">
+
+<h2>📌 Freeze Panes</h2>
+
+<p>
+Agar Excel sheet bahut badi ho jaye to headings screen ke upar visible rakhne ke liye Freeze Panes useful hota hai.
+</p>
+
+<p>
+Excel mein:
+</p>
+
+<div class="formula">
+View → Freeze Panes
+</div>
+
+<p>
+se ye feature use kiya ja sakta hai.
+</p>
+
+</div>
+
+
+<!-- PRINT -->
+
+<div class="card">
+
+<h2>🖨️ Excel Sheet Print Karna</h2>
+
+<div class="step">
+<div class="step-number">1</div>
+<div>File menu open karein.</div>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<div>Print option choose karein.</div>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<div>Print Preview check karein.</div>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<div>Printer select karein.</div>
+</div>
+
+<div class="step">
+<div class="step-number">5</div>
+<div>Print button par click karein.</div>
+</div>
+
+<div class="info">
+Shortcut: <b>Ctrl + P</b>
+</div>
+
+</div>
+
+
+<!-- PRACTICAL PROJECT -->
+
+<div class="card">
+
+<h2>🎯 Complete Excel Practical Project</h2>
+
+<p>
+Ab ek complete project khud banane ki practice karein.
+</p>
+
+<h3>Project Name: Class 12 Student Result</h3>
+
+<table>
+
+<tr>
+<th>Column</th>
+<th>Data</th>
+</tr>
+
+<tr>
+<td>A</td>
+<td>Roll No</td>
+</tr>
+
+<tr>
+<td>B</td>
+<td>Student Name</td>
+</tr>
+
+<tr>
+<td>C</td>
+<td>Hindi</td>
+</tr>
+
+<tr>
+<td>D</td>
+<td>English</td>
+</tr>
+
+<tr>
+<td>E</td>
+<td>Maths</td>
+</tr>
+
+<tr>
+<td>F</td>
+<td>Science</td>
+</tr>
+
+<tr>
+<td>G</td>
+<td>Computer</td>
+</tr>
+
+<tr>
+<td>H</td>
+<td>Total</td>
+</tr>
+
+<tr>
+<td>I</td>
+<td>Percentage</td>
+</tr>
+
+<tr>
+<td>J</td>
+<td>Grade</td>
+</tr>
+
+<tr>
+<td>K</td>
+<td>Result</td>
+</tr>
+
+</table>
+
+<div class="success">
+<b>Task:</b> Is project mein kam se kam 10 students ka data enter karein aur Total, Percentage, Grade aur Result formulas se automatically calculate karein.
+</div>
+
+</div>
+
+
+<!-- PRACTICAL TASKS -->
+
+<div class="card">
+
+<h2>📝 Practice Tasks</h2>
+
+<div class="practice">
+<b>Task 1:</b> 10 students ki marksheet banayein.
+</div>
+
+<div class="practice">
+<b>Task 2:</b> Total marks ke liye SUM use karein.
+</div>
+
+<div class="practice">
+<b>Task 3:</b> Percentage calculate karein.
+</div>
+
+<div class="practice">
+<b>Task 4:</b> MAX se highest marks nikalein.
+</div>
+
+<div class="practice">
+<b>Task 5:</b> MIN se lowest marks nikalein.
+</div>
+
+<div class="practice">
+<b>Task 6:</b> IF function se PASS/FAIL banayein.
+</div>
+
+<div class="practice">
+<b>Task 7:</b> Percentage ke according Grade banayein.
+</div>
+
+<div class="practice">
+<b>Task 8:</b> Student marks ka chart banayein.
+</div>
+
+<div class="practice">
+<b>Task 9:</b> 5 employees ki salary statement banayein.
+</div>
+
+<div class="practice">
+<b>Task 10:</b> Salary statement mein Net Salary calculate karein.
+</div>
+
+</div>
+
+
+<!-- SHORTCUTS -->
+
+<div class="card">
+
+<h2>⌨️ Important MS Excel Shortcut Keys</h2>
+
+<table>
+
+<tr>
+<th>Shortcut</th>
+<th>Work</th>
+</tr>
+
+<tr>
+<td>Ctrl + N</td>
+<td>New Workbook</td>
+</tr>
+
+<tr>
+<td>Ctrl + O</td>
+<td>Open</td>
+</tr>
+
+<tr>
+<td>Ctrl + S</td>
+<td>Save</td>
+</tr>
+
+<tr>
+<td>Ctrl + P</td>
+<td>Print</td>
+</tr>
+
+<tr>
+<td>Ctrl + C</td>
+<td>Copy</td>
+</tr>
+
+<tr>
+<td>Ctrl + X</td>
+<td>Cut</td>
+</tr>
+
+<tr>
+<td>Ctrl + V</td>
+<td>Paste</td>
+</tr>
+
+<tr>
+<td>Ctrl + Z</td>
+<td>Undo</td>
+</tr>
+
+<tr>
+<td>Ctrl + Y</td>
+<td>Redo</td>
+</tr>
+
+<tr>
+<td>Ctrl + A</td>
+<td>Select All</td>
+</tr>
+
+<tr>
+<td>Ctrl + F</td>
+<td>Find</td>
+</tr>
+
+<tr>
+<td>Ctrl + H</td>
+<td>Replace</td>
+</tr>
+
+<tr>
+<td>Ctrl + B</td>
+<td>Bold</td>
+</tr>
+
+<tr>
+<td>Ctrl + I</td>
+<td>Italic</td>
+</tr>
+
+<tr>
+<td>Ctrl + U</td>
+<td>Underline</td>
+</tr>
+
+<tr>
+<td>F2</td>
+<td>Cell Edit</td>
+</tr>
+
+<tr>
+<td>Alt + =</td>
+<td>AutoSum</td>
+</tr>
+
+<tr>
+<td>Delete</td>
+<td>Cell Content Delete</td>
+</tr>
+
+<tr>
+<td>Ctrl + 1</td>
+<td>Format Cells</td>
+</tr>
+
+<tr>
+<td>Ctrl + Arrow Key</td>
+<td>Data Range ke end tak jana</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- EXAM QUESTIONS -->
+
+<div class="card">
+
+<h2>📝 Exam Practice Questions</h2>
+
+<ol>
+
+<li>MS Excel kya hai?</li>
+
+<li>Workbook aur Worksheet mein kya difference hai?</li>
+
+<li>Cell kya hota hai?</li>
+
+<li>SUM function ka use kya hai?</li>
+
+<li>AVERAGE function ka use kya hai?</li>
+
+<li>MAX function kya karta hai?</li>
+
+<li>MIN function kya karta hai?</li>
+
+<li>COUNT function kya karta hai?</li>
+
+<li>IF function ka use kya hai?</li>
+
+<li>Percentage calculate karne ka formula likhiye.</li>
+
+<li>Student marksheet mein Total ka formula likhiye.</li>
+
+<li>PASS/FAIL ke liye IF formula likhiye.</li>
+
+<li>Grade calculate karne ke liye IF ka use kaise karenge?</li>
+
+<li>Salary statement kya hota hai?</li>
+
+<li>Gross Salary kya hoti hai?</li>
+
+<li>Net Salary kya hoti hai?</li>
+
+<li>Chart kya hota hai?</li>
+
+<li>Sort aur Filter mein kya difference hai?</li>
+
+<li>Conditional Formatting kya hai?</li>
+
+<li>Freeze Panes ka use kya hai?</li>
+
+</ol>
+
+</div>
+
+
+<!-- MCQ -->
+
+<div class="card">
+
+<h2>❓ MS Excel MCQs</h2>
+
+<h3>1. Excel mein formula kis symbol se start hota hai?</h3>
+
+<p>A) + &nbsp;&nbsp; B) = &nbsp;&nbsp; C) # &nbsp;&nbsp; D) @</p>
+<p><b>Answer: B) =</b></p>
+
+<h3>2. Total ke liye kaunsa function use hota hai?</h3>
+
+<p>A) SUM &nbsp;&nbsp; B) MAX &nbsp;&nbsp; C) COUNT &nbsp;&nbsp; D) IF</p>
+<p><b>Answer: A) SUM</b></p>
+
+<h3>3. Average ke liye kaunsa function use hota hai?</h3>
+
+<p>A) MIN &nbsp;&nbsp; B) AVERAGE &nbsp;&nbsp; C) SUM &nbsp;&nbsp; D) COUNT</p>
+<p><b>Answer: B) AVERAGE</b></p>
+
+<h3>4. Sabse badi value ke liye kaunsa function hai?</h3>
+
+<p>A) MIN &nbsp;&nbsp; B) COUNT &nbsp;&nbsp; C) MAX &nbsp;&nbsp; D) IF</p>
+<p><b>Answer: C) MAX</b></p>
+
+<h3>5. Sabse chhoti value ke liye kaunsa function hai?</h3>
+
+<p>A) MIN &nbsp;&nbsp; B) MAX &nbsp;&nbsp; C) SUM &nbsp;&nbsp; D) IF</p>
+<p><b>Answer: A) MIN</b></p>
+
+<h3>6. Condition ke liye kaunsa function use hota hai?</h3>
+
+<p>A) SUM &nbsp;&nbsp; B) IF &nbsp;&nbsp; C) COUNT &nbsp;&nbsp; D) MAX</p>
+<p><b>Answer: B) IF</b></p>
+
+<h3>7. Excel mein chart kis tab se insert kiya jata hai?</h3>
+
+<p>A) Home &nbsp;&nbsp; B) Insert &nbsp;&nbsp; C) View &nbsp;&nbsp; D) Review</p>
+<p><b>Answer: B) Insert</b></p>
+
+<h3>8. Save shortcut kya hai?</h3>
+
+<p>A) Ctrl + P &nbsp;&nbsp; B) Ctrl + S &nbsp;&nbsp; C) Ctrl + O &nbsp;&nbsp; D) Ctrl + N</p>
+<p><b>Answer: B) Ctrl + S</b></p>
+
+<h3>9. Print ka shortcut kya hai?</h3>
+
+<p>A) Ctrl + P &nbsp;&nbsp; B) Ctrl + S &nbsp;&nbsp; C) Ctrl + C &nbsp;&nbsp; D) Ctrl + X</p>
+<p><b>Answer: A) Ctrl + P</b></p>
+
+<h3>10. Copy ka shortcut kya hai?</h3>
+
+<p>A) Ctrl + X &nbsp;&nbsp; B) Ctrl + V &nbsp;&nbsp; C) Ctrl + C &nbsp;&nbsp; D) Ctrl + Z</p>
+<p><b>Answer: C) Ctrl + C</b></p>
+
+<h3>11. Undo ka shortcut kya hai?</h3>
+
+<p>A) Ctrl + Y &nbsp;&nbsp; B) Ctrl + Z &nbsp;&nbsp; C) Ctrl + U &nbsp;&nbsp; D) Ctrl + A</p>
+<p><b>Answer: B) Ctrl + Z</b></p>
+
+<h3>12. Conditional Formatting ka use kisliye hota hai?</h3>
+
+<p>A) Computer shutdown</p>
+<p>B) Condition ke according cells highlight karne ke liye</p>
+<p>C) File delete karne ke liye</p>
+<p>D) Printer connect karne ke liye</p>
+
+<p><b>Answer: B</b></p>
+
+</div>
+
+
+<!-- IMPORTANT POINTS -->
+
+<div class="card">
+
+<h2>⭐ Important Points</h2>
+
+<ul>
+
+<li>Excel mein formula <b>=</b> se start hota hai.</li>
+
+<li>SUM total calculate karta hai.</li>
+
+<li>AVERAGE average calculate karta hai.</li>
+
+<li>MAX highest value deta hai.</li>
+
+<li>MIN lowest value deta hai.</li>
+
+<li>COUNT numbers count karta hai.</li>
+
+<li>IF condition ke according result deta hai.</li>
+
+<li>Percentage marksheet mein bahut important hai.</li>
+
+<li>Chart data ko visual form mein show karta hai.</li>
+
+<li>Sort data ko order mein arrange karta hai.</li>
+
+<li>Filter required data ko show karta hai.</li>
+
+<li>Conditional Formatting cells ko conditions ke according highlight karta hai.</li>
+
+<li>Freeze Panes large sheets mein useful hai.</li>
+
+<li>Ctrl + S se workbook save hoti hai.</li>
+
+<li>Ctrl + P se print option open hota hai.</li>
+
+</ul>
+
+</div>
+
+
+<!-- SUMMARY -->
+
+<div class="card">
+
+<h2>📚 Lesson 2 Summary</h2>
+
+<p>
+Is lesson mein humne MS Excel ka practical use seekha.
+Humne student marksheet banani, formulas lagana, percentage aur grade calculate karna,
+PASS/FAIL result banana, salary statement banana, bonus calculation,
+charts, sorting, filtering aur conditional formatting ke baare mein padha.
+</p>
+
+<div class="success">
+
+<b>🎉 MS Excel Course Complete!</b>
+
+<br><br>
+
+Ab aapke Computer Siksha website par:
+
+<br><br>
+
+✅ Computer Basics - 2 Lessons<br>
+✅ MS Word - 2 Lessons<br>
+✅ PowerPoint - 2 Lessons<br>
+✅ MS Excel - 2 Lessons
+
+<br><br>
+
+Ye courses beginners ko computer practical skills samajhne mein help karenge.
+
+</div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav-buttons">
+
+<a href="index.html" class="btn">
+🏠 Home
+</a>
+
+<a href="ms-excel-lesson1.html" class="btn">
+⬅️ Excel Lesson 1
+</a>
+
+<a href="powerpoint-lesson2.html" class="btn">
+📊 PowerPoint
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Computer Siksha</p>
+<p>Learn. Practice. Grow.</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,2155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Tools - Lesson 1 | Computer Siksha</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#0f2a5f,#2563eb);
+    color:white;
+    text-align:center;
+    padding:32px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:36px;
+}
+
+header p{
+    margin:5px 0;
+    font-size:16px;
+}
+
+nav{
+    background:#123a7a;
+    text-align:center;
+    padding:13px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 8px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:22px;
+    border-radius:14px;
+    box-shadow:0 3px 14px rgba(0,0,0,0.08);
+}
+
+h2{
+    color:#0f2a5f;
+    border-left:5px solid #2563eb;
+    padding-left:12px;
+}
+
+h3{
+    color:#17458f;
+}
+
+.info{
+    background:#eaf3ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.important{
+    background:#fff4d6;
+    border-left:5px solid #f59e0b;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.success{
+    background:#eaf8ee;
+    border-left:5px solid #22a447;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.warning{
+    background:#fff0f0;
+    border-left:5px solid #e53935;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.step{
+    display:flex;
+    align-items:flex-start;
+    margin:15px 0;
+}
+
+.number{
+    background:#2563eb;
+    color:white;
+    min-width:38px;
+    height:38px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    margin-right:12px;
+}
+
+.formula{
+    background:#111827;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    font-family:monospace;
+    overflow-x:auto;
+}
+
+.prompt-card{
+    background:white;
+    border:1px solid #dce2eb;
+    border-radius:15px;
+    margin:30px 0;
+    overflow:hidden;
+    box-shadow:0 4px 18px rgba(0,0,0,0.09);
+}
+
+.prompt-heading{
+    background:#0f2a5f;
+    color:white;
+    padding:16px 20px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.photo-title{
+    background:#eef4ff;
+    color:#17458f;
+    padding:10px 18px;
+    font-weight:bold;
+}
+
+.example-photo{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    display:block;
+    background:#ddd;
+}
+
+.prompt-body{
+    padding:20px;
+}
+
+.tag{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.prompt-box{
+    background:#111827;
+    color:#f4f7fb;
+    border-radius:10px;
+    padding:18px;
+    font-size:15px;
+    line-height:1.7;
+    white-space:pre-wrap;
+    overflow-x:auto;
+    margin-top:10px;
+}
+
+.copy-info{
+    background:#eef4ff;
+    border-left:4px solid #2563eb;
+    padding:12px;
+    border-radius:7px;
+    margin-top:12px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+}
+
+th{
+    background:#17458f;
+    color:white;
+}
+
+th,td{
+    border:1px solid #bbb;
+    padding:10px;
+}
+
+tr:nth-child(even){
+    background:#f7f9fc;
+}
+
+.nav-buttons{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    margin:30px 0;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#17458f;
+}
+
+footer{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:28px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+    }
+
+    .card{
+        padding:17px;
+    }
+
+    .example-photo{
+        height:260px;
+    }
+
+    .prompt-heading{
+        font-size:17px;
+    }
+
+    .prompt-box{
+        font-size:14px;
+    }
+
+    .nav-buttons{
+        flex-direction:column;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<h1>🤖 AI Tools - Lesson 1</h1>
+
+<p>AI Basics + 35+ Trending Photo Transformation Prompts</p>
+
+<p>Computer Siksha | Learn • Practice • Grow</p>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="computer-basics.html">Computer Basics</a>
+
+<a href="ms-word-lesson2.html">MS Word</a>
+
+<a href="powerpoint-lesson2.html">PowerPoint</a>
+
+<a href="ms-excel-lesson2.html">MS Excel</a>
+
+<a href="internet-basics-lesson2.html">Internet</a>
+
+</nav>
+
+
+<div class="container">
+
+
+<div class="card">
+
+<h2>🤖 AI Kya Hai?</h2>
+
+<p>
+AI ka full form Artificial Intelligence hai.
+AI ek aisi technology hai jo computer systems ko information
+samajhne, patterns identify karne aur different tasks mein help
+karne ki ability deti hai.
+</p>
+
+<p>
+Aaj AI ki madad se hum text create kar sakte hain, questions
+samajh sakte hain, images generate kar sakte hain, videos create
+kar sakte hain aur bahut se creative kaam kar sakte hain.
+</p>
+
+<div class="info">
+
+<b>Simple Example:</b>
+
+<p>
+Aap AI ko ek clear instruction dete ho aur AI us instruction
+ke according output generate karne ki koshish karta hai.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>✨ Generative AI Kya Hai?</h2>
+
+<p>
+Generative AI aisi AI technology hai jo naya content create karne
+mein help kar sakti hai.
+</p>
+
+<table>
+
+<tr>
+<th>Content</th>
+<th>AI Se Kya Create Ho Sakta Hai?</th>
+</tr>
+
+<tr>
+<td>Text</td>
+<td>Notes, Ideas, Articles</td>
+</tr>
+
+<tr>
+<td>Image</td>
+<td>Realistic Photos, Artwork</td>
+</tr>
+
+<tr>
+<td>Video</td>
+<td>Cinematic Videos</td>
+</tr>
+
+<tr>
+<td>Voice</td>
+<td>Voice Over</td>
+</tr>
+
+<tr>
+<td>Presentation</td>
+<td>Slides aur Content</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="card">
+
+<h2>✍️ Prompt Kya Hota Hai?</h2>
+
+<p>
+Prompt ek instruction ya description hota hai jo hum AI ko dete hain.
+AI image banate samay prompt mein hum batate hain ki image mein
+person, clothes, location, lighting, camera style aur mood kaisa hona chahiye.
+</p>
+
+<div class="formula">
+Person + Outfit + Location + Pose + Lighting + Camera + Mood + Details
+</div>
+
+<br>
+
+<p>
+Example:
+</p>
+
+<div class="prompt-box">Create an ultra-realistic cinematic portrait of a person wearing a black jacket, standing on a city street at night, dramatic lighting, DSLR photography, realistic skin texture.</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>📸 Apni Photo Ke Saath AI Photo Kaise Banaye?</h2>
+
+<p>
+Agar AI image tool mein reference image upload karne ka option hai,
+to aap apni photo upload karke us photo ko reference ke roop mein
+use kar sakte hain.
+</p>
+
+<div class="step">
+
+<div class="number">1</div>
+
+<div>
+Ek clear photo select karein jisme face clearly visible ho.
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="number">2</div>
+
+<div>
+AI image generation tool mein apni photo upload karein.
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="number">3</div>
+
+<div>
+Neeche diye gaye kisi bhi prompt ko copy karein.
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="number">4</div>
+
+<div>
+Prompt ko AI tool mein paste karein.
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="number">5</div>
+
+<div>
+Image generate karein aur result check karein.
+</div>
+
+</div>
+
+<div class="important">
+
+<b>Important:</b>
+
+AI tools face ko har baar 100% same nahi rakhte.
+Clear reference photo aur detailed identity instructions
+consistency ko improve kar sakte hain.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>🔒 Face Same Rakhne Ke Liye Important Instruction</h2>
+
+<p>
+In prompts mein identity preserve karne ke liye instruction already
+include ki gayi hai.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the person's facial identity, facial structure, natural facial features and skin tone. Keep the same person recognizable. Do not replace the face with another person. Keep the result realistic and natural.</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>🔥 35+ Trending-Style AI Photo Prompts</h2>
+
+<p>
+Ab aate hain main part par. Neeche diye gaye prompts generic
+photo prompts nahi hain. Inmein different viral/trending-style
+looks ko dhyan mein rakhkar transformation concepts diye gaye hain.
+</p>
+
+<div class="success">
+
+<b>Kaise use karein?</b>
+
+<br><br>
+
+1. Apni photo upload karein.<br>
+2. Prompt copy karein.<br>
+3. AI tool mein paste karein.<br>
+4. Image generate karein.<br>
+5. Result ke according prompt ko thoda modify karein.
+
+</div>
+
+</div>
+
+
+<!-- PROMPT 1 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🔥 Prompt 1 — 1980s Retro Indian Photo
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=1400&q=85"
+alt="Retro portrait example">
+
+<div class="prompt-body">
+
+<span class="tag">1980s Retro Trend</span>
+
+<p>
+Old camera, retro clothes aur vintage Indian photography jaisa look.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same person's facial identity, facial structure, natural features and skin tone. Transform the scene into an authentic 1980s Indian retro photograph. Give the person a stylish vintage 1980s outfit, classic hairstyle, old Indian street environment, warm film colors, authentic analog camera look, subtle film grain, realistic flash photography, natural pose, realistic skin texture, slightly faded vintage colors, nostalgic atmosphere, highly photorealistic.</div>
+
+<div class="copy-info">
+Apni photo upload karke is prompt ko use karein.
+</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 2 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+❤️ Prompt 2 — Red Outfit Viral Style
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1400&q=85"
+alt="Red fashion portrait example">
+
+<div class="prompt-body">
+
+<span class="tag">Red Outfit</span>
+
+<p>
+Strong red outfit, cinematic lighting aur stylish attitude pose.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same person's face and recognizable identity. Create a highly realistic fashion portrait of the same person wearing a stylish deep red outfit, confident attitude pose, modern urban background, dramatic cinematic lighting, realistic skin texture, premium fashion photography, DSLR quality, shallow depth of field, natural body proportions, detailed fabric texture, photorealistic result.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 3 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🕶️ Prompt 3 — Black Sunglasses Street Style
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1400&q=85"
+alt="Street portrait example">
+
+<div class="prompt-body">
+
+<span class="tag">Street Attitude</span>
+
+<p>
+Black sunglasses aur modern street-fashion look.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same face and identity. Create an ultra-realistic street fashion portrait of the same person wearing black sunglasses, a premium dark outfit and stylish shoes, standing confidently on a modern city street, cinematic daylight, realistic shadows, DSLR photography, shallow depth of field, detailed clothing texture, natural skin, editorial fashion photography, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 4 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🎞️ Prompt 4 — 1990s Film Camera Look
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1400&q=85"
+alt="Film portrait example">
+
+<div class="prompt-body">
+
+<span class="tag">1990s Film</span>
+
+<p>
+90s fashion aur direct camera flash ke saath authentic film look.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same facial identity. Transform the photo into an authentic 1990s film-camera portrait. Give the person a stylish 1990s-inspired outfit, simple old-school hairstyle, urban Indian street background, direct camera flash, realistic film grain, slightly imperfect analog exposure, warm nostalgic tones, natural pose, photorealistic skin texture, authentic vintage photograph.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 5 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+💎 Prompt 5 — Old Money Luxury Look
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1400&q=85"
+alt="Luxury formal portrait example">
+
+<div class="prompt-body">
+
+<span class="tag">Old Money</span>
+
+<p>
+Classy formal outfit, luxury interior aur elegant photography.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same person's identity and facial features. Create an ultra-realistic old-money luxury portrait. Dress the same person in an elegant premium outfit, place them inside a sophisticated classic luxury interior, warm natural window light, elegant posture, subtle confident expression, realistic fabric texture, premium editorial photography, DSLR portrait, cinematic depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 6 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🌃 Prompt 6 — Neon Night City
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=85"
+alt="Night city example">
+
+<div class="prompt-body">
+
+<span class="tag">Neon Night</span>
+
+<p>
+Night city, glowing lights aur cinematic attitude.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same face and identity. Create an ultra-realistic cinematic night portrait of the person standing in a modern city surrounded by glowing neon lights, stylish dark outfit, confident attitude, wet street reflections, dramatic lighting, realistic skin texture, cinematic color grading, DSLR photography, shallow depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 7 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🚗 Prompt 7 — Luxury Car Cinematic
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1400&q=85"
+alt="Luxury car example">
+
+<div class="prompt-body">
+
+<span class="tag">Luxury Car</span>
+
+<p>
+Premium car ke saath cinematic fashion shoot.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same facial identity. Create an ultra-realistic luxury automotive fashion portrait of the same person standing beside a premium black luxury car, wearing a stylish dark outfit, confident pose, modern city background, dramatic sunset lighting, realistic car reflections, premium editorial photography, DSLR quality, cinematic depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 8 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🌧️ Prompt 8 — Rainy Cinematic Street
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&w=1400&q=85"
+alt="Rainy city example">
+
+<div class="prompt-body">
+
+<span class="tag">Rain Look</span>
+
+<p>
+Rain, wet road aur city lights ke saath cinematic portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same person's face and identity. Create an ultra-realistic cinematic rainy street portrait, stylish dark jacket, confident walking pose, soft rain falling, wet road reflections, glowing city lights, dramatic cinematic lighting, realistic water droplets, natural skin texture, DSLR photography, shallow depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 9 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+👖 Prompt 9 — Denim Street Fashion
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1400&q=85"
+alt="Fashion example">
+
+<div class="prompt-body">
+
+<span class="tag">Denim Style</span>
+
+<p>
+Denim jacket aur stylish urban street look.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same face and recognizable identity. Create an ultra-realistic street fashion photograph of the same person wearing a stylish denim jacket, modern casual outfit and clean sneakers, urban city background, confident pose, natural daylight, professional DSLR photography, realistic clothing texture, cinematic depth of field, premium fashion editorial look, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 10 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+📸 Prompt 10 — Direct Flash Party Photo
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1400&q=85"
+alt="Flash photography example">
+
+<div class="prompt-body">
+
+<span class="tag">Flash Photography</span>
+
+<p>
+Direct flash, dark background aur social-media style candid look.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the exact same facial identity. Create an authentic direct-flash social media photograph of the person wearing a stylish modern outfit, standing in a dimly lit evening environment, strong camera flash illuminating the face, dark background, realistic shadows, slight film grain, candid attitude, realistic skin texture, authentic camera photography, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 11 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🏍️ Prompt 11 — Motorcycle Rider Look
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1400&q=85"
+alt="Motorcycle example">
+
+<div class="prompt-body">
+
+<span class="tag">Rider Style</span>
+
+<p>
+Motorcycle aur open road ke saath cinematic rider look.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same person's facial identity. Create an ultra-realistic cinematic motorcycle portrait of the same person wearing a stylish riding jacket and casual outfit, standing beside a modern motorcycle on an open road, dramatic sunset sky, confident pose, realistic motorcycle details, cinematic lighting, DSLR photography, shallow depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 12 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🏔️ Prompt 12 — Mountain Explorer
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=85"
+alt="Mountain example">
+
+<div class="prompt-body">
+
+<span class="tag">Adventure</span>
+
+<p>
+Mountain viewpoint aur cinematic travel photography.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same face and identity. Create an ultra-realistic cinematic travel portrait of the same person standing on a beautiful mountain viewpoint, stylish outdoor jacket, dramatic mountains in the background, golden sunrise, natural confident pose, realistic atmosphere, DSLR photography, cinematic depth of field, realistic skin texture, photorealistic travel photography.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 13 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🌅 Prompt 13 — Golden Hour Portrait
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85"
+alt="Golden hour example">
+
+<div class="prompt-body">
+
+<span class="tag">Golden Hour</span>
+
+<p>
+Sunset light ke saath warm cinematic portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same facial identity and natural features. Create an ultra-realistic golden-hour portrait of the same person wearing a stylish casual outfit, standing outdoors during sunset, warm sunlight illuminating the face, cinematic rim light, natural confident expression, realistic skin texture, DSLR photography, beautiful background blur, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 14 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+📰 Prompt 14 — Fashion Magazine Cover
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=85"
+alt="Fashion editorial example">
+
+<div class="prompt-body">
+
+<span class="tag">Magazine Style</span>
+
+<p>
+Premium fashion magazine jaisa editorial portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same facial identity. Create an ultra-realistic high-fashion editorial portrait of the same person wearing a premium stylish outfit, sophisticated studio background, professional fashion lighting, confident expression, magazine photography composition, realistic skin texture, sharp facial details, DSLR photography, premium editorial aesthetic, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 15 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🪞 Prompt 15 — Luxury Mirror Selfie
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=85"
+alt="Fashion mirror style example">
+
+<div class="prompt-body">
+
+<span class="tag">Mirror Style</span>
+
+<p>
+Luxury room mein stylish mirror photo.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same person's face and identity. Create an ultra-realistic luxury mirror photograph of the same person wearing a stylish modern outfit, standing in front of a large elegant mirror inside a premium room, realistic smartphone-camera perspective, natural indoor lighting, detailed reflection, realistic skin and clothing texture, social media photography, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 16 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🧥 Prompt 16 — Leather Jacket Attitude
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1520975958225-36f7f2f5f7b7?auto=format&fit=crop&w=1400&q=85"
+alt="Leather fashion example">
+
+<div class="prompt-body">
+
+<span class="tag">Leather Look</span>
+
+<p>
+Black leather jacket aur powerful cinematic pose.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same facial identity. Create an ultra-realistic cinematic fashion portrait of the same person wearing a premium black leather jacket, dark trousers and stylish sunglasses, standing confidently against an urban wall, dramatic side lighting, realistic leather texture, cinematic shadows, DSLR photography, shallow depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 17 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+☕ Prompt 17 — Cafe Lifestyle
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=85"
+alt="Cafe lifestyle example">
+
+<div class="prompt-body">
+
+<span class="tag">Lifestyle</span>
+
+<p>
+Modern cafe mein relaxed social-media lifestyle photo.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same face and identity. Create an ultra-realistic lifestyle portrait of the person sitting inside a stylish modern cafe, wearing a premium casual outfit, coffee cup on the table, warm natural window light, relaxed confident expression, cozy background, DSLR photography, realistic skin texture, cinematic depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 18 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+✈️ Prompt 18 — Airport Traveller
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&q=85"
+alt="Airport travel example">
+
+<div class="prompt-body">
+
+<span class="tag">Travel</span>
+
+<p>
+Airport par modern traveller aur premium lifestyle look.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same person's facial identity. Create an ultra-realistic cinematic airport travel photograph of the same person walking through a modern airport terminal with a stylish travel bag, premium casual outfit, confident walking pose, natural window lighting, realistic environment, DSLR travel photography, cinematic depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 19 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🌴 Prompt 19 — Beach Sunset Lifestyle
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85"
+alt="Beach sunset example">
+
+<div class="prompt-body">
+
+<span class="tag">Beach</span>
+
+<p>
+Beach sunset ke saath stylish travel portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same facial identity and natural features. Create an ultra-realistic cinematic beach portrait of the same person standing beside the ocean during sunset, stylish casual outfit, warm golden sunlight, ocean waves in the background, confident natural pose, realistic skin texture, DSLR photography, cinematic composition, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 20 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🏛️ Prompt 20 — Royal Palace Look
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85"
+alt="Luxury palace example">
+
+<div class="prompt-body">
+
+<span class="tag">Royal Style</span>
+
+<p>
+Grand palace ke andar royal cinematic portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same facial identity. Create an ultra-realistic royal cinematic portrait of the same person wearing an elegant traditional-inspired outfit, standing inside a grand heritage palace, detailed architecture, warm golden lighting, confident posture, realistic fabric texture, premium photography, cinematic depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 21 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+💼 Prompt 21 — Corporate Boss Look
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"
+alt="Office example">
+
+<div class="prompt-body">
+
+<span class="tag">Professional</span>
+
+<p>
+Modern office mein premium professional portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same face and identity. Create an ultra-realistic professional corporate portrait of the same person wearing a premium formal outfit, standing inside a modern office, confident posture, natural window light, sophisticated background, realistic skin texture, professional DSLR photography, cinematic depth of field, premium business editorial style, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 22 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🧢 Prompt 22 — Y2K Street Style
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1400&q=85"
+alt="Y2K fashion example">
+
+<div class="prompt-body">
+
+<span class="tag">Y2K</span>
+
+<p>
+2000s inspired fashion, colorful street background aur retro camera look.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same facial identity and natural features. Transform the image into a stylish early-2000s Y2K-inspired street fashion photograph. Give the same person a trendy Y2K outfit, retro accessories, colorful urban background, direct camera flash, subtle film grain, realistic skin texture, authentic early-digital-camera aesthetic, natural pose, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 23 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🌆 Prompt 23 — Rooftop Sunset Attitude
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1400&q=85"
+alt="City rooftop example">
+
+<div class="prompt-body">
+
+<span class="tag">Rooftop</span>
+
+<p>
+Rooftop par city skyline aur sunset ke saath attitude shot.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same person's facial identity. Create an ultra-realistic cinematic rooftop portrait of the same person wearing a stylish dark outfit, standing confidently on a high-rise rooftop, modern city skyline in the background, dramatic sunset sky, soft wind, cinematic lighting, DSLR photography, realistic skin texture, shallow depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 24 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🌲 Prompt 24 — Forest Cinematic
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=85"
+alt="Forest example">
+
+<div class="prompt-body">
+
+<span class="tag">Nature Cinematic</span>
+
+<p>
+Green forest mein mysterious cinematic portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same face and identity. Create an ultra-realistic cinematic portrait of the same person walking through a beautiful green forest, stylish outdoor outfit, soft sunlight passing through trees, light atmospheric mist, confident natural pose, realistic skin texture, cinematic depth, DSLR photography, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 25 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🖤 Prompt 25 — Black & White Classic
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1400&q=85"
+alt="Black and white portrait example">
+
+<div class="prompt-body">
+
+<span class="tag">Classic</span>
+
+<p>
+Black-and-white professional portrait with strong shadows.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the exact same facial identity. Create a highly realistic black-and-white cinematic portrait of the same person wearing an elegant dark outfit, dramatic studio lighting, strong natural shadows, detailed facial features, realistic skin texture, professional DSLR portrait photography, classic editorial composition, timeless photorealistic photograph.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 26 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🚘 Prompt 26 — Road Trip Cinematic
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1400&q=85"
+alt="Road trip example">
+
+<div class="prompt-body">
+
+<span class="tag">Road Trip</span>
+
+<p>
+Open highway aur travel adventure ke saath cinematic photo.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same person's face and identity. Create an ultra-realistic cinematic road-trip portrait of the same person standing beside a stylish car on an open highway, mountains in the distance, fashionable casual outfit, golden sunset, adventurous atmosphere, realistic car details, DSLR photography, cinematic composition, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 27 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+❄️ Prompt 27 — Snow Mountain Luxury
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1517825738774-7de9363ef735?auto=format&fit=crop&w=1400&q=85"
+alt="Snow mountain example">
+
+<div class="prompt-body">
+
+<span class="tag">Winter</span>
+
+<p>
+Snow mountains aur premium winter outfit.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same facial identity. Create an ultra-realistic cinematic winter travel portrait of the same person wearing a premium winter jacket, standing in a beautiful snowy mountain landscape, snowy peaks in the background, soft morning light, natural confident pose, realistic cold atmosphere, DSLR photography, cinematic depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 28 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🎧 Prompt 28 — Music Creator Studio
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1598387993281-cecf8b71a8f8?auto=format&fit=crop&w=1400&q=85"
+alt="Studio creator example">
+
+<div class="prompt-body">
+
+<span class="tag">Creator Style</span>
+
+<p>
+Music/content studio mein modern creator look.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same person's facial identity. Create an ultra-realistic cinematic creator-studio portrait of the same person wearing a stylish modern outfit, standing inside a professional music and content studio, microphones and studio lights softly visible in the background, dramatic lighting, confident expression, realistic skin texture, DSLR photography, cinematic depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 29 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🎬 Prompt 29 — Cinematic Movie Poster
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1400&q=85"
+alt="Cinematic portrait example">
+
+<div class="prompt-body">
+
+<span class="tag">Movie Look</span>
+
+<p>
+Cinematic movie-poster jaisa powerful portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same facial identity and natural features. Create an ultra-realistic cinematic movie-poster style portrait of the same person wearing a stylish dark outfit, dramatic background, strong rim lighting, atmospheric depth, confident expression, realistic skin texture, professional cinema photography, cinematic shadows, high detail, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 30 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🌊 Prompt 30 — Ocean Blue Aesthetic
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85"
+alt="Ocean example">
+
+<div class="prompt-body">
+
+<span class="tag">Blue Aesthetic</span>
+
+<p>
+Ocean, blue tones aur clean cinematic fashion look.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same person's face and identity. Create an ultra-realistic cinematic ocean-side portrait of the same person wearing a stylish blue and white outfit, standing near the sea, beautiful blue water and sky, soft natural daylight, confident relaxed pose, realistic skin texture, premium travel photography, DSLR quality, cinematic depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 31 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🏙️ Prompt 31 — Urban Black & Red
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1400&q=85"
+alt="Urban fashion example">
+
+<div class="prompt-body">
+
+<span class="tag">Black & Red</span>
+
+<p>
+Black outfit ke saath red lighting aur modern urban atmosphere.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same facial identity. Create an ultra-realistic cinematic urban fashion portrait of the same person wearing a black outfit with subtle red accents, standing against a modern city wall, dramatic red and neutral lighting, confident attitude, realistic skin texture, detailed clothing, DSLR photography, cinematic shadows, shallow depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 32 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+📻 Prompt 32 — Old Indian Studio Portrait
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1400&q=85"
+alt="Classic portrait example">
+
+<div class="prompt-body">
+
+<span class="tag">Vintage Studio</span>
+
+<p>
+Old Indian studio photography jaisa classic portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same person's facial identity. Create an authentic vintage Indian studio portrait inspired by classic analog photography, retro outfit, simple studio background, soft flash lighting, subtle film grain, slightly faded colors, realistic skin texture, natural pose, authentic old-camera appearance, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 33 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🌙 Prompt 33 — Midnight Luxury Look
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1400&q=85"
+alt="Night city example">
+
+<div class="prompt-body">
+
+<span class="tag">Midnight</span>
+
+<p>
+Dark night city, luxury outfit aur dramatic lighting.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same face and identity. Create an ultra-realistic midnight luxury portrait of the same person wearing an elegant black outfit, standing on a modern city street at night, premium buildings and lights in the background, dramatic cinematic lighting, realistic reflections, confident pose, DSLR photography, photorealistic skin texture, cinematic depth of field.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 34 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🌸 Prompt 34 — Soft Aesthetic Portrait
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=1400&q=85"
+alt="Soft portrait example">
+
+<div class="prompt-body">
+
+<span class="tag">Aesthetic</span>
+
+<p>
+Soft light, clean background aur premium aesthetic portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same person's facial identity and natural features. Create an ultra-realistic soft aesthetic portrait of the same person wearing a clean stylish outfit, beautiful minimal background, soft natural window lighting, gentle shadows, realistic skin texture, subtle background blur, professional portrait photography, natural expression, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 35 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+📷 Prompt 35 — Disposable Camera Trend
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=85"
+alt="Camera photography example">
+
+<div class="prompt-body">
+
+<span class="tag">Disposable Camera</span>
+
+<p>
+Casual candid photo, flash aur imperfect film-camera effect.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same facial identity. Create an authentic disposable-camera style photograph of the same person wearing a stylish casual outfit, candid confident pose, direct camera flash, slightly imperfect framing, realistic film grain, subtle motion and exposure imperfections, natural skin texture, nostalgic social-media aesthetic, photorealistic analog photograph.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 36 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🔥 Prompt 36 — Streetwear Night Shoot
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=85"
+alt="Streetwear example">
+
+<div class="prompt-body">
+
+<span class="tag">Streetwear</span>
+
+<p>
+Oversized streetwear, city lights aur fashion shoot.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same facial identity and recognizable appearance. Create an ultra-realistic modern streetwear fashion portrait of the same person wearing an oversized stylish outfit, sneakers and subtle accessories, standing in a city at night, glowing street lights, confident attitude, cinematic lighting, realistic skin texture, professional fashion photography, shallow depth of field, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 37 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+💙 Prompt 37 — Blue Hour Cinematic
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=85"
+alt="Blue hour city example">
+
+<div class="prompt-body">
+
+<span class="tag">Blue Hour</span>
+
+<p>
+Sunset ke baad blue-hour sky aur cinematic city portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same person's facial identity and natural features. Create an ultra-realistic cinematic blue-hour portrait of the same person wearing a premium dark outfit, standing in a modern city environment shortly after sunset, deep blue sky, city lights turning on, confident natural pose, realistic skin texture, DSLR photography, cinematic depth of field, premium editorial look, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 38 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🧳 Prompt 38 — Vintage Traveller 1970s
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1400&q=85"
+alt="Vintage travel example">
+
+<div class="prompt-body">
+
+<span class="tag">1970s Travel</span>
+
+<p>
+1970s inspired traveller look with vintage camera effect.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same facial identity. Transform the image into an authentic 1970s-inspired travel photograph. Give the same person vintage travel clothing, classic luggage, an old railway-station environment, warm analog film colors, subtle grain, realistic vintage camera exposure, natural candid pose, nostalgic atmosphere, highly photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 39 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+👔 Prompt 39 — White Shirt Minimal Look
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1400&q=85"
+alt="Minimal portrait example">
+
+<div class="prompt-body">
+
+<span class="tag">Minimal Fashion</span>
+
+<p>
+Simple white shirt, clean background aur premium DSLR portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Preserve the same face and identity. Create an ultra-realistic minimal fashion portrait of the same person wearing a clean white shirt, standing against a simple elegant background, soft natural studio lighting, confident relaxed expression, realistic skin texture, sharp facial details, professional DSLR photography, subtle shadows, premium editorial portrait, photorealistic.</div>
+
+</div>
+</div>
+
+
+<!-- PROMPT 40 -->
+
+<div class="prompt-card">
+
+<div class="prompt-heading">
+🎞️ Prompt 40 — Cinematic Red Light Portrait
+</div>
+
+<div class="photo-title">
+📸 Example / Reference Visual
+</div>
+
+<img class="example-photo"
+src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1400&q=85"
+alt="Cinematic portrait example">
+
+<div class="prompt-body">
+
+<span class="tag">Cinematic Red Light</span>
+
+<p>
+Dark studio, red cinematic lighting aur strong attitude portrait.
+</p>
+
+<div class="prompt-box">Use the uploaded photo as the identity reference. Keep the same person's facial identity and natural facial features. Create an ultra-realistic cinematic portrait of the same person wearing a stylish black outfit, standing in a dark studio environment with dramatic red cinematic side lighting, subtle atmospheric depth, confident expression, realistic skin texture, detailed clothing, professional DSLR photography, shallow depth of field, high-end editorial photography, photorealistic.</div>
+
+</div>
+</div>
+
+
+<div class="card">
+
+<h2>🎯 Prompt Ko Aur Better Kaise Banaye?</h2>
+
+<p>
+Agar first result perfect na aaye to poora prompt change karne
+ki zarurat nahi hai. Sirf required part ko modify karein.
+</p>
+
+<table>
+
+<tr>
+<th>Agar kya change karna hai</th>
+<th>Prompt mein kya change karein</th>
+</tr>
+
+<tr>
+<td>Kapde</td>
+<td>Outfit description change karein</td>
+</tr>
+
+<tr>
+<td>Background</td>
+<td>Location change karein</td>
+</tr>
+
+<tr>
+<td>Light</td>
+<td>Lighting description change karein</td>
+</tr>
+
+<tr>
+<td>Pose</td>
+<td>Standing, walking, sitting etc. likhein</td>
+</tr>
+
+<tr>
+<td>Photo Style</td>
+<td>Film, DSLR, editorial, cinematic etc.</td>
+</tr>
+
+<tr>
+<td>Color</td>
+<td>Warm, cool, black and white etc.</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="card">
+
+<h2>📸 Apni Photo Ke Liye Best Reference Image Tips</h2>
+
+<ul>
+
+<li>Face clearly visible hona chahiye.</li>
+
+<li>Bahut dark photo avoid karein.</li>
+
+<li>Face par unnecessary objects na ho.</li>
+
+<li>High-quality photo use karna better hota hai.</li>
+
+<li>Ek simple clear photo se starting kar sakte hain.</li>
+
+<li>Agar tool multiple reference photos support karta hai to instructions ke according use karein.</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>⚠️ AI Photo Use Karte Samay Safety</h2>
+
+<div class="warning">
+
+AI mein kisi aur person ki photo bina permission ke upload karke
+unke naam ya identity ka misuse nahi karna chahiye.
+
+</div>
+
+<ul>
+
+<li>Apni photo ya permission wali photo use karein.</li>
+
+<li>Personal documents ki photo AI tools mein upload na karein.</li>
+
+<li>Private information wali image upload karne se pehle carefully check karein.</li>
+
+<li>AI generated image ko real photograph batakar misleading use na karein.</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>📝 Practice Questions</h2>
+
+<ol>
+
+<li>AI kya hai?</li>
+
+<li>AI ka full form kya hai?</li>
+
+<li>Generative AI kya hota hai?</li>
+
+<li>Prompt kya hota hai?</li>
+
+<li>AI image prompt mein kya-kya information di ja sakti hai?</li>
+
+<li>Reference photo kya hoti hai?</li>
+
+<li>AI image mein face identity preserve karne ka kya purpose hai?</li>
+
+<li>AI image generate karne ke liye prompt kyon important hai?</li>
+
+<li>1980s retro photo ka kya matlab hai?</li>
+
+<li>Film camera effect kya hota hai?</li>
+
+<li>Golden hour photography kya hoti hai?</li>
+
+<li>Cinematic photography kya hoti hai?</li>
+
+<li>Old Money style kya hota hai?</li>
+
+<li>Y2K style kis type ke fashion se related hai?</li>
+
+<li>Direct flash photography kya hoti hai?</li>
+
+<li>Prompt mein outfit ki details kyon deni chahiye?</li>
+
+<li>Prompt mein background ki details kyon useful hain?</li>
+
+<li>AI generated photo ko improve kaise kar sakte hain?</li>
+
+<li>Reference photo clear kyon honi chahiye?</li>
+
+<li>AI photo banate samay privacy ka dhyan kyon rakhna chahiye?</li>
+
+</ol>
+
+</div>
+
+
+<div class="card">
+
+<h2>❓ MCQ</h2>
+
+
+<h3>1. AI ka full form kya hai?</h3>
+
+<p>
+क) Artificial Intelligence<br>
+ख) Automatic Internet<br>
+ग) Advanced Image<br>
+घ) Active Information
+</p>
+
+<p><b>उत्तर: क) Artificial Intelligence</b></p>
+
+
+<h3>2. AI ko instruction dene ko kya kaha jaata hai?</h3>
+
+<p>
+क) Prompt<br>
+ख) Folder<br>
+ग) Browser<br>
+घ) File
+</p>
+
+<p><b>उत्तर: क) Prompt</b></p>
+
+
+<h3>3. Apni photo ko AI image tool mein kya use kiya ja sakta hai?</h3>
+
+<p>
+क) Reference image<br>
+ख) Printer<br>
+ग) Keyboard<br>
+घ) Speaker
+</p>
+
+<p><b>उत्तर: क) Reference image</b></p>
+
+
+<h3>4. 1980s style mein kya important hota hai?</h3>
+
+<p>
+क) Vintage clothing aur film-camera look<br>
+ख) Modern computer screen<br>
+ग) Spreadsheet<br>
+घ) Email
+</p>
+
+<p><b>उत्तर: क) Vintage clothing aur film-camera look</b></p>
+
+
+<h3>5. Golden hour kis cheez se related hai?</h3>
+
+<p>
+क) Photography lighting<br>
+ख) Keyboard<br>
+ग) Printing<br>
+घ) File storage
+</p>
+
+<p><b>उत्तर: क) Photography lighting</b></p>
+
+
+<h3>6. Y2K style kis cheez se related hai?</h3>
+
+<p>
+क) Early-2000s inspired fashion<br>
+ख) Computer repair<br>
+ग) Internet speed<br>
+घ) Spreadsheet
+</p>
+
+<p><b>उत्तर: क) Early-2000s inspired fashion</b></p>
+
+
+<h3>7. AI photo ka result improve karne ke liye kya kar sakte hain?</h3>
+
+<p>
+क) Prompt ko improve karein<br>
+ख) Computer tod dein<br>
+ग) Screen hata dein<br>
+घ) Keyboard disconnect karein
+</p>
+
+<p><b>उत्तर: क) Prompt ko improve karein</b></p>
+
+
+<h3>8. Face identity ke liye kya useful ho sakta hai?</h3>
+
+<p>
+क) Clear reference photo<br>
+ख) Blank page<br>
+ग) Printer<br>
+घ) Speaker
+</p>
+
+<p><b>उत्तर: क) Clear reference photo</b></p>
+
+
+<h3>9. Direct flash ka kya matlab hai?</h3>
+
+<p>
+क) Camera flash se directly subject ko illuminate karna<br>
+ख) Computer ko restart karna<br>
+ग) File save karna<br>
+घ) Internet disconnect karna
+</p>
+
+<p><b>उत्तर: क) Camera flash se directly subject ko illuminate karna</b></p>
+
+
+<h3>10. AI photo mein privacy ke liye kya karna chahiye?</h3>
+
+<p>
+क) Private information wali photos carefully handle karein<br>
+ख) Har personal document upload karein<br>
+ग) Password share karein<br>
+घ) OTP share karein
+</p>
+
+<p><b>उत्तर: क) Private information wali photos carefully handle karein</b></p>
+
+
+<h3>11. Old Money style generally kis type ka look deta hai?</h3>
+
+<p>
+क) Elegant aur sophisticated look<br>
+ख) Gaming screen<br>
+ग) Cartoon interface<br>
+घ) Spreadsheet
+</p>
+
+<p><b>उत्तर: क) Elegant aur sophisticated look</b></p>
+
+
+<h3>12. Cinematic photo mein kya important ho sakta hai?</h3>
+
+<p>
+क) Lighting, composition aur depth<br>
+ख) Sirf file name<br>
+ग) Sirf keyboard<br>
+घ) Sirf printer
+</p>
+
+<p><b>उत्तर: क) Lighting, composition aur depth</b></p>
+
+</div>
+
+
+<div class="card">
+
+<h2>🎯 Final Practical Project</h2>
+
+<p>
+Ab apni photo ke saath kam se kam 5 different styles try karein:
+</p>
+
+<ol>
+
+<li>1980s Retro</li>
+
+<li>Red Outfit</li>
+
+<li>Old Money</li>
+
+<li>Rainy Cinematic</li>
+
+<li>Y2K Street Style</li>
+
+</ol>
+
+<div class="success">
+
+<b>Challenge:</b>
+
+In 5 styles mein se jo result sabse achha lage,
+us prompt ko edit karke apna custom style create karein.
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>📚 Lesson 1 Summary</h2>
+
+<p>
+Is lesson mein humne AI, Generative AI aur Prompt ke baare mein
+basic information seekhi. Humne samjha ki reference photo ke saath
+AI image transformation kaise ki ja sakti hai.
+</p>
+
+<p>
+Humne 35 se zyada different trending-style photo concepts dekhe,
+jinhe apni photo ke saath try kiya ja sakta hai.
+</p>
+
+<div class="success">
+
+<b>🎉 Lesson 1 Complete!</b>
+
+<br><br>
+
+Agle lesson mein hum seekhenge:
+
+<br><br>
+
+🎬 AI Video Kaise Banaye<br>
+🆓 Free AI Video Tools<br>
+💳 Paid AI Video Tools<br>
+🖼️ Image To Video<br>
+✍️ Video Prompts<br>
+🎙️ AI Voice Over<br>
+🎵 Background Music<br>
+👤 Face Consistency<br>
+🎞️ Multiple Clips Ko Jodna<br>
+📱 YouTube Shorts / Instagram Reels<br>
+🎥 Complete AI Video Project
+
+</div>
+
+</div>
+
+
+<div class="nav-buttons">
+
+<a href="index.html" class="btn">
+🏠 Home
+</a>
+
+<a href="internet-basics-lesson2.html" class="btn">
+⬅️ Internet
+</a>
+
+<a href="ai-tools-lesson2.html" class="btn">
+🎬 AI Lesson 2
+</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Computer Siksha</p>
+
+<p>Learn • Practice • Grow</p>
+
+</footer>
+
+
+</body>
+</html>

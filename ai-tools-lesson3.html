@@ -1,0 +1,1617 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+
+<title>AI Tools - Lesson 3 | Computer Siksha</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#0f2a5f;
+    color:white;
+    padding:28px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:34px;
+}
+
+header p{
+    margin:5px 0 0;
+    font-size:16px;
+}
+
+nav{
+    background:#123875;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 9px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+h2{
+    color:#0f2a5f;
+    border-left:5px solid #2563eb;
+    padding-left:12px;
+    margin-top:35px;
+}
+
+h3{
+    color:#123875;
+}
+
+.card{
+    background:white;
+    padding:22px;
+    margin:20px 0;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.info{
+    background:#eaf2ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.important{
+    background:#fff5d9;
+    border-left:5px solid #f59e0b;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.success{
+    background:#e9f9ef;
+    border-left:5px solid #16a34a;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.warning{
+    background:#fff0f0;
+    border-left:5px solid #dc2626;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.step{
+    background:#f8fafc;
+    border:1px solid #dbe3ef;
+    padding:16px;
+    margin:12px 0;
+    border-radius:10px;
+}
+
+.step-number{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    width:32px;
+    height:32px;
+    line-height:32px;
+    text-align:center;
+    border-radius:50%;
+    font-weight:bold;
+    margin-right:8px;
+}
+
+.prompt-box{
+    background:#111827;
+    color:#e5e7eb;
+    padding:18px;
+    border-radius:10px;
+    margin:15px 0;
+    overflow:auto;
+}
+
+.prompt-box pre{
+    margin:0;
+    white-space:pre-wrap;
+    font-size:14px;
+}
+
+.example{
+    background:#f8fafc;
+    border:2px solid #dbeafe;
+    padding:18px;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+.ai-screen{
+    background:#111827;
+    color:white;
+    padding:20px;
+    border-radius:12px;
+    margin:20px 0;
+}
+
+.screen-title{
+    background:#2563eb;
+    padding:10px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.screen-content{
+    background:#374151;
+    padding:30px 20px;
+    margin-top:10px;
+    border-radius:7px;
+    text-align:center;
+    font-size:22px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #d7dee9;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#eaf2ff;
+    color:#0f2a5f;
+}
+
+ul,ol{
+    padding-left:25px;
+}
+
+.project{
+    background:#eefbf3;
+    border:2px solid #86efac;
+    padding:22px;
+    border-radius:12px;
+}
+
+.nav-buttons{
+    text-align:center;
+    margin:40px 0;
+}
+
+.nav-buttons a{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    margin:6px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.nav-buttons a:hover{
+    background:#0f2a5f;
+}
+
+footer{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:22px;
+    margin-top:40px;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+<h1>🤖 AI Tools – Lesson 3</h1>
+
+<p>AI से पढ़ाई, लिखाई, Presentation और Daily Work</p>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="internet-basics-lesson2.html">Internet Basics</a>
+
+<a href="ai-tools-lesson1.html">AI Lesson 1</a>
+
+<a href="ai-tools-lesson2.html">AI Lesson 2</a>
+
+<a href="ai-tools-lesson3.html">AI Lesson 3</a>
+
+</nav>
+
+
+<div class="container">
+
+
+<!-- INTRO -->
+
+<div class="card">
+
+<h2>1. Lesson 3 में क्या सीखेंगे?</h2>
+
+<p>
+इस Lesson में हम AI का उपयोग केवल फोटो और वीडियो बनाने के लिए नहीं,
+बल्कि पढ़ाई, नोट्स बनाने, लेखन, Presentation, प्रश्नों के उत्तर,
+अनुवाद, विचार बनाने और रोजमर्रा के काम में करना सीखेंगे।
+</p>
+
+<div class="info">
+
+<b>इस Lesson का मुख्य उद्देश्य:</b>
+
+<br>
+
+AI को एक उपयोगी सहायक की तरह इस्तेमाल करना सीखना,
+लेकिन महत्वपूर्ण जानकारी को स्वयं जाँचकर ही उपयोग करना।
+
+</div>
+
+</div>
+
+
+<!-- AI FOR STUDY -->
+
+<div class="card">
+
+<h2>2. AI से पढ़ाई कैसे करें?</h2>
+
+<p>
+AI किसी विषय को आसान भाषा में समझाने, उदाहरण देने,
+अभ्यास प्रश्न बनाने और पढ़ाई की योजना तैयार करने में मदद कर सकता है।
+</p>
+
+<div class="step">
+
+<span class="step-number">1</span>
+
+जिस विषय को समझना है उसका नाम लिखें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">2</span>
+
+बताएँ कि आप किस कक्षा में पढ़ते हैं।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">3</span>
+
+बताएँ कि आपको उत्तर किस भाषा में चाहिए।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">4</span>
+
+AI से उदाहरण और अभ्यास प्रश्न माँगें।
+
+</div>
+
+</div>
+
+
+<!-- STUDY PROMPT -->
+
+<div class="card">
+
+<h2>3. पढ़ाई के लिए AI Prompt</h2>
+
+<div class="prompt-box">
+
+<pre>
+मैं कक्षा 12 का विद्यार्थी हूँ।
+मुझे [विषय का नाम] बहुत आसान हिंदी में समझाइए।
+
+पहले विषय की Basic जानकारी दीजिए।
+फिर आसान उदाहरण दीजिए।
+अंत में 10 महत्वपूर्ण प्रश्न
+और उनके उत्तर दीजिए।
+</pre>
+
+</div>
+
+<div class="success">
+
+इस तरह का Prompt AI को आपके स्तर और जरूरत के बारे में स्पष्ट जानकारी देता है।
+
+</div>
+
+</div>
+
+
+<!-- CHAPTER SUMMARY -->
+
+<div class="card">
+
+<h2>4. किसी Chapter का Summary बनाना</h2>
+
+<p>
+यदि आपके पास किसी Chapter का Text है तो उसे AI में देकर उसका छोटा और आसान Summary
+बनाने में मदद ली जा सकती है।
+</p>
+
+<div class="prompt-box">
+
+<pre>
+नीचे दिए गए Chapter को आसान हिंदी में समझाइए।
+
+मुख्य विचार अलग-अलग बिंदुओं में बताइए।
+कठिन शब्दों के आसान अर्थ बताइए।
+अंत में परीक्षा के लिए महत्वपूर्ण बातें लिखिए।
+
+[यहाँ Chapter का Text डालें]
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- NOTES -->
+
+<div class="card">
+
+<h2>5. AI से Notes बनाना</h2>
+
+<p>
+AI की मदद से किसी बड़े विषय को छोटे और व्यवस्थित Notes में बदला जा सकता है।
+</p>
+
+<div class="example">
+
+<b>उदाहरण:</b>
+
+<br><br>
+
+विषय: कंप्यूटर की मेमोरी
+
+<br><br>
+
+AI से आप पूछ सकते हैं:
+
+<br><br>
+
+“कंप्यूटर मेमोरी के प्रकार आसान हिंदी में समझाइए और
+परीक्षा के लिए छोटे Notes बनाइए।”
+
+</div>
+
+</div>
+
+
+<!-- QUESTIONS -->
+
+<div class="card">
+
+<h2>6. AI से Practice Questions बनाना</h2>
+
+<div class="prompt-box">
+
+<pre>
+कक्षा 12 के [विषय] के लिए
+20 महत्वपूर्ण अभ्यास प्रश्न बनाइए।
+
+10 प्रश्न छोटे उत्तर वाले
+और 10 प्रश्न लंबे उत्तर वाले रखें।
+
+अंत में सभी प्रश्नों के उत्तर भी दीजिए।
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- MCQ -->
+
+<div class="card">
+
+<h2>7. AI से MCQ बनाना</h2>
+
+<div class="prompt-box">
+
+<pre>
+[विषय] पर 20 महत्वपूर्ण MCQ बनाइए।
+
+हर प्रश्न के चार विकल्प हों।
+सही उत्तर अंत में बताइए।
+प्रश्न कक्षा 12 के स्तर के हों।
+</pre>
+
+</div>
+
+<div class="important">
+
+AI से बनाए गए उत्तरों को परीक्षा में लिखने से पहले
+अपनी किताब या शिक्षक से मिलाकर देखना अच्छा अभ्यास है।
+
+</div>
+
+</div>
+
+
+<!-- EXAM PREPARATION -->
+
+<div class="card">
+
+<h2>8. AI से Exam Preparation</h2>
+
+<p>
+AI से परीक्षा की तैयारी के लिए Revision Plan बनाया जा सकता है।
+</p>
+
+<div class="prompt-box">
+
+<pre>
+मेरी परीक्षा की तैयारी के लिए 15 दिन का Study Plan बनाइए।
+
+मैं कक्षा 12 में पढ़ता हूँ।
+
+मेरे विषय:
+1. हिंदी
+2. अंग्रेजी
+3. अकाउंटेंसी
+4. सांख्यिकी
+5. कंप्यूटर
+
+हर दिन के लिए पढ़ने के विषय,
+Revision और Practice का समय बताइए।
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- TRANSLATION -->
+
+<div class="card">
+
+<h2>9. AI से Translation</h2>
+
+<p>
+AI की मदद से किसी Text को एक भाषा से दूसरी भाषा में समझने में सहायता ली जा सकती है।
+</p>
+
+<div class="prompt-box">
+
+<pre>
+इस अंग्रेजी Paragraph का आसान हिंदी में अनुवाद कीजिए।
+अर्थ बिल्कुल स्पष्ट रखें।
+कठिन शब्दों के आसान अर्थ भी बताइए।
+
+[यहाँ Text डालें]
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- WRITING -->
+
+<div class="card">
+
+<h2>10. AI से Writing में मदद</h2>
+
+<p>
+AI का उपयोग आवेदन, ईमेल, पत्र, परिचय, लेख और अन्य लेखन के Draft तैयार करने में किया जा सकता है।
+</p>
+
+<table>
+
+<tr>
+<th>काम</th>
+<th>AI से क्या मदद मिल सकती है?</th>
+</tr>
+
+<tr>
+<td>आवेदन</td>
+<td>आवेदन का प्रारूप</td>
+</tr>
+
+<tr>
+<td>ईमेल</td>
+<td>ईमेल का Draft</td>
+</tr>
+
+<tr>
+<td>पत्र</td>
+<td>पत्र का प्रारूप</td>
+</tr>
+
+<tr>
+<td>लेख</td>
+<td>विचार और संरचना</td>
+</tr>
+
+<tr>
+<td>परिचय</td>
+<td>Professional परिचय का Draft</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- BETTER PROMPT -->
+
+<div class="card">
+
+<h2>11. अच्छा Prompt कैसे लिखें?</h2>
+
+<p>
+AI को बेहतर परिणाम देने के लिए Prompt में स्पष्ट जानकारी देना जरूरी है।
+</p>
+
+<table>
+
+<tr>
+<th>जानकारी</th>
+<th>उदाहरण</th>
+</tr>
+
+<tr>
+<td>काम</td>
+<td>एक लेख लिखिए</td>
+</tr>
+
+<tr>
+<td>विषय</td>
+<td>कंप्यूटर शिक्षा</td>
+</tr>
+
+<tr>
+<td>भाषा</td>
+<td>आसान हिंदी</td>
+</tr>
+
+<tr>
+<td>लंबाई</td>
+<td>500 शब्द</td>
+</tr>
+
+<tr>
+<td>शैली</td>
+<td>विद्यार्थियों के लिए</td>
+</tr>
+
+<tr>
+<td>Format</td>
+<td>Heading और Points</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- PROMPT FORMULA -->
+
+<div class="card">
+
+<h2>12. Prompt Formula</h2>
+
+<div class="ai-screen">
+
+<div class="screen-title">
+PROMPT FORMULA
+</div>
+
+<div class="screen-content">
+
+काम + विषय + भाषा + लंबाई + शैली + Format
+
+</div>
+
+</div>
+
+<div class="example">
+
+<b>उदाहरण:</b>
+
+<br><br>
+
+“कक्षा 12 के विद्यार्थियों के लिए कंप्यूटर के लाभ पर
+आसान हिंदी में 300 शब्दों का लेख लिखिए।
+Heading और छोटे Points का उपयोग कीजिए।”
+
+</div>
+
+</div>
+
+
+<!-- PRESENTATION -->
+
+<div class="card">
+
+<h2>13. AI से Presentation बनाना</h2>
+
+<p>
+AI की सहायता से Presentation के लिए Topic, Slide Titles,
+मुख्य Points और बोलने के लिए Script तैयार की जा सकती है।
+</p>
+
+<div class="step">
+
+<span class="step-number">1</span>
+
+Presentation का Topic बताइए।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">2</span>
+
+कितनी Slides चाहिए यह बताइए।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">3</span>
+
+हर Slide के मुख्य Points माँगिए।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">4</span>
+
+हर Slide के लिए Image Idea माँगिए।
+
+</div>
+
+</div>
+
+
+<!-- PRESENTATION PROMPT -->
+
+<div class="card">
+
+<h2>14. Presentation Prompt Example</h2>
+
+<div class="prompt-box">
+
+<pre>
+“कंप्यूटर के प्रकार” विषय पर
+10 Slides की Presentation का Content तैयार कीजिए।
+
+हर Slide में:
+1. छोटा Title
+2. 3 से 5 मुख्य Points
+3. Image Idea
+
+भाषा आसान हिंदी रखें।
+Content विद्यार्थियों के लिए उपयुक्त हो।
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- PPT VISUAL -->
+
+<div class="card">
+
+<h2>15. Presentation की Basic Structure</h2>
+
+<div class="ai-screen">
+
+<div class="screen-title">
+📊 PRESENTATION
+</div>
+
+<div class="screen-content">
+
+<b>Slide 1</b><br>
+Title
+
+<br><br>
+
+<b>Slide 2</b><br>
+Introduction
+
+<br><br>
+
+<b>Slide 3–8</b><br>
+Main Topic
+
+<br><br>
+
+<b>Slide 9</b><br>
+Summary
+
+<br><br>
+
+<b>Slide 10</b><br>
+Thank You
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- IMAGE EDITING -->
+
+<div class="card">
+
+<h2>16. AI से Photo Editing</h2>
+
+<p>
+कुछ AI उपकरण फोटो में बदलाव करने में सहायता कर सकते हैं।
+जैसे Background बदलना, प्रकाश सुधारना, वस्तु हटाना या नया दृश्य बनाना।
+</p>
+
+<div class="info">
+
+यदि किसी व्यक्ति की फोटो इस्तेमाल की जा रही है,
+तो उसकी अनुमति और Privacy का ध्यान रखना जरूरी है।
+
+</div>
+
+</div>
+
+
+<!-- PHOTO EDIT PROMPT -->
+
+<div class="card">
+
+<h2>17. Photo Editing Prompt Example</h2>
+
+<div class="prompt-box">
+
+<pre>
+Edit the uploaded photo.
+
+Keep the person's identity and facial features consistent.
+
+Change the background to a modern city street
+during golden hour.
+
+Keep realistic lighting and natural shadows.
+Maintain realistic proportions and natural appearance.
+Create a clean cinematic photograph.
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- BACKGROUND -->
+
+<div class="card">
+
+<h2>18. Background बदलने के लिए Prompt</h2>
+
+<div class="prompt-box">
+
+<pre>
+Use the uploaded photo.
+
+Keep the person unchanged.
+
+Replace only the background with
+a beautiful mountain landscape.
+
+Match the lighting and shadows naturally.
+Keep the result realistic.
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- IMAGE QUALITY -->
+
+<div class="card">
+
+<h2>19. AI Image की Quality सुधारना</h2>
+
+<p>
+AI Image बनाते समय कुछ सामान्य बातों का ध्यान रखा जा सकता है।
+</p>
+
+<ul>
+
+<li>साफ Reference Image का उपयोग करें।</li>
+
+<li>Prompt में मुख्य विषय स्पष्ट रखें।</li>
+
+<li>बहुत अधिक चीजें एक साथ न माँगें।</li>
+
+<li>Lighting और Background स्पष्ट करें।</li>
+
+<li>Result को ध्यान से जाँचें।</li>
+
+</ul>
+
+</div>
+
+
+<!-- AI FACT CHECK -->
+
+<div class="card">
+
+<h2>20. AI के उत्तर की जाँच क्यों करें?</h2>
+
+<p>
+AI कभी-कभी गलत या अधूरी जानकारी दे सकता है।
+इसलिए महत्वपूर्ण जानकारी को दूसरी विश्वसनीय जगह से जाँचना जरूरी है।
+</p>
+
+<div class="warning">
+
+<b>विशेष ध्यान:</b>
+
+<br>
+
+परीक्षा, कानून, पैसे, स्वास्थ्य या अन्य महत्वपूर्ण मामलों में
+AI के उत्तर को अंतिम सत्य मानकर सीधे उपयोग नहीं करना चाहिए।
+
+</div>
+
+</div>
+
+
+<!-- AI BRAINSTORM -->
+
+<div class="card">
+
+<h2>21. AI से नए Ideas लेना</h2>
+
+<p>
+यदि आपको किसी Project या Video के लिए Idea नहीं मिल रहा है,
+तो AI से कई Ideas माँगे जा सकते हैं।
+</p>
+
+<div class="prompt-box">
+
+<pre>
+मुझे Computer Education पर
+20 YouTube Video Ideas दीजिए।
+
+Ideas विद्यार्थियों के लिए उपयोगी हों।
+हर Idea के साथ एक छोटा Hook भी दीजिए।
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- YOUTUBE -->
+
+<div class="card">
+
+<h2>22. AI से YouTube Video Planning</h2>
+
+<div class="prompt-box">
+
+<pre>
+मेरे YouTube चैनल के लिए
+Computer Learning पर एक Short Video की योजना बनाइए।
+
+इसमें शामिल करें:
+
+1. Hook
+2. Main Topic
+3. 3 Scene
+4. Voice Over
+5. Ending
+6. CTA
+7. Thumbnail Idea
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- SOCIAL MEDIA -->
+
+<div class="card">
+
+<h2>23. Social Media के लिए AI</h2>
+
+<p>
+AI की मदद से Social Media Content की योजना बनाने में सहायता ली जा सकती है।
+</p>
+
+<table>
+
+<tr>
+<th>काम</th>
+<th>उदाहरण</th>
+</tr>
+
+<tr>
+<td>Caption</td>
+<td>वीडियो का छोटा विवरण</td>
+</tr>
+
+<tr>
+<td>Title</td>
+<td>वीडियो का आकर्षक नाम</td>
+</tr>
+
+<tr>
+<td>Ideas</td>
+<td>अगली Videos के Ideas</td>
+</tr>
+
+<tr>
+<td>Script</td>
+<td>वीडियो की कहानी</td>
+</tr>
+
+<tr>
+<td>Thumbnail Idea</td>
+<td>Thumbnail का Concept</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- RESUME -->
+
+<div class="card">
+
+<h2>24. AI से Resume में मदद</h2>
+
+<p>
+AI आपके दिए हुए सही विवरण के आधार पर Resume का Format और भाषा सुधारने में मदद कर सकता है।
+</p>
+
+<div class="prompt-box">
+
+<pre>
+मेरे लिए एक सरल और Professional Resume का Draft तैयार कीजिए।
+
+नाम: [नाम]
+शहर: [शहर]
+शिक्षा: [शिक्षा]
+Skills: [Skills]
+Experience: Fresher
+
+Resume साफ और विद्यार्थियों के लिए उपयुक्त रखें।
+</pre>
+
+</div>
+
+<div class="important">
+
+अपनी निजी जानकारी केवल भरोसेमंद सेवा में ही साझा करें।
+
+</div>
+
+</div>
+
+
+<!-- DAILY WORK -->
+
+<div class="card">
+
+<h2>25. Daily Work में AI</h2>
+
+<ul>
+
+<li>किसी विषय को समझना</li>
+
+<li>Notes बनाना</li>
+
+<li>Ideas लेना</li>
+
+<li>लेखन सुधारना</li>
+
+<li>Translation में सहायता</li>
+
+<li>Presentation की योजना बनाना</li>
+
+<li>Video Script बनाना</li>
+
+<li>Image Prompt बनाना</li>
+
+<li>Video Prompt बनाना</li>
+
+<li>Study Plan बनाना</li>
+
+</ul>
+
+</div>
+
+
+<!-- WRONG PROMPT -->
+
+<div class="card">
+
+<h2>26. कमजोर Prompt और अच्छा Prompt</h2>
+
+<h3>❌ कमजोर Prompt</h3>
+
+<div class="prompt-box">
+
+<pre>
+Computer के बारे में बताओ।
+</pre>
+
+</div>
+
+<h3>✅ बेहतर Prompt</h3>
+
+<div class="prompt-box">
+
+<pre>
+कक्षा 12 के विद्यार्थी के लिए
+कंप्यूटर के मुख्य भाग आसान हिंदी में समझाइए।
+
+हर भाग का नाम, उसका काम और एक उदाहरण दीजिए।
+अंत में 10 परीक्षा उपयोगी प्रश्न भी बनाइए।
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- ITERATION -->
+
+<div class="card">
+
+<h2>27. AI से बेहतर Result कैसे लें?</h2>
+
+<p>
+पहला उत्तर पसंद न आए तो Prompt को बदलकर दोबारा पूछ सकते हैं।
+इसे Prompt सुधारना कहा जा सकता है।
+</p>
+
+<div class="step">
+
+<b>पहला Prompt:</b>
+
+<br>
+
+“Computer के बारे में समझाओ।”
+
+</div>
+
+<div class="step">
+
+<b>दूसरा Prompt:</b>
+
+<br>
+
+“Computer को कक्षा 12 के विद्यार्थी के स्तर पर आसान हिंदी में समझाओ।”
+
+</div>
+
+<div class="step">
+
+<b>तीसरा Prompt:</b>
+
+<br>
+
+“Computer को आसान हिंदी में समझाओ, उदाहरण दो,
+मुख्य Points बताओ और अंत में 10 MCQ बनाओ।”
+
+</div>
+
+<div class="success">
+
+जितनी स्पष्ट आवश्यकता होगी, AI को उतना बेहतर निर्देश मिलेगा।
+
+</div>
+
+</div>
+
+
+<!-- PRACTICAL -->
+
+<div class="project">
+
+<h2>🏆 28. Practical Project – AI Study Assistant</h2>
+
+<p>
+अब एक पूरा Practical Project करें।
+</p>
+
+<h3>Step 1 – Topic चुनें</h3>
+
+<p>
+किसी भी एक Computer Topic को चुनें।
+</p>
+
+<h3>Step 2 – Summary बनवाएँ</h3>
+
+<p>
+AI से Topic का आसान Summary बनवाएँ।
+</p>
+
+<h3>Step 3 – Notes बनवाएँ</h3>
+
+<p>
+उसी Topic के छोटे Notes बनवाएँ।
+</p>
+
+<h3>Step 4 – Questions बनवाएँ</h3>
+
+<p>
+10 Practice Questions और 10 MCQ बनवाएँ।
+</p>
+
+<h3>Step 5 – Presentation Plan</h3>
+
+<p>
+उसी Topic पर 5 Slides की Presentation का Content तैयार करवाएँ।
+</p>
+
+<h3>Step 6 – Video Idea</h3>
+
+<p>
+उसी Topic पर एक Short Video की Script बनवाएँ।
+</p>
+
+<div class="success">
+
+🎉 अब एक ही Topic से आपने Notes, Questions,
+Presentation और Video का Content तैयार कर लिया।
+
+</div>
+
+</div>
+
+
+<!-- PRIVACY -->
+
+<div class="card">
+
+<h2>29. AI इस्तेमाल करते समय Privacy</h2>
+
+<ul>
+
+<li>अपना Password AI में न डालें।</li>
+
+<li>OTP किसी AI या वेबसाइट के साथ साझा न करें।</li>
+
+<li>Bank की गोपनीय जानकारी साझा न करें।</li>
+
+<li>किसी की निजी फोटो बिना अनुमति इस्तेमाल न करें।</li>
+
+<li>बहुत निजी Documents अपलोड करने से पहले सावधानी रखें।</li>
+
+<li>AI सेवा की Privacy और Terms को समझने की कोशिश करें।</li>
+
+</ul>
+
+</div>
+
+
+<!-- COPYRIGHT -->
+
+<div class="card">
+
+<h2>30. Copyright का ध्यान</h2>
+
+<p>
+AI से Content बनाते समय भी दूसरे लोगों के Copyright का ध्यान रखना चाहिए।
+</p>
+
+<ul>
+
+<li>दूसरों की फोटो बिना अनुमति इस्तेमाल न करें।</li>
+
+<li>Copyright वाले Music का गलत उपयोग न करें।</li>
+
+<li>दूसरों का पूरा लेख या पुस्तक कॉपी न करें।</li>
+
+<li>अपने Content में अपना योगदान रखें।</li>
+
+</ul>
+
+</div>
+
+
+<!-- IMPORTANT -->
+
+<div class="card">
+
+<h2>31. Important Points</h2>
+
+<ul>
+
+<li>AI पढ़ाई में सहायक हो सकता है।</li>
+
+<li>AI से Notes और Summary बनाए जा सकते हैं।</li>
+
+<li>AI से Practice Questions और MCQ तैयार किए जा सकते हैं।</li>
+
+<li>AI से Study Plan बनाया जा सकता है।</li>
+
+<li>AI Translation में सहायता कर सकता है।</li>
+
+<li>AI से Presentation का Content तैयार किया जा सकता है।</li>
+
+<li>AI से Image Editing के लिए निर्देश दिए जा सकते हैं।</li>
+
+<li>अच्छा Prompt स्पष्ट होना चाहिए।</li>
+
+<li>पहला Result सही न हो तो Prompt सुधारें।</li>
+
+<li>महत्वपूर्ण जानकारी को Verify करें।</li>
+
+<li>Privacy और Copyright का ध्यान रखें।</li>
+
+</ul>
+
+</div>
+
+
+<!-- PRACTICE QUESTIONS -->
+
+<div class="card">
+
+<h2>32. Practice Questions</h2>
+
+<ol>
+
+<li>AI का उपयोग पढ़ाई में कैसे किया जा सकता है?</li>
+
+<li>AI से Notes कैसे बनाए जा सकते हैं?</li>
+
+<li>AI से Summary बनाने का क्या लाभ है?</li>
+
+<li>AI से MCQ कैसे बनवाए जा सकते हैं?</li>
+
+<li>AI से Study Plan कैसे तैयार किया जा सकता है?</li>
+
+<li>AI Translation क्या है?</li>
+
+<li>AI से Presentation का Content कैसे बनाया जा सकता है?</li>
+
+<li>अच्छा Prompt क्या होता है?</li>
+
+<li>Prompt में कौन-कौन सी जानकारी दी जा सकती है?</li>
+
+<li>AI के उत्तर को Verify करना क्यों जरूरी है?</li>
+
+<li>AI से Image Editing में क्या मदद मिल सकती है?</li>
+
+<li>AI से YouTube Video की Planning कैसे की जा सकती है?</li>
+
+<li>AI से Resume बनाने में क्या सहायता मिल सकती है?</li>
+
+<li>AI से Ideas कैसे प्राप्त किए जा सकते हैं?</li>
+
+<li>AI इस्तेमाल करते समय Privacy क्यों जरूरी है?</li>
+
+<li>Copyright क्या है?</li>
+
+<li>कमजोर Prompt और अच्छे Prompt में क्या अंतर है?</li>
+
+<li>Prompt को सुधारना क्यों जरूरी हो सकता है?</li>
+
+<li>AI Study Assistant Project क्या है?</li>
+
+<li>AI के उपयोग में किन बातों की सावधानी रखनी चाहिए?</li>
+
+</ol>
+
+</div>
+
+
+<!-- MCQ -->
+
+<div class="card">
+
+<h2>33. MCQs</h2>
+
+<p><b>1. AI का उपयोग किस काम में किया जा सकता है?</b></p>
+
+<p>A) पढ़ाई</p>
+<p>B) Notes</p>
+<p>C) Ideas</p>
+<p>D) सभी</p>
+
+<p><b>सही उत्तर: D</b></p>
+
+
+<p><b>2. Summary का अर्थ क्या है?</b></p>
+
+<p>A) विषय का संक्षिप्त रूप</p>
+<p>B) केवल फोटो</p>
+<p>C) केवल आवाज</p>
+<p>D) केवल Video</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>3. AI से क्या बनाया जा सकता है?</b></p>
+
+<p>A) Practice Questions</p>
+<p>B) MCQ</p>
+<p>C) Study Plan</p>
+<p>D) सभी</p>
+
+<p><b>सही उत्तर: D</b></p>
+
+
+<p><b>4. अच्छा Prompt कैसा होना चाहिए?</b></p>
+
+<p>A) स्पष्ट</p>
+<p>B) अस्पष्ट</p>
+<p>C) खाली</p>
+<p>D) अधूरा</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>5. AI का उत्तर हमेशा सही होता है?</b></p>
+
+<p>A) हाँ</p>
+<p>B) नहीं</p>
+<p>C) हमेशा</p>
+<p>D) केवल रात में</p>
+
+<p><b>सही उत्तर: B</b></p>
+
+
+<p><b>6. महत्वपूर्ण जानकारी के साथ क्या करना चाहिए?</b></p>
+
+<p>A) Verify करना</p>
+<p>B) बिना देखे मान लेना</p>
+<p>C) Delete करना</p>
+<p>D) Ignore करना</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>7. AI से Presentation में क्या बनाया जा सकता है?</b></p>
+
+<p>A) Slide Content</p>
+<p>B) केवल Keyboard</p>
+<p>C) केवल Mouse</p>
+<p>D) केवल Folder</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>8. AI से Photo Editing में क्या बदला जा सकता है?</b></p>
+
+<p>A) Background</p>
+<p>B) केवल Keyboard</p>
+<p>C) केवल Mouse</p>
+<p>D) केवल Speaker</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>9. AI का उपयोग करते समय किसकी सुरक्षा करनी चाहिए?</b></p>
+
+<p>A) Password</p>
+<p>B) OTP</p>
+<p>C) निजी जानकारी</p>
+<p>D) सभी</p>
+
+<p><b>सही उत्तर: D</b></p>
+
+
+<p><b>10. Copyright का ध्यान क्यों रखना चाहिए?</b></p>
+
+<p>A) दूसरे के Content के अधिकारों का सम्मान करने के लिए</p>
+<p>B) Computer बंद करने के लिए</p>
+<p>C) Internet तेज करने के लिए</p>
+<p>D) Password बनाने के लिए</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>11. Prompt सुधारने से क्या हो सकता है?</b></p>
+
+<p>A) बेहतर Result मिल सकता है</p>
+<p>B) Computer टूट सकता है</p>
+<p>C) Internet बंद हो जाता है</p>
+<p>D) File Delete हो जाती है</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>12. AI Study Assistant का उद्देश्य क्या है?</b></p>
+
+<p>A) पढ़ाई में सहायता करना</p>
+<p>B) केवल Game खेलना</p>
+<p>C) Computer बंद करना</p>
+<p>D) Printer चलाना</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+</div>
+
+
+<!-- FINAL PROJECT -->
+
+<div class="project">
+
+<h2>🎓 Final AI Tools Project</h2>
+
+<p>
+अब Lesson 1, Lesson 2 और Lesson 3 में सीखी गई चीजों को मिलाकर एक पूरा Project बनाइए।
+</p>
+
+<h3>Project:</h3>
+
+<p><b>“AI की मदद से एक Complete Educational Video”</b></p>
+
+<h3>आपको बनाना है:</h3>
+
+<ul>
+
+<li>एक Educational Topic</li>
+
+<li>AI से Topic का Summary</li>
+
+<li>Short Notes</li>
+
+<li>Practice Questions</li>
+
+<li>MCQ</li>
+
+<li>Presentation Content</li>
+
+<li>AI Image Prompt</li>
+
+<li>AI Video Prompt</li>
+
+<li>Hindi Voice Over Script</li>
+
+<li>Background Music Idea</li>
+
+<li>Final Short Video</li>
+
+</ul>
+
+<div class="success">
+
+<b>🏆 Project Complete होने पर:</b>
+
+<br><br>
+
+आपके पास एक ऐसा Educational Content Package होगा
+जिसका उपयोग पढ़ाई, Presentation और Educational Video बनाने में किया जा सकता है।
+
+</div>
+
+</div>
+
+
+<!-- SUMMARY -->
+
+<div class="card">
+
+<h2>📚 Lesson 3 Summary</h2>
+
+<p>
+इस Lesson में हमने AI का उपयोग पढ़ाई, Notes, Summary,
+Practice Questions, MCQ, Study Plan, Translation, Writing,
+Presentation, Image Editing और Video Planning के लिए करना सीखा।
+</p>
+
+<p>
+हमने यह भी सीखा कि अच्छा Prompt कैसे लिखा जाता है,
+AI के उत्तर को Verify क्यों करना चाहिए और Privacy तथा Copyright
+का ध्यान क्यों रखना जरूरी है।
+</p>
+
+<div class="info">
+
+<b>AI को अपना सहायक समझें, अंतिम निर्णय लेने वाला नहीं।</b>
+
+</div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav-buttons">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="ai-tools-lesson1.html">⬅ AI Lesson 1</a>
+
+<a href="ai-tools-lesson2.html">⬅ AI Lesson 2</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+© 2026 Computer Siksha
+
+<br>
+
+Learn. Practice. Grow.
+
+</footer>
+
+
+</body>
+</html>

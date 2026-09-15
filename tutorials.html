@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tutorials - Computer Siksha</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:#0f2a5f;
+    color:white;
+    padding:25px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+    color:#dbe7ff;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:white;
+    padding:14px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+nav a{
+    text-decoration:none;
+    color:#0f2a5f;
+    font-weight:bold;
+    margin:0 14px;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
+/* MAIN */
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.page-title{
+    text-align:center;
+    color:#0f2a5f;
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.page-description{
+    text-align:center;
+    color:#555;
+    font-size:17px;
+    margin-bottom:35px;
+}
+
+/* TUTORIAL GRID */
+
+.tutorial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* TUTORIAL CARD */
+
+.tutorial-card{
+    background:white;
+    border-radius:14px;
+    padding:28px 24px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+    border:1px solid #e5e9f2;
+    transition:0.3s;
+    display:flex;
+    flex-direction:column;
+}
+
+.tutorial-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.13);
+}
+
+.tutorial-icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.tutorial-card h2{
+    color:#0f2a5f;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.tutorial-card p{
+    color:#555;
+    line-height:1.6;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+.tutorial-tag{
+    display:inline-block;
+    background:#eef4ff;
+    color:#2563eb;
+    font-weight:bold;
+    padding:8px 12px;
+    border-radius:8px;
+    width:max-content;
+    margin-bottom:20px;
+}
+
+.tutorial-btn{
+    display:block;
+    text-decoration:none;
+    text-align:center;
+    background:#2563eb;
+    color:white;
+    padding:12px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:auto;
+    transition:0.3s;
+}
+
+.tutorial-btn:hover{
+    background:#0f2a5f;
+}
+
+/* INFORMATION BOX */
+
+.info-box{
+    margin-top:45px;
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.07);
+}
+
+.info-box h2{
+    color:#0f2a5f;
+    margin-bottom:15px;
+}
+
+.info-box p{
+    color:#555;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:50px;
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+footer p{
+    margin:6px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .tutorial-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:7px 8px;
+    }
+
+    .tutorial-grid{
+        grid-template-columns:1fr;
+    }
+
+    .page-title{
+        font-size:27px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>💻 Computer Siksha</h1>
+
+    <p>Learn. Practice. Grow.</p>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="courses.html">Courses</a>
+
+    <a href="tutorials.html">Tutorials</a>
+
+    <a href="#">About</a>
+
+    <a href="#">Contact</a>
+
+</nav>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="container">
+
+    <h1 class="page-title">
+        🛠️ Practical Tutorials
+    </h1>
+
+    <p class="page-description">
+        कंप्यूटर के जरूरी काम आसान तरीके से सीखें
+    </p>
+
+
+    <div class="tutorial-grid">
+
+
+        <!-- TUTORIAL 1 -->
+
+        <div class="tutorial-card">
+
+            <div class="tutorial-icon">
+                💻
+            </div>
+
+            <h2>
+                Computer Practical
+            </h2>
+
+            <p>
+                कंप्यूटर को सही तरीके से इस्तेमाल करना,
+                फाइल और फोल्डर बनाना, कॉपी, पेस्ट, सेव
+                और दूसरी जरूरी Practical जानकारी सीखें।
+            </p>
+
+            <div class="tutorial-tag">
+                Beginner
+            </div>
+
+            <a href="computer-basics.html" class="tutorial-btn">
+                Start Tutorial →
+            </a>
+
+        </div>
+
+
+        <!-- TUTORIAL 2 -->
+
+        <div class="tutorial-card">
+
+            <div class="tutorial-icon">
+                📝
+            </div>
+
+            <h2>
+                MS Word Practical
+            </h2>
+
+            <p>
+                डॉक्यूमेंट बनाना, Typing, Formatting,
+                Table, Image, Page Setup और Resume
+                तैयार करने का Practical तरीका सीखें।
+            </p>
+
+            <div class="tutorial-tag">
+                Practical
+            </div>
+
+            <a href="ms-word-lesson2.html" class="tutorial-btn">
+                Start Tutorial →
+            </a>
+
+        </div>
+
+
+        <!-- TUTORIAL 3 -->
+
+        <div class="tutorial-card">
+
+            <div class="tutorial-icon">
+                📊
+            </div>
+
+            <h2>
+                PowerPoint Practical
+            </h2>
+
+            <p>
+                सुंदर Presentation बनाना, Images,
+                Shapes, Tables, Animations, Transitions
+                और Slide Show का Practical सीखें।
+            </p>
+
+            <div class="tutorial-tag">
+                Practical
+            </div>
+
+            <a href="powerpoint-lesson2.html" class="tutorial-btn">
+                Start Tutorial →
+            </a>
+
+        </div>
+
+
+        <!-- TUTORIAL 4 -->
+
+        <div class="tutorial-card">
+
+            <div class="tutorial-icon">
+                📈
+            </div>
+
+            <h2>
+                MS Excel Practical
+            </h2>
+
+            <p>
+                Excel में Marksheet, Salary Statement,
+                Formula, Result, Bonus और Charts
+                बनाना Practical तरीके से सीखें।
+            </p>
+
+            <div class="tutorial-tag">
+                Practical
+            </div>
+
+            <a href="ms-excel-lesson2.html" class="tutorial-btn">
+                Start Tutorial →
+            </a>
+
+        </div>
+
+
+        <!-- TUTORIAL 5 -->
+
+        <div class="tutorial-card">
+
+            <div class="tutorial-icon">
+                🌐
+            </div>
+
+            <h2>
+                Internet Practical
+            </h2>
+
+            <p>
+                इंटरनेट पर जानकारी खोजना, वेबसाइट खोलना,
+                डाउनलोड, अपलोड, ईमेल और सुरक्षित इंटरनेट
+                उपयोग करना सीखें।
+            </p>
+
+            <div class="tutorial-tag">
+                Beginner
+            </div>
+
+            <a href="internet-basics-lesson2.html" class="tutorial-btn">
+                Start Tutorial →
+            </a>
+
+        </div>
+
+
+        <!-- TUTORIAL 6 -->
+
+        <div class="tutorial-card">
+
+            <div class="tutorial-icon">
+                🤖
+            </div>
+
+            <h2>
+                AI Tools Practical
+            </h2>
+
+            <p>
+                AI की मदद से Image, Video, Notes,
+                Questions और Creative Content बनाने
+                का Practical तरीका सीखें।
+            </p>
+
+            <div class="tutorial-tag">
+                Advanced
+            </div>
+
+            <a href="ai-tools-lesson2.html" class="tutorial-btn">
+                Start Tutorial →
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- INFORMATION -->
+
+    <div class="info-box">
+
+        <h2>
+            🎯 Tutorials से क्या सीखेंगे?
+        </h2>
+
+        <p>
+            इन Practical Tutorials में आपको केवल
+            जानकारी ही नहीं बल्कि कंप्यूटर पर काम
+            करने का तरीका भी समझाया जाएगा।
+        </p>
+
+        <br>
+
+        <p>
+            आप पहले Tutorial को पढ़ें, फिर उसी काम को
+            अपने कंप्यूटर पर Practice करें। इस तरह
+            धीरे-धीरे आपकी Computer Skills बेहतर होंगी।
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Computer Siksha
+    </p>
+
+    <p>
+        Learn. Practice. Grow.
+    </p>
+
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - Computer Siksha</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:#0f2a5f;
+    color:white;
+    padding:25px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+    color:#dbe7ff;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:white;
+    padding:14px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+nav a{
+    text-decoration:none;
+    color:#0f2a5f;
+    font-weight:bold;
+    margin:0 14px;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
+/* MAIN */
+
+.container{
+    width:92%;
+    max-width:1000px;
+    margin:40px auto;
+}
+
+.page-title{
+    text-align:center;
+    color:#0f2a5f;
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.page-description{
+    text-align:center;
+    color:#555;
+    font-size:17px;
+    margin-bottom:35px;
+}
+
+/* CONTACT GRID */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+/* CONTACT CARD */
+
+.contact-card{
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+    border:1px solid #e5e9f2;
+}
+
+.contact-card h2{
+    color:#0f2a5f;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.contact-item{
+    background:#f8faff;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.contact-item h3{
+    color:#0f2a5f;
+    margin-bottom:7px;
+    font-size:17px;
+}
+
+.contact-item p{
+    color:#555;
+    line-height:1.6;
+}
+
+/* FORM */
+
+.form-group{
+    margin-bottom:17px;
+}
+
+.form-group label{
+    display:block;
+    color:#0f2a5f;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #d5dbe8;
+    border-radius:8px;
+    font-family:Arial, sans-serif;
+    font-size:15px;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:#2563eb;
+}
+
+.form-group textarea{
+    height:130px;
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:13px;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#0f2a5f;
+}
+
+/* NOTE */
+
+.note{
+    margin-top:25px;
+    background:#fff8e6;
+    border-left:5px solid #f0a500;
+    padding:18px;
+    border-radius:8px;
+}
+
+.note p{
+    color:#555;
+    line-height:1.6;
+}
+
+/* BOTTOM BOX */
+
+.help-box{
+    background:white;
+    margin-top:30px;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.07);
+    text-align:center;
+}
+
+.help-box h2{
+    color:#0f2a5f;
+    margin-bottom:12px;
+}
+
+.help-box p{
+    color:#555;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:50px;
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+}
+
+footer p{
+    margin:6px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:7px 8px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .page-title{
+        font-size:27px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>💻 Computer Siksha</h1>
+
+    <p>Learn. Practice. Grow.</p>
+
+</header>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="courses.html">Courses</a>
+
+    <a href="tutorials.html">Tutorials</a>
+
+    <a href="about.html">About</a>
+
+    <a href="contact.html">Contact</a>
+
+</nav>
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+
+    <h1 class="page-title">
+        📩 Contact Us
+    </h1>
+
+    <p class="page-description">
+        Computer Siksha से संपर्क करने के लिए नीचे दी गई जानकारी देखें
+    </p>
+
+
+    <div class="contact-grid">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-card">
+
+            <h2>
+                📞 संपर्क जानकारी
+            </h2>
+
+
+            <div class="contact-item">
+
+                <h3>
+                    📧 ईमेल
+                </h3>
+
+                <p>
+                    आप अपने सवाल या सुझाव ईमेल के माध्यम से भेज सकते हैं।
+                </p>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <h3>
+                    💬 संदेश
+                </h3>
+
+                <p>
+                    वेबसाइट से जुड़ी किसी भी समस्या, सुझाव या
+                    जानकारी के लिए संपर्क कर सकते हैं।
+                </p>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <h3>
+                    🎓 शिक्षा से संबंधित सवाल
+                </h3>
+
+                <p>
+                    Courses, Lessons और Tutorials से जुड़े
+                    सवाल या सुझाव भी भेज सकते हैं।
+                </p>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <h3>
+                    💡 सुझाव
+                </h3>
+
+                <p>
+                    यदि आपको वेबसाइट पर किसी नए Course या
+                    Tutorial की जरूरत है, तो हमें जरूर बताएं।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-card">
+
+            <h2>
+                📝 हमें संदेश भेजें
+            </h2>
+
+
+            <form>
+
+
+                <div class="form-group">
+
+                    <label>
+                        आपका नाम
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="अपना नाम लिखें"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        ईमेल
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="अपना ईमेल लिखें"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        विषय
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="संदेश का विषय लिखें"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        आपका संदेश
+                    </label>
+
+                    <textarea
+                        placeholder="अपना संदेश यहां लिखें..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    संदेश भेजें →
+                </button>
+
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- IMPORTANT NOTE -->
+
+    <div class="note">
+
+        <p>
+            <strong>नोट:</strong>
+            अभी यह संपर्क फॉर्म केवल वेबसाइट का
+            डिजाइन दिखाता है। इसे बाद में वास्तविक
+            संदेश भेजने की सुविधा से जोड़ा जा सकता है।
+        </p>
+
+    </div>
+
+
+    <!-- HELP BOX -->
+
+    <div class="help-box">
+
+        <h2>
+            🙏 Computer Siksha
+        </h2>
+
+        <p>
+            आपका सुझाव हमारे लिए महत्वपूर्ण है।
+            सीखते रहें, Practice करते रहें और
+            अपनी Computer Skills को बेहतर बनाते रहें।
+        </p>
+
+        <br>
+
+        <h3>
+            Learn. Practice. Grow.
+        </h3>
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Computer Siksha
+    </p>
+
+    <p>
+        Learn. Practice. Grow.
+    </p>
+
+</footer>
+
+
+</body>
+</html>

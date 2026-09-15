@@ -1,0 +1,2209 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PowerPoint Lesson 2 - Computer Siksha</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:34px;
+}
+
+header p{
+    margin:5px 0 0;
+}
+
+nav{
+    background:white;
+    text-align:center;
+    padding:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+nav a{
+    display:inline-block;
+    text-decoration:none;
+    color:#0f2a5f;
+    font-weight:bold;
+    padding:8px 14px;
+    margin:4px;
+    border-radius:6px;
+}
+
+nav a:hover{
+    background:#e8efff;
+}
+
+.container{
+    width:92%;
+    max-width:1050px;
+    margin:30px auto;
+}
+
+.lesson-title{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+    border-radius:12px;
+    margin-bottom:25px;
+}
+
+.lesson-title h2{
+    margin:0;
+    font-size:29px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:22px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+.card h2{
+    color:#0f2a5f;
+    border-bottom:2px solid #e5e7eb;
+    padding-bottom:8px;
+    margin-top:0;
+}
+
+.card h3{
+    color:#2563eb;
+}
+
+.info{
+    background:#eef5ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    border-radius:6px;
+    margin:15px 0;
+}
+
+.important{
+    background:#fff7df;
+    border-left:5px solid #f59e0b;
+    padding:15px;
+    border-radius:6px;
+    margin:15px 0;
+}
+
+.success{
+    background:#ecfdf5;
+    border-left:5px solid #10b981;
+    padding:15px;
+    border-radius:6px;
+    margin:15px 0;
+}
+
+.visual{
+    background:#f8fafc;
+    border:2px solid #dbe4f0;
+    border-radius:12px;
+    padding:20px;
+    margin:20px 0;
+}
+
+.visual-title{
+    text-align:center;
+    font-weight:bold;
+    color:#0f2a5f;
+    margin-bottom:15px;
+}
+
+.fake-window{
+    border:2px solid #94a3b8;
+    border-radius:8px;
+    overflow:hidden;
+    background:white;
+}
+
+.fake-titlebar{
+    background:#0f2a5f;
+    color:white;
+    padding:9px 12px;
+    font-weight:bold;
+}
+
+.fake-ribbon{
+    background:#e8efff;
+    padding:10px;
+    color:#1e3a8a;
+    font-weight:bold;
+}
+
+.fake-toolbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    padding:10px;
+    background:#f1f5f9;
+}
+
+.tool{
+    background:white;
+    border:1px solid #cbd5e1;
+    padding:6px 9px;
+    border-radius:5px;
+    font-size:13px;
+}
+
+.slide-area{
+    margin:18px auto;
+    max-width:700px;
+    min-height:300px;
+    border:3px solid #2563eb;
+    background:white;
+    padding:35px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.slide-area h3{
+    font-size:30px;
+    color:#0f2a5f;
+}
+
+.slide-area p{
+    font-size:18px;
+}
+
+.theme-box{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.theme{
+    width:180px;
+    height:110px;
+    border-radius:10px;
+    padding:15px;
+    color:white;
+    font-weight:bold;
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+}
+
+.theme-one{
+    background:#2563eb;
+}
+
+.theme-two{
+    background:#7c3aed;
+}
+
+.theme-three{
+    background:#059669;
+}
+
+.theme-four{
+    background:#ea580c;
+}
+
+.image-demo{
+    max-width:650px;
+    margin:auto;
+    border:3px dashed #2563eb;
+    padding:15px;
+    text-align:center;
+    background:#eef5ff;
+}
+
+.image-icon{
+    font-size:80px;
+}
+
+.shape-demo{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.circle{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#2563eb;
+}
+
+.square{
+    width:100px;
+    height:100px;
+    background:#f59e0b;
+}
+
+.rectangle{
+    width:170px;
+    height:90px;
+    background:#10b981;
+}
+
+.diamond{
+    width:85px;
+    height:85px;
+    background:#7c3aed;
+    transform:rotate(45deg);
+}
+
+.transition-demo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.transition-slide{
+    width:220px;
+    height:130px;
+    background:white;
+    border:3px solid #2563eb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    border-radius:8px;
+}
+
+.arrow{
+    font-size:35px;
+    color:#2563eb;
+}
+
+.animation-demo{
+    text-align:center;
+    padding:25px;
+}
+
+.animation-text{
+    display:inline-block;
+    padding:15px 25px;
+    background:#2563eb;
+    color:white;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.presentation-preview{
+    max-width:750px;
+    margin:auto;
+    border:3px solid #0f2a5f;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.preview-top{
+    background:#0f2a5f;
+    color:white;
+    padding:12px;
+    font-weight:bold;
+}
+
+.preview-content{
+    padding:25px;
+    min-height:260px;
+}
+
+.preview-content h2{
+    color:#2563eb;
+}
+
+.checklist{
+    background:#f8fafc;
+    border-radius:8px;
+    padding:18px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+}
+
+th{
+    background:#0f2a5f;
+    color:white;
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+td{
+    padding:12px;
+    border:1px solid #ddd;
+    background:white;
+}
+
+.question{
+    background:#f8fafc;
+    padding:12px 15px;
+    margin:10px 0;
+    border-left:4px solid #2563eb;
+    border-radius:7px;
+}
+
+.mcq{
+    background:#f8fafc;
+    padding:15px;
+    margin:12px 0;
+    border-radius:8px;
+}
+
+.answer{
+    color:#15803d;
+    font-weight:bold;
+}
+
+.shortcut{
+    display:inline-block;
+    background:#eef2ff;
+    padding:4px 9px;
+    border-radius:5px;
+    color:#1e3a8a;
+    font-weight:bold;
+}
+
+.nav-buttons{
+    text-align:center;
+    margin:35px 0;
+}
+
+.btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    margin:6px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#0f2a5f;
+}
+
+footer{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    .lesson-title h2{
+        font-size:23px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .slide-area{
+        min-height:220px;
+        padding:20px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>📊 Computer Siksha</h1>
+
+<p>Learn. Practice. Grow.</p>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="computer-basics.html">Computer Basics</a>
+
+<a href="ms-word-lesson1.html">MS Word</a>
+
+<a href="powerpoint-lesson1.html">PowerPoint Lesson 1</a>
+
+<a href="powerpoint-lesson2.html">Lesson 2</a>
+
+</nav>
+
+
+<div class="container">
+
+
+<div class="lesson-title">
+
+<h2>📊 PowerPoint – Lesson 2</h2>
+
+<p>Design, Images, Shapes, Transitions, Animations & Practical Work</p>
+
+</div>
+
+
+<!-- 1 -->
+
+<div class="card">
+
+<h2>1. Lesson 2 Mein Kya Seekhenge?</h2>
+
+<p>
+Is lesson mein hum Microsoft PowerPoint ko practical way mein seekhenge.
+Hum presentation ko attractive aur professional banane ke liye different
+tools ka use karenge.
+</p>
+
+<ul>
+
+<li>🎨 Themes aur Design</li>
+<li>🖼️ Images Insert Karna</li>
+<li>🔷 Shapes Insert Karna</li>
+<li>📊 Tables Add Karna</li>
+<li>🎞️ Transitions</li>
+<li>✨ Animations</li>
+<li>▶️ Slide Show</li>
+<li>🔊 Audio aur Video ka Basic Use</li>
+<li>📐 Professional Slide Design</li>
+<li>💻 Complete Practical Presentation</li>
+
+</ul>
+
+</div>
+
+
+<!-- 2 -->
+
+<div class="card">
+
+<h2>2. PowerPoint Design Kya Hai?</h2>
+
+<p>
+Design ka use presentation ki appearance ko better banane ke liye kiya jata hai.
+Ek achha design presentation ko attractive aur easy to read banata hai.
+</p>
+
+<div class="important">
+
+<strong>Important:</strong>
+
+Design beautiful hone ke saath-saath readable bhi hona chahiye.
+Bahut zyada colors aur effects use karne se presentation confusing ho sakti hai.
+
+</div>
+
+</div>
+
+
+<!-- 3 -->
+
+<div class="card">
+
+<h2>3. Theme Kya Hoti Hai?</h2>
+
+<p>
+PowerPoint Theme colors, fonts aur overall visual style ka combination hoti hai.
+Theme apply karne se presentation ka look quickly change kiya ja sakta hai.
+</p>
+
+<div class="visual">
+
+<div class="visual-title">🎨 Theme Examples</div>
+
+<div class="theme-box">
+
+<div class="theme theme-one">
+Blue Theme<br>
+Computer
+</div>
+
+<div class="theme theme-two">
+Purple Theme<br>
+Education
+</div>
+
+<div class="theme theme-three">
+Green Theme<br>
+Environment
+</div>
+
+<div class="theme theme-four">
+Orange Theme<br>
+Business
+</div>
+
+</div>
+
+</div>
+
+<p>
+Theme apply karne ke liye PowerPoint ke <strong>Design</strong> tab ka use
+kiya jata hai.
+</p>
+
+</div>
+
+
+<!-- 4 -->
+
+<div class="card">
+
+<h2>4. Theme Apply Kaise Karein?</h2>
+
+<ol>
+
+<li>PowerPoint presentation open karein.</li>
+
+<li><strong>Design</strong> tab par click karein.</li>
+
+<li>Themes section mein available themes dekhein.</li>
+
+<li>Apni pasand ki theme select karein.</li>
+
+<li>Theme presentation par apply ho jayegi.</li>
+
+</ol>
+
+<div class="success">
+
+<strong>Practical Tip:</strong>
+
+Education presentation ke liye simple aur readable theme choose karein.
+
+</div>
+
+</div>
+
+
+<!-- 5 -->
+
+<div class="card">
+
+<h2>5. PowerPoint Interface ka Practical Visual</h2>
+
+<p>
+Neeche ek simple visual example diya gaya hai jo PowerPoint ke different
+parts ko samajhne mein help karega.
+</p>
+
+<div class="visual">
+
+<div class="fake-window">
+
+<div class="fake-titlebar">
+📊 Microsoft PowerPoint — Computer Basics
+</div>
+
+<div class="fake-ribbon">
+Home &nbsp; Insert &nbsp; Design &nbsp; Transitions &nbsp; Animations &nbsp; Slide Show
+</div>
+
+<div class="fake-toolbar">
+
+<div class="tool">New Slide</div>
+<div class="tool">Font</div>
+<div class="tool">Bold</div>
+<div class="tool">Italic</div>
+<div class="tool">Text Color</div>
+<div class="tool">Alignment</div>
+
+</div>
+
+<div class="slide-area">
+
+<h3>Computer Basics</h3>
+
+<p>Introduction to Computer</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 6 -->
+
+<div class="card">
+
+<h2>6. Image Insert Karna</h2>
+
+<p>
+PowerPoint presentation mein images add karke information ko visually
+samjhaya ja sakta hai.
+</p>
+
+<h3>Steps:</h3>
+
+<ol>
+
+<li><strong>Insert</strong> tab par click karein.</li>
+
+<li><strong>Pictures</strong> option select karein.</li>
+
+<li>Computer mein saved image choose karein.</li>
+
+<li><strong>Insert</strong> par click karein.</li>
+
+<li>Image slide mein add ho jayegi.</li>
+
+</ol>
+
+<div class="visual">
+
+<div class="visual-title">🖼️ Image Insert Example</div>
+
+<div class="image-demo">
+
+<div class="image-icon">🖼️</div>
+
+<strong>Computer Image</strong>
+
+<p>
+Yahan presentation mein selected image दिखाई देगी.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="card">
+
+<h2>7. Image ko Resize Kaise Karein?</h2>
+
+<p>
+Image insert karne ke baad uska size change kiya ja sakta hai.
+</p>
+
+<ol>
+
+<li>Image par click karein.</li>
+
+<li>Image ke corners par small handles दिखाई देंगे.</li>
+
+<li>Corner handle ko drag karein.</li>
+
+<li>Image ka size change ho jayega.</li>
+
+</ol>
+
+<div class="important">
+
+<strong>Tip:</strong>
+
+Image ko resize karte waqt corner se drag karna better hota hai,
+isse image ka proportion maintain rehne mein help milti hai.
+
+</div>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="card">
+
+<h2>8. Image ko Move Kaise Karein?</h2>
+
+<p>
+Image ko slide ke kisi bhi suitable location par move kiya ja sakta hai.
+</p>
+
+<ol>
+
+<li>Image select karein.</li>
+
+<li>Mouse pointer ko image ke andar le jayein.</li>
+
+<li>Mouse button press karke drag karein.</li>
+
+<li>Image ko desired position par place karein.</li>
+
+</ol>
+
+</div>
+
+
+<!-- 9 -->
+
+<div class="card">
+
+<h2>9. Shapes Kya Hote Hain?</h2>
+
+<p>
+PowerPoint mein Shapes ka use diagrams, arrows, buttons, boxes aur
+different visual elements banane ke liye hota hai.
+</p>
+
+<div class="visual">
+
+<div class="visual-title">🔷 Shape Examples</div>
+
+<div class="shape-demo">
+
+<div class="circle"></div>
+
+<div class="square"></div>
+
+<div class="rectangle"></div>
+
+<div class="diamond"></div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="card">
+
+<h2>10. Shape Insert Kaise Karein?</h2>
+
+<ol>
+
+<li><strong>Insert</strong> tab open karein.</li>
+
+<li><strong>Shapes</strong> option par click karein.</li>
+
+<li>Apni required shape select karein.</li>
+
+<li>Slide par mouse se drag karein.</li>
+
+<li>Shape slide par appear ho jayegi.</li>
+
+</ol>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="card">
+
+<h2>11. Shape mein Text Kaise Likhein?</h2>
+
+<p>
+Shape ke andar text add karna bahut useful hota hai.
+</p>
+
+<ol>
+
+<li>Shape par right-click karein.</li>
+
+<li><strong>Add Text</strong> option select karein.</li>
+
+<li>Apna text type karein.</li>
+
+</ol>
+
+<div class="visual">
+
+<div class="visual-title">Example</div>
+
+<div style="max-width:300px;margin:auto;background:#2563eb;color:white;padding:20px;border-radius:10px;text-align:center;font-weight:bold;">
+
+INPUT → PROCESSING → OUTPUT
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="card">
+
+<h2>12. Arrows ka Use</h2>
+
+<p>
+Arrows ka use process, direction aur relationship explain karne ke liye
+kiya jata hai.
+</p>
+
+<div class="visual">
+
+<div style="text-align:center;font-size:22px;font-weight:bold;">
+
+DATA
+
+<span style="color:#2563eb;"> ➜ </span>
+
+PROCESSING
+
+<span style="color:#2563eb;"> ➜ </span>
+
+INFORMATION
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 13 -->
+
+<div class="card">
+
+<h2>13. Table Insert Karna</h2>
+
+<p>
+PowerPoint mein data ko rows aur columns mein show karne ke liye table
+ka use kiya ja sakta hai.
+</p>
+
+<ol>
+
+<li>Insert tab open karein.</li>
+
+<li>Table option select karein.</li>
+
+<li>Required rows aur columns select karein.</li>
+
+<li>Table slide mein insert ho jayegi.</li>
+
+</ol>
+
+<div class="visual">
+
+<div class="visual-title">📊 Table Example</div>
+
+<table>
+
+<tr>
+<th>Device</th>
+<th>Type</th>
+<th>Use</th>
+</tr>
+
+<tr>
+<td>Keyboard</td>
+<td>Input</td>
+<td>Typing</td>
+</tr>
+
+<tr>
+<td>Monitor</td>
+<td>Output</td>
+<td>Display</td>
+</tr>
+
+<tr>
+<td>Printer</td>
+<td>Output</td>
+<td>Printing</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- 14 -->
+
+<div class="card">
+
+<h2>14. Transition Kya Hai?</h2>
+
+<p>
+Transition ek visual effect hai jo ek slide se doosri slide par jaate waqt
+dikhai deta hai.
+</p>
+
+<div class="visual">
+
+<div class="visual-title">🎞️ Transition Example</div>
+
+<div class="transition-demo">
+
+<div class="transition-slide">
+Slide 1
+</div>
+
+<div class="arrow">
+➜
+</div>
+
+<div class="transition-slide">
+Slide 2
+</div>
+
+</div>
+
+<p style="text-align:center;">
+Slide 1 se Slide 2 par change hone ke time transition effect दिखाई दे सकता है.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- 15 -->
+
+<div class="card">
+
+<h2>15. Transition Apply Kaise Karein?</h2>
+
+<ol>
+
+<li>Jis slide par transition lagana hai usse select karein.</li>
+
+<li><strong>Transitions</strong> tab open karein.</li>
+
+<li>Available transition effect select karein.</li>
+
+<li>Preview se effect check karein.</li>
+
+<li>Agar zarurat ho to duration set karein.</li>
+
+</ol>
+
+<div class="important">
+
+<strong>Tip:</strong>
+
+Professional presentation mein simple transitions ka use karna better hota hai.
+
+</div>
+
+</div>
+
+
+<!-- 16 -->
+
+<div class="card">
+
+<h2>16. Animation Kya Hai?</h2>
+
+<p>
+Animation ka use slide ke andar मौजूद text, image, shape ya other object
+par movement/effect dene ke liye kiya jata hai.
+</p>
+
+<div class="visual">
+
+<div class="visual-title">✨ Animation Example</div>
+
+<div class="animation-demo">
+
+<div class="animation-text">
+Welcome to Computer Siksha
+</div>
+
+<p>
+Example: Text slide par appear, fade ya move ho sakta hai.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 17 -->
+
+<div class="card">
+
+<h2>17. Animation Apply Kaise Karein?</h2>
+
+<ol>
+
+<li>Text ya object select karein.</li>
+
+<li><strong>Animations</strong> tab open karein.</li>
+
+<li>Available animation effect choose karein.</li>
+
+<li>Preview karke result check karein.</li>
+
+<li>Timing ko zarurat ke according set karein.</li>
+
+</ol>
+
+</div>
+
+
+<!-- 18 -->
+
+<div class="card">
+
+<h2>18. Transition aur Animation mein Difference</h2>
+
+<table>
+
+<tr>
+
+<th>Transition</th>
+
+<th>Animation</th>
+
+</tr>
+
+<tr>
+
+<td>Ek slide se doosri slide ke change par effect.</td>
+
+<td>Slide ke andar object par effect.</td>
+
+</tr>
+
+<tr>
+
+<td>Slide-level effect.</td>
+
+<td>Object-level effect.</td>
+
+</tr>
+
+<tr>
+
+<td>Transitions tab se apply hota hai.</td>
+
+<td>Animations tab se apply hota hai.</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- 19 -->
+
+<div class="card">
+
+<h2>19. Slide Show Kya Hai?</h2>
+
+<p>
+Slide Show mode mein presentation full screen mein audience ko dikhai ja sakti hai.
+</p>
+
+<p>
+Presentation ko check karne ke liye bhi Slide Show useful hai.
+</p>
+
+<div class="visual">
+
+<div class="visual-title">▶️ Slide Show Preview</div>
+
+<div class="presentation-preview">
+
+<div class="preview-top">
+Computer Siksha – Presentation
+</div>
+
+<div class="preview-content">
+
+<h2>Computer Basics</h2>
+
+<p>Learn the fundamentals of computers.</p>
+
+<p>💻 Easy Learning</p>
+
+<p>🎯 Practical Skills</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 20 -->
+
+<div class="card">
+
+<h2>20. Slide Show Start Kaise Karein?</h2>
+
+<p>
+PowerPoint mein Slide Show start karne ke liye Slide Show tab ka use kiya
+ja sakta hai.
+</p>
+
+<p>
+Common shortcut:</p>
+
+<div class="info">
+
+<span class="shortcut">F5</span>
+
+&nbsp; = Beginning se Slide Show
+
+</div>
+
+<div class="info">
+
+<span class="shortcut">Shift + F5</span>
+
+&nbsp; = Current slide se Slide Show
+
+</div>
+
+</div>
+
+
+<!-- 21 -->
+
+<div class="card">
+
+<h2>21. Audio Add Karna</h2>
+
+<p>
+PowerPoint presentation mein audio add kiya ja sakta hai.
+Audio ka use narration, background sound ya explanation ke liye kiya ja sakta hai.
+</p>
+
+<ol>
+
+<li>Insert tab open karein.</li>
+
+<li>Audio option select karein.</li>
+
+<li>Required audio file choose karein.</li>
+
+<li>Audio presentation mein add ho jayega.</li>
+
+</ol>
+
+<div class="important">
+
+Audio use karte waqt presentation ke topic aur audience ka dhyan rakhein.
+
+</div>
+
+</div>
+
+
+<!-- 22 -->
+
+<div class="card">
+
+<h2>22. Video Add Karna</h2>
+
+<p>
+PowerPoint mein video bhi add kiya ja sakta hai.
+Educational presentations mein video explanation useful ho sakti hai.
+</p>
+
+<ol>
+
+<li>Insert tab open karein.</li>
+
+<li>Video option select karein.</li>
+
+<li>Required video choose karein.</li>
+
+<li>Video slide mein insert ho jayega.</li>
+
+</ol>
+
+</div>
+
+
+<!-- 23 -->
+
+<div class="card">
+
+<h2>23. Professional Slide Design ke Rules</h2>
+
+<ul>
+
+<li>Ek slide par bahut zyada text na likhein.</li>
+
+<li>Heading clear aur visible rakhein.</li>
+
+<li>Readable font use karein.</li>
+
+<li>Background aur text mein proper contrast rakhein.</li>
+
+<li>Relevant images use karein.</li>
+
+<li>Bullets ka use karein.</li>
+
+<li>Unnecessary animations avoid karein.</li>
+
+<li>Har slide ka layout consistent rakhein.</li>
+
+<li>Spelling check karein.</li>
+
+<li>Presentation ko Slide Show mode mein test karein.</li>
+
+</ul>
+
+</div>
+
+
+<!-- 24 -->
+
+<div class="card">
+
+<h2>24. Ek Professional Slide ka Example</h2>
+
+<div class="visual">
+
+<div class="presentation-preview">
+
+<div class="preview-top">
+📊 COMPUTER BASICS
+</div>
+
+<div class="preview-content">
+
+<h2>Computer Kya Hai?</h2>
+
+<p>
+Computer ek electronic device hai jo data ko receive,
+process aur useful information provide karta hai.
+</p>
+
+<ul>
+
+<li>Fast Processing</li>
+
+<li>Accurate Results</li>
+
+<li>Large Storage</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="success">
+
+Is example mein title, short explanation aur bullet points ka simple
+combination use kiya gaya hai.
+
+</div>
+
+</div>
+
+
+<!-- 25 -->
+
+<div class="card">
+
+<h2>25. Complete Practical Presentation</h2>
+
+<p>
+Ab hum ek complete presentation ka structure banayenge.
+Topic hai:
+<strong>"Computer Basics"</strong>
+</p>
+
+<table>
+
+<tr>
+<th>Slide</th>
+<th>Title</th>
+<th>Main Content</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Computer Basics</td>
+<td>Introduction</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Computer Kya Hai?</td>
+<td>Definition + Image</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Computer Parts</td>
+<td>Monitor, Keyboard, Mouse, CPU</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Input Devices</td>
+<td>Keyboard, Mouse, Scanner</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Output Devices</td>
+<td>Monitor, Printer, Speaker</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Hardware & Software</td>
+<td>Comparison Table</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Uses of Computer</td>
+<td>Education, Business, Banking</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Advantages</td>
+<td>Speed, Accuracy, Storage</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Conclusion</td>
+<td>Important Points</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Thank You</td>
+<td>Thank You Message</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- 26 -->
+
+<div class="card">
+
+<h2>26. Practical Task – Slide 1</h2>
+
+<p>
+PowerPoint open karke ek new presentation banayein.
+</p>
+
+<h3>Slide 1:</h3>
+
+<div class="visual">
+
+<div class="slide-area">
+
+<h3>COMPUTER BASICS</h3>
+
+<p>Introduction to Computers</p>
+
+<p>Presented by: Your Name</p>
+
+</div>
+
+</div>
+
+<p>
+Is slide mein ek suitable theme apply karein.
+Title ko large aur clear rakhein.
+</p>
+
+</div>
+
+
+<!-- 27 -->
+
+<div class="card">
+
+<h2>27. Practical Task – Slide 2</h2>
+
+<h3>Slide 2:</h3>
+
+<div class="visual">
+
+<div class="slide-area">
+
+<h3>Computer Kya Hai?</h3>
+
+<p>
+Computer ek electronic device hai jo data ko process karke
+useful information provide karta hai.
+</p>
+
+<div style="font-size:45px;">
+💻
+</div>
+
+</div>
+
+</div>
+
+<p>
+Is slide mein ek computer-related image add karein.
+</p>
+
+</div>
+
+
+<!-- 28 -->
+
+<div class="card">
+
+<h2>28. Practical Task – Slide 3</h2>
+
+<h3>Slide 3:</h3>
+
+<div class="visual">
+
+<div class="slide-area">
+
+<h3>Computer ke Main Parts</h3>
+
+<p>🖥️ Monitor</p>
+
+<p>⌨️ Keyboard</p>
+
+<p>🖱️ Mouse</p>
+
+<p>🖥️ CPU</p>
+
+</div>
+
+</div>
+
+<p>
+Is slide mein Shapes ya images ka use karke computer parts show karein.
+</p>
+
+</div>
+
+
+<!-- 29 -->
+
+<div class="card">
+
+<h2>29. Practical Task – Slide 4</h2>
+
+<h3>Slide 4:</h3>
+
+<div class="visual">
+
+<div class="slide-area">
+
+<h3>Input → Processing → Output</h3>
+
+<p style="font-size:25px;">
+⌨️ INPUT
+</p>
+
+<p style="font-size:30px;">
+↓
+</p>
+
+<p style="font-size:25px;">
+⚙️ PROCESSING
+</p>
+
+<p style="font-size:30px;">
+↓
+</p>
+
+<p style="font-size:25px;">
+🖥️ OUTPUT
+</p>
+
+</div>
+
+</div>
+
+<p>
+Is slide ko Shapes aur Arrows ki help se banane ki practice karein.
+</p>
+
+</div>
+
+
+<!-- 30 -->
+
+<div class="card">
+
+<h2>30. Practical Task – Slide 5</h2>
+
+<h3>Slide 5:</h3>
+
+<div class="visual">
+
+<div class="slide-area">
+
+<h3>Hardware vs Software</h3>
+
+<table>
+
+<tr>
+<th>Hardware</th>
+<th>Software</th>
+</tr>
+
+<tr>
+<td>Keyboard</td>
+<td>Windows</td>
+</tr>
+
+<tr>
+<td>Mouse</td>
+<td>MS Word</td>
+</tr>
+
+<tr>
+<td>Monitor</td>
+<td>PowerPoint</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<p>
+Is slide ko Table tool ki help se banayein.
+</p>
+
+</div>
+
+
+<!-- 31 -->
+
+<div class="card">
+
+<h2>31. Practical Task – Slide 6</h2>
+
+<h3>Slide 6:</h3>
+
+<div class="visual">
+
+<div class="slide-area">
+
+<h3>Uses of Computer</h3>
+
+<ul style="text-align:left;max-width:400px;margin:auto;">
+
+<li>Education</li>
+
+<li>Banking</li>
+
+<li>Business</li>
+
+<li>Communication</li>
+
+<li>Entertainment</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<p>
+Bullets ka use karke information ko short aur clear rakhein.
+</p>
+
+</div>
+
+
+<!-- 32 -->
+
+<div class="card">
+
+<h2>32. Practical Task – Slide 7</h2>
+
+<h3>Slide 7:</h3>
+
+<div class="visual">
+
+<div class="slide-area">
+
+<h3>Advantages</h3>
+
+<p>⚡ Fast</p>
+
+<p>🎯 Accurate</p>
+
+<p>💾 Large Storage</p>
+
+<p>🔄 Reliable</p>
+
+</div>
+
+</div>
+
+<p>
+Is slide mein suitable icons/images ya shapes use karein.
+</p>
+
+</div>
+
+
+<!-- 33 -->
+
+<div class="card">
+
+<h2>33. Practical Task – Slide 8</h2>
+
+<h3>Slide 8:</h3>
+
+<div class="visual">
+
+<div class="slide-area">
+
+<h3>Conclusion</h3>
+
+<p>
+Computer aaj ke digital world ka important part hai.
+</p>
+
+<p>
+Computer skills students aur professionals dono ke liye useful hain.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 34 -->
+
+<div class="card">
+
+<h2>34. Practical Task – Slide 9</h2>
+
+<h3>Slide 9:</h3>
+
+<div class="visual">
+
+<div class="slide-area">
+
+<h3>Thank You</h3>
+
+<p>Thank you for watching!</p>
+
+<p>📚 Computer Siksha</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 35 -->
+
+<div class="card">
+
+<h2>35. Presentation ko Check Kaise Karein?</h2>
+
+<p>
+Presentation complete hone ke baad usse final check karna important hai.
+</p>
+
+<div class="checklist">
+
+<p>☐ Spelling check ki?</p>
+
+<p>☐ Slides ka order correct hai?</p>
+
+<p>☐ Images clear hain?</p>
+
+<p>☐ Text readable hai?</p>
+
+<p>☐ Theme consistent hai?</p>
+
+<p>☐ Animations properly work kar rahi hain?</p>
+
+<p>☐ Transitions check kiye?</p>
+
+<p>☐ Slide Show mein presentation dekhi?</p>
+
+<p>☐ Presentation save ki?</p>
+
+</div>
+
+</div>
+
+
+<!-- 36 -->
+
+<div class="card">
+
+<h2>36. Presentation Save aur Backup</h2>
+
+<p>
+Presentation complete hone ke baad usse save karein.
+Important presentation ka backup rakhna bhi useful hai.
+</p>
+
+<p>
+Aap presentation ki copy kisi pen drive ya other safe storage location
+par rakh sakte hain.
+</p>
+
+<div class="info">
+
+<strong>Shortcut:</strong>
+
+<span class="shortcut">Ctrl + S</span>
+
+</div>
+
+</div>
+
+
+<!-- 37 -->
+
+<div class="card">
+
+<h2>37. Useful PowerPoint Shortcuts</h2>
+
+<table>
+
+<tr>
+<th>Shortcut</th>
+<th>Use</th>
+</tr>
+
+<tr>
+<td>Ctrl + M</td>
+<td>New Slide</td>
+</tr>
+
+<tr>
+<td>Ctrl + S</td>
+<td>Save</td>
+</tr>
+
+<tr>
+<td>Ctrl + C</td>
+<td>Copy</td>
+</tr>
+
+<tr>
+<td>Ctrl + X</td>
+<td>Cut</td>
+</tr>
+
+<tr>
+<td>Ctrl + V</td>
+<td>Paste</td>
+</tr>
+
+<tr>
+<td>Ctrl + Z</td>
+<td>Undo</td>
+</tr>
+
+<tr>
+<td>Ctrl + Y</td>
+<td>Redo</td>
+</tr>
+
+<tr>
+<td>F5</td>
+<td>Start Slide Show</td>
+</tr>
+
+<tr>
+<td>Esc</td>
+<td>Exit Slide Show</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- 38 -->
+
+<div class="card">
+
+<h2>38. Important Points</h2>
+
+<ul>
+
+<li>Theme presentation ka overall design change karti hai.</li>
+
+<li>Images information ko visually explain kar sakti hain.</li>
+
+<li>Shapes diagrams aur visual explanations ke liye useful hain.</li>
+
+<li>Tables data ko organized format mein show karti hain.</li>
+
+<li>Transition slides ke beech effect hota hai.</li>
+
+<li>Animation slide ke objects par effect hota hai.</li>
+
+<li>Slide Show presentation ko full-screen mode mein show karta hai.</li>
+
+<li>F5 se Slide Show start kiya ja sakta hai.</li>
+
+<li>Professional presentation simple aur readable honi chahiye.</li>
+
+</ul>
+
+</div>
+
+
+<!-- 39 -->
+
+<div class="card">
+
+<h2>39. Practice Questions</h2>
+
+<div class="question">1. PowerPoint Theme kya hoti hai?</div>
+
+<div class="question">2. Theme apply karne ke liye kaunse tab ka use hota hai?</div>
+
+<div class="question">3. PowerPoint mein image kaise insert karte hain?</div>
+
+<div class="question">4. Image ko resize kaise karte hain?</div>
+
+<div class="question">5. Shapes ka kya use hai?</div>
+
+<div class="question">6. PowerPoint mein table kaise insert karte hain?</div>
+
+<div class="question">7. Transition kya hota hai?</div>
+
+<div class="question">8. Animation kya hota hai?</div>
+
+<div class="question">9. Transition aur Animation mein kya difference hai?</div>
+
+<div class="question">10. Slide Show kya hota hai?</div>
+
+<div class="question">11. F5 shortcut ka kya use hai?</div>
+
+<div class="question">12. Audio PowerPoint presentation mein kyon add kiya ja sakta hai?</div>
+
+<div class="question">13. Video ka basic use kya hai?</div>
+
+<div class="question">14. Professional presentation ke liye kaun-si baatein dhyan mein rakhni chahiye?</div>
+
+<div class="question">15. Presentation complete hone ke baad usse check karna kyon important hai?</div>
+
+<div class="question">16. PowerPoint mein arrows ka kya use hai?</div>
+
+<div class="question">17. Shape mein text kaise add karte hain?</div>
+
+<div class="question">18. Presentation mein bahut zyada animation use karna kyon avoid karna chahiye?</div>
+
+<div class="question">19. Slide Show mein presentation kaise check kar sakte hain?</div>
+
+<div class="question">20. PowerPoint presentation save karne ka shortcut kya hai?</div>
+
+</div>
+
+
+<!-- 40 -->
+
+<div class="card">
+
+<h2>40. MCQs</h2>
+
+
+<div class="mcq">
+
+<strong>Q1. PowerPoint mein Theme kisliye use hoti hai?</strong>
+
+<p>A) File delete karne ke liye</p>
+<p>B) Presentation ka design change karne ke liye</p>
+<p>C) Computer shut down karne ke liye</p>
+<p>D) Internet chalane ke liye</p>
+
+<p class="answer">Answer: B) Presentation ka design change karne ke liye</p>
+
+</div>
+
+
+<div class="mcq">
+
+<strong>Q2. Image insert karne ke liye kaunsa tab use hota hai?</strong>
+
+<p>A) Insert</p>
+<p>B) Review</p>
+<p>C) View</p>
+<p>D) Slide Show</p>
+
+<p class="answer">Answer: A) Insert</p>
+
+</div>
+
+
+<div class="mcq">
+
+<strong>Q3. Shapes ka use kisliye kiya jata hai?</strong>
+
+<p>A) Diagrams aur visual elements ke liye</p>
+<p>B) Computer restart karne ke liye</p>
+<p>C) File rename karne ke liye</p>
+<p>D) Browser open karne ke liye</p>
+
+<p class="answer">Answer: A) Diagrams aur visual elements ke liye</p>
+
+</div>
+
+
+<div class="mcq">
+
+<strong>Q4. Transition kis par apply hota hai?</strong>
+
+<p>A) Slide ke beech</p>
+<p>B) Keyboard par</p>
+<p>C) File name par</p>
+<p>D) Folder par</p>
+
+<p class="answer">Answer: A) Slide ke beech</p>
+
+</div>
+
+
+<div class="mcq">
+
+<strong>Q5. Animation kis par apply ki ja sakti hai?</strong>
+
+<p>A) Slide ke objects par</p>
+<p>B) Computer cabinet par</p>
+<p>C) Folder par</p>
+<p>D) Keyboard par</p>
+
+<p class="answer">Answer: A) Slide ke objects par</p>
+
+</div>
+
+
+<div class="mcq">
+
+<strong>Q6. Slide Show start karne ka common shortcut kya hai?</strong>
+
+<p>A) Ctrl + S</p>
+<p>B) F5</p>
+<p>C) Ctrl + P</p>
+<p>D) Ctrl + O</p>
+
+<p class="answer">Answer: B) F5</p>
+
+</div>
+
+
+<div class="mcq">
+
+<strong>Q7. Table kisliye useful hai?</strong>
+
+<p>A) Data ko rows aur columns mein show karne ke liye</p>
+<p>B) Audio record karne ke liye</p>
+<p>C) Computer band karne ke liye</p>
+<p>D) Browser search karne ke liye</p>
+
+<p class="answer">Answer: A) Data ko rows aur columns mein show karne ke liye</p>
+
+</div>
+
+
+<div class="mcq">
+
+<strong>Q8. Professional presentation mein kya important hai?</strong>
+
+<p>A) Bahut zyada text</p>
+<p>B) Clear aur readable content</p>
+<p>C) Har jagah animation</p>
+<p>D) Random colors</p>
+
+<p class="answer">Answer: B) Clear aur readable content</p>
+
+</div>
+
+
+<div class="mcq">
+
+<strong>Q9. Ctrl + S ka use kya hai?</strong>
+
+<p>A) Save</p>
+<p>B) Slide Show</p>
+<p>C) Animation</p>
+<p>D) Theme</p>
+
+<p class="answer">Answer: A) Save</p>
+
+</div>
+
+
+<div class="mcq">
+
+<strong>Q10. PowerPoint mein video kisliye use kiya ja sakta hai?</strong>
+
+<p>A) Visual explanation ke liye</p>
+<p>B) Computer format karne ke liye</p>
+<p>C) File delete karne ke liye</p>
+<p>D) Folder rename karne ke liye</p>
+
+<p class="answer">Answer: A) Visual explanation ke liye</p>
+
+</div>
+
+
+<div class="mcq">
+
+<strong>Q11. Shapes mein text add kiya ja sakta hai?</strong>
+
+<p>A) Yes</p>
+<p>B) No</p>
+
+<p class="answer">Answer: A) Yes</p>
+
+</div>
+
+
+<div class="mcq">
+
+<strong>Q12. Presentation ko final check karne ke liye kya useful hai?</strong>
+
+<p>A) Slide Show</p>
+<p>B) Calculator</p>
+<p>C) Paint</p>
+<p>D) Notepad</p>
+
+<p class="answer">Answer: A) Slide Show</p>
+
+</div>
+
+</div>
+
+
+<!-- 41 -->
+
+<div class="card">
+
+<h2>41. Lesson 2 Summary</h2>
+
+<p>
+Is lesson mein humne PowerPoint ke important practical features seekhe.
+</p>
+
+<ul>
+
+<li>🎨 Themes aur Design</li>
+
+<li>🖼️ Images</li>
+
+<li>🔷 Shapes</li>
+
+<li>📊 Tables</li>
+
+<li>🎞️ Transitions</li>
+
+<li>✨ Animations</li>
+
+<li>▶️ Slide Show</li>
+
+<li>🔊 Audio</li>
+
+<li>🎬 Video</li>
+
+<li>📐 Professional Slide Design</li>
+
+<li>💻 Complete Presentation Practice</li>
+
+</ul>
+
+<div class="success">
+
+<strong>🎉 PowerPoint Course Complete!</strong>
+
+<br><br>
+
+Aapne PowerPoint ke Introduction se lekar practical presentation
+banane tak ke important concepts complete kar liye hain.
+
+</div>
+
+</div>
+
+
+<!-- Navigation -->
+
+<div class="nav-buttons">
+
+<a href="index.html" class="btn">🏠 Home</a>
+
+<a href="powerpoint-lesson1.html" class="btn">⬅ Lesson 1</a>
+
+<a href="ms-word-lesson2.html" class="btn">📝 MS Word</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p>© 2026 Computer Siksha</p>
+
+<p>Learn. Practice. Grow.</p>
+
+</footer>
+
+</body>
+</html>

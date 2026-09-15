@@ -1,0 +1,1890 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+
+<title>AI Tools - Lesson 2 | Computer Siksha</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#0f2a5f;
+    color:white;
+    padding:28px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:34px;
+}
+
+header p{
+    margin:5px 0 0;
+    font-size:16px;
+}
+
+nav{
+    background:#123875;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+h2{
+    color:#0f2a5f;
+    border-left:5px solid #2563eb;
+    padding-left:12px;
+    margin-top:35px;
+}
+
+h3{
+    color:#123875;
+}
+
+.card{
+    background:white;
+    padding:22px;
+    margin:20px 0;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.info{
+    background:#eaf2ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.important{
+    background:#fff5d9;
+    border-left:5px solid #f59e0b;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.success{
+    background:#e9f9ef;
+    border-left:5px solid #16a34a;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.warning{
+    background:#fff0f0;
+    border-left:5px solid #dc2626;
+    padding:15px;
+    border-radius:8px;
+    margin:15px 0;
+}
+
+.step{
+    background:#f8fafc;
+    border:1px solid #dbe3ef;
+    padding:16px;
+    margin:12px 0;
+    border-radius:10px;
+}
+
+.step-number{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    width:32px;
+    height:32px;
+    line-height:32px;
+    text-align:center;
+    border-radius:50%;
+    font-weight:bold;
+    margin-right:8px;
+}
+
+pre{
+    background:#111827;
+    color:#e5e7eb;
+    padding:18px;
+    border-radius:10px;
+    overflow:auto;
+    white-space:pre-wrap;
+    font-size:14px;
+}
+
+.prompt-box{
+    background:#f8fafc;
+    border:2px solid #dbeafe;
+    padding:18px;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+    background:white;
+}
+
+th,td{
+    border:1px solid #d7dee9;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#eaf2ff;
+    color:#0f2a5f;
+}
+
+.shortcut{
+    font-weight:bold;
+    color:#2563eb;
+}
+
+.video-box{
+    background:#111827;
+    color:white;
+    border-radius:12px;
+    padding:25px;
+    text-align:center;
+    margin:20px 0;
+}
+
+.video-screen{
+    background:#374151;
+    min-height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:8px;
+    font-size:25px;
+}
+
+.timeline{
+    background:#e5e7eb;
+    height:45px;
+    border-radius:8px;
+    margin-top:15px;
+    padding:7px;
+}
+
+.clip{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:7px 15px;
+    margin-right:5px;
+    border-radius:5px;
+}
+
+.voice{
+    background:#ede9fe;
+    border-left:5px solid #7c3aed;
+    padding:15px;
+    border-radius:8px;
+}
+
+.music{
+    background:#ecfeff;
+    border-left:5px solid #0891b2;
+    padding:15px;
+    border-radius:8px;
+}
+
+.project{
+    background:#eefbf3;
+    border:2px solid #86efac;
+    padding:22px;
+    border-radius:12px;
+}
+
+.nav-buttons{
+    text-align:center;
+    margin:40px 0;
+}
+
+.nav-buttons a{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    margin:6px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.nav-buttons a:hover{
+    background:#0f2a5f;
+}
+
+footer{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:22px;
+    margin-top:40px;
+}
+
+@media(max-width:700px){
+
+    header h1{
+        font-size:27px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>🤖 AI Tools – Lesson 2</h1>
+
+<p>AI Video Creation, Voice, Music & Practical Projects</p>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="internet-basics-lesson2.html">Internet Basics</a>
+
+<a href="ai-tools-lesson1.html">AI Lesson 1</a>
+
+<a href="ai-tools-lesson2.html">AI Lesson 2</a>
+
+</nav>
+
+
+<div class="container">
+
+
+<!-- INTRO -->
+
+<div class="card">
+
+<h2>Lesson 2 में क्या सीखेंगे?</h2>
+
+<p>
+इस पाठ में हम AI की मदद से वीडियो बनाने का पूरा तरीका सीखेंगे।
+आप सीखेंगे कि AI इमेज से वीडियो कैसे बनाया जाता है, टेक्स्ट से वीडियो कैसे बनाया जाता है,
+AI आवाज कैसे बनाई जाती है, बैकग्राउंड म्यूजिक कैसे लगाया जाता है और अलग-अलग क्लिप को जोड़कर
+एक पूरी वीडियो कैसे तैयार की जाती है।
+</p>
+
+<div class="info">
+
+<b>इस पाठ का लक्ष्य:</b>
+
+<br>
+
+एक साधारण फोटो या लिखे हुए विचार से एक अच्छी AI वीडियो तैयार करना।
+
+</div>
+
+</div>
+
+
+<!-- AI VIDEO -->
+
+<div class="card">
+
+<h2>1. AI Video क्या है?</h2>
+
+<p>
+AI Video ऐसी वीडियो होती है जिसे बनाने में कृत्रिम बुद्धिमत्ता की सहायता ली जाती है।
+AI आपकी लिखी हुई जानकारी या दी गई तस्वीर को समझकर वीडियो तैयार करने में मदद कर सकता है।
+</p>
+
+<p>
+उदाहरण के लिए, आप किसी व्यक्ति की तस्वीर देकर लिख सकते हैं कि वह सड़क पर चल रहा है,
+कैमरा धीरे-धीरे उसके पास आ रहा है और पीछे शहर की रोशनी दिखाई दे रही है।
+</p>
+
+<div class="video-box">
+
+<div class="video-screen">
+🎬 AI VIDEO PREVIEW
+</div>
+
+<div class="timeline">
+
+<span class="clip">CLIP 1</span>
+
+<span class="clip">CLIP 2</span>
+
+<span class="clip">CLIP 3</span>
+
+<span class="clip">CLIP 4</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TYPES -->
+
+<div class="card">
+
+<h2>2. AI से वीडियो बनाने के मुख्य तरीके</h2>
+
+<table>
+
+<tr>
+<th>तरीका</th>
+<th>क्या किया जाता है?</th>
+</tr>
+
+<tr>
+<td>टेक्स्ट से वीडियो</td>
+<td>लिखे हुए निर्देश से वीडियो बनाना</td>
+</tr>
+
+<tr>
+<td>फोटो से वीडियो</td>
+<td>एक फोटो को चलती हुई वीडियो में बदलना</td>
+</tr>
+
+<tr>
+<td>फोटो + निर्देश</td>
+<td>फोटो देकर उसमें होने वाली गतिविधि बताना</td>
+</tr>
+
+<tr>
+<td>वीडियो से वीडियो</td>
+<td>पहले से मौजूद वीडियो को AI की सहायता से बदलना</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- TEXT TO VIDEO -->
+
+<div class="card">
+
+<h2>3. टेक्स्ट से AI Video बनाना</h2>
+
+<p>
+इस तरीके में आपको केवल यह लिखना होता है कि आपको किस प्रकार की वीडियो चाहिए।
+AI उस निर्देश के आधार पर वीडियो बनाने की कोशिश करता है।
+</p>
+
+<div class="step">
+
+<span class="step-number">1</span>
+
+AI वीडियो बनाने वाला उपकरण खोलें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">2</span>
+
+टेक्स्ट से वीडियो वाला विकल्प चुनें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">3</span>
+
+अपना वीडियो Prompt लिखें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">4</span>
+
+वीडियो का आकार चुनें।
+
+<br>
+
+उदाहरण: Shorts/Reels के लिए 9:16
+
+</div>
+
+<div class="step">
+
+<span class="step-number">5</span>
+
+वीडियो तैयार करने का विकल्प दबाएँ।
+
+</div>
+
+<div class="success">
+
+AI द्वारा वीडियो तैयार होने के बाद उसे ध्यान से देखें।
+यदि परिणाम सही नहीं है तो Prompt में अधिक स्पष्ट जानकारी दें।
+
+</div>
+
+</div>
+
+
+<!-- PHOTO TO VIDEO -->
+
+<div class="card">
+
+<h2>4. Photo से AI Video बनाना</h2>
+
+<p>
+यह AI वीडियो बनाने का बहुत उपयोगी तरीका है।
+आप अपनी फोटो को AI वीडियो उपकरण में देकर उसे हल्की गतिविधि वाली वीडियो में बदल सकते हैं।
+</p>
+
+<div class="step">
+
+<b>पहला चरण:</b>
+
+अपनी साफ फोटो चुनें।
+
+</div>
+
+<div class="step">
+
+<b>दूसरा चरण:</b>
+
+फोटो AI Video उपकरण में डालें।
+
+</div>
+
+<div class="step">
+
+<b>तीसरा चरण:</b>
+
+बताएँ कि फोटो में क्या गतिविधि होनी चाहिए।
+
+</div>
+
+<div class="step">
+
+<b>चौथा चरण:</b>
+
+कैमरा की गति बताएं।
+
+</div>
+
+<div class="step">
+
+<b>पाँचवाँ चरण:</b>
+
+वीडियो तैयार करें और परिणाम देखें।
+
+</div>
+
+</div>
+
+
+<!-- PHOTO PROMPT -->
+
+<div class="card">
+
+<h2>5. Photo-to-Video Prompt कैसे लिखें?</h2>
+
+<p>
+अच्छा Prompt लिखते समय केवल यह नहीं लिखना चाहिए कि “वीडियो बना दो”।
+आपको व्यक्ति की गतिविधि, कैमरा और वातावरण भी बताना चाहिए।
+</p>
+
+<div class="prompt-box">
+
+<b>उदाहरण Prompt:</b>
+
+<pre>
+Use the uploaded photo as the main character.
+Keep the person's identity and face consistent.
+The person slowly walks forward on a cinematic city street.
+Natural body movement, realistic facial expression,
+soft evening lights, slight wind movement in clothes,
+slow camera push-in, realistic cinematic video,
+smooth motion, natural lighting.
+</pre>
+
+</div>
+
+<div class="important">
+
+<b>याद रखें:</b>
+
+<br>
+
+जितना स्पष्ट Prompt होगा, AI को आपके विचार को समझने में उतनी मदद मिलेगी।
+
+</div>
+
+</div>
+
+
+<!-- FACE CONSISTENCY -->
+
+<div class="card">
+
+<h2>6. सभी Clips में Face Same कैसे रखें?</h2>
+
+<p>
+अगर आप अपनी खुद की फोटो से कई वीडियो क्लिप बनाना चाहते हैं तो सबसे जरूरी चीज है
+व्यक्ति की पहचान को लगातार समान रखना।
+</p>
+
+<div class="step">
+
+<b>1.</b> एक अच्छी और साफ फोटो को Reference Image के रूप में रखें।
+
+</div>
+
+<div class="step">
+
+<b>2.</b> सभी क्लिप में उसी Reference Image का उपयोग करें।
+
+</div>
+
+<div class="step">
+
+<b>3.</b> Prompt में लिखें कि व्यक्ति की पहचान और चेहरा समान रखा जाए।
+
+</div>
+
+<div class="step">
+
+<b>4.</b> कपड़े और वातावरण बदल सकते हैं, लेकिन मुख्य व्यक्ति को स्पष्ट रखें।
+
+</div>
+
+<div class="step">
+
+<b>5.</b> यदि उपकरण में Seed, Reference Strength या Character Reference जैसा विकल्प हो,
+तो उसका उपयोग करें।
+
+</div>
+
+<div class="warning">
+
+<b>महत्वपूर्ण:</b>
+
+<br>
+
+AI हर बार चेहरा बिल्कुल समान रखने की गारंटी नहीं देता।
+अलग-अलग AI उपकरणों में परिणाम अलग हो सकते हैं।
+
+</div>
+
+</div>
+
+
+<!-- CINEMATIC -->
+
+<div class="card">
+
+<h2>7. Cinematic Video Prompt</h2>
+
+<p>
+Cinematic वीडियो के लिए Prompt में कैमरा, प्रकाश, वातावरण और गति बताना उपयोगी होता है।
+</p>
+
+<div class="prompt-box">
+
+<pre>
+Use the uploaded photo as the main character.
+Keep the face and identity consistent.
+Cinematic evening street scene,
+the person walks slowly toward the camera,
+soft background lights, realistic shadows,
+gentle wind, natural movement,
+slow camera tracking shot,
+shallow depth of field,
+realistic cinematic look,
+smooth motion, high detail.
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- CAMERA MOVEMENTS -->
+
+<div class="card">
+
+<h2>8. Camera Movement के शब्द</h2>
+
+<table>
+
+<tr>
+<th>Camera शब्द</th>
+<th>अर्थ</th>
+</tr>
+
+<tr>
+<td>Slow Push-in</td>
+<td>कैमरा धीरे-धीरे व्यक्ति के पास आता है</td>
+</tr>
+
+<tr>
+<td>Pull Back</td>
+<td>कैमरा धीरे-धीरे पीछे जाता है</td>
+</tr>
+
+<tr>
+<td>Tracking Shot</td>
+<td>कैमरा व्यक्ति के साथ चलता है</td>
+</tr>
+
+<tr>
+<td>Pan</td>
+<td>कैमरा एक तरफ से दूसरी तरफ घूमता है</td>
+</tr>
+
+<tr>
+<td>Zoom In</td>
+<td>विषय को पास से दिखाना</td>
+</tr>
+
+<tr>
+<td>Zoom Out</td>
+<td>विषय से दूर का दृश्य दिखाना</td>
+</tr>
+
+<tr>
+<td>Slow Motion</td>
+<td>गतिविधि को धीमी गति में दिखाना</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- AI VOICE -->
+
+<div class="card">
+
+<h2>9. AI Voice क्या है?</h2>
+
+<p>
+AI Voice की सहायता से लिखे हुए शब्दों को कृत्रिम आवाज में बदला जा सकता है।
+इससे बिना अपनी आवाज रिकॉर्ड किए वीडियो में Voice Over जोड़ा जा सकता है।
+</p>
+
+<div class="voice">
+
+<b>उदाहरण:</b>
+
+<br><br>
+
+आप लिखते हैं:
+
+<br>
+
+“कभी भी अपनी शुरुआत को छोटा मत समझो।”
+
+<br><br>
+
+AI Voice उस वाक्य को आवाज में बदल सकती है।
+
+</div>
+
+</div>
+
+
+<!-- VOICE STEPS -->
+
+<div class="card">
+
+<h2>10. AI Voice बनाने के चरण</h2>
+
+<div class="step">
+
+<span class="step-number">1</span>
+
+AI Voice बनाने वाला उपकरण खोलें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">2</span>
+
+अपनी भाषा चुनें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">3</span>
+
+आवाज का प्रकार चुनें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">4</span>
+
+अपना Script लिखें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">5</span>
+
+आवाज तैयार करें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">6</span>
+
+ऑडियो को वीडियो संपादन कार्यक्रम में जोड़ें।
+
+</div>
+
+</div>
+
+
+<!-- VOICE PROMPT -->
+
+<div class="card">
+
+<h2>11. AI Voice के लिए Script कैसे लिखें?</h2>
+
+<div class="prompt-box">
+
+<pre>
+एक अच्छी AI Voice Script छोटी,
+साफ और आसानी से बोलने योग्य होनी चाहिए।
+
+उदाहरण:
+
+“हर बड़ी सफलता की शुरुआत
+एक छोटे कदम से होती है।
+बस शुरुआत करने की हिम्मत चाहिए।”
+</pre>
+
+</div>
+
+<div class="important">
+
+लंबे वाक्यों की जगह छोटे वाक्य रखने से आवाज अधिक स्वाभाविक लग सकती है।
+
+</div>
+
+</div>
+
+
+<!-- MUSIC -->
+
+<div class="card">
+
+<h2>12. Background Music कैसे जोड़ें?</h2>
+
+<p>
+वीडियो में हल्का Background Music वीडियो के वातावरण को बेहतर बना सकता है।
+</p>
+
+<div class="music">
+
+<b>उदाहरण:</b>
+
+<br><br>
+
+Motivational Video → हल्का प्रेरणादायक संगीत
+
+<br>
+
+Cinematic Video → Cinematic Background Music
+
+<br>
+
+Travel Video → Relaxing Travel Music
+
+<br>
+
+Funny Video → हल्का मजेदार संगीत
+
+</div>
+
+<div class="warning">
+
+हमेशा ऐसा संगीत इस्तेमाल करें जिसके उपयोग की अनुमति हो।
+कॉपीराइट वाले संगीत का गलत उपयोग करने से वीडियो पर समस्या आ सकती है।
+
+</div>
+
+</div>
+
+
+<!-- AUDIO BALANCE -->
+
+<div class="card">
+
+<h2>13. Voice और Music का Balance</h2>
+
+<p>
+यदि Background Music बहुत तेज है तो दर्शक Voice Over को ठीक से नहीं सुन पाएगा।
+इसलिए Voice को स्पष्ट और Music को अपेक्षाकृत हल्का रखना चाहिए।
+</p>
+
+<table>
+
+<tr>
+<th>तत्व</th>
+<th>ध्यान किस पर दें?</th>
+</tr>
+
+<tr>
+<td>Voice</td>
+<td>साफ और आसानी से सुनाई दे</td>
+</tr>
+
+<tr>
+<td>Music</td>
+<td>Voice को दबाए नहीं</td>
+</tr>
+
+<tr>
+<td>Sound Effects</td>
+<td>जरूरत के अनुसार कम मात्रा में</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- CLIPS -->
+
+<div class="card">
+
+<h2>14. कई AI Clips को एक Video में जोड़ना</h2>
+
+<p>
+AI से पूरी लंबी वीडियो एक ही बार में बनाने की बजाय कई छोटी Clips बनाना आसान हो सकता है।
+बाद में इन्हें एक वीडियो में जोड़ा जा सकता है।
+</p>
+
+<div class="video-box">
+
+<div class="video-screen">
+🎬 VIDEO TIMELINE
+</div>
+
+<div class="timeline">
+
+<span class="clip">5 sec</span>
+
+<span class="clip">6 sec</span>
+
+<span class="clip">7 sec</span>
+
+<span class="clip">5 sec</span>
+
+</div>
+
+</div>
+
+<p>
+इस तरह 4 छोटी Clips मिलकर लगभग 20–25 सेकंड की वीडियो बन सकती हैं।
+</p>
+
+</div>
+
+
+<!-- COMPLETE WORKFLOW -->
+
+<div class="card">
+
+<h2>15. Complete AI Video Workflow</h2>
+
+<div class="step">
+
+<span class="step-number">1</span>
+
+वीडियो का विषय तय करें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">2</span>
+
+छोटी Script लिखें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">3</span>
+
+हर Scene का Prompt तैयार करें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">4</span>
+
+AI से Images या Video Clips तैयार करें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">5</span>
+
+AI Voice तैयार करें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">6</span>
+
+Background Music जोड़ें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">7</span>
+
+सभी Clips को क्रम में लगाएँ।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">8</span>
+
+वीडियो देखें और गलत हिस्से ठीक करें।
+
+</div>
+
+<div class="step">
+
+<span class="step-number">9</span>
+
+अंत में वीडियो Export करें।
+
+</div>
+
+</div>
+
+
+<!-- SHORTS -->
+
+<div class="card">
+
+<h2>16. YouTube Shorts / Instagram Reels के लिए वीडियो</h2>
+
+<p>
+Short Video के लिए Vertical वीडियो प्रारूप बहुत उपयोगी है।
+</p>
+
+<table>
+
+<tr>
+<th>चीज</th>
+<th>उदाहरण</th>
+</tr>
+
+<tr>
+<td>वीडियो आकार</td>
+<td>9:16</td>
+</tr>
+
+<tr>
+<td>वीडियो दिशा</td>
+<td>Vertical</td>
+</tr>
+
+<tr>
+<td>पहले कुछ सेकंड</td>
+<td>Strong Hook</td>
+</tr>
+
+<tr>
+<td>बीच का भाग</td>
+<td>Main Story</td>
+</tr>
+
+<tr>
+<td>अंत</td>
+<td>Strong Ending / CTA</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- HOOK -->
+
+<div class="card">
+
+<h2>17. Video Hook क्या है?</h2>
+
+<p>
+Hook वीडियो की शुरुआत का वह भाग है जो दर्शक का ध्यान खींचने की कोशिश करता है।
+</p>
+
+<div class="prompt-box">
+
+<b>उदाहरण:</b>
+
+<pre>
+“अगर आप भी AI से वीडियो बनाना चाहते हैं,
+तो यह तरीका जरूर देखिए।”
+
+“सिर्फ एक फोटो से ऐसी वीडियो बनाई जा सकती है।”
+
+“क्या आपकी एक फोटो भी Cinematic Video बन सकती है?”
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- CTA -->
+
+<div class="card">
+
+<h2>18. CTA क्या है?</h2>
+
+<p>
+CTA का अर्थ है दर्शक को कोई अगला कार्य करने के लिए कहना।
+</p>
+
+<div class="info">
+
+उदाहरण:
+
+<br><br>
+
+वीडियो पसंद आए तो चैनल को Subscribe करें।
+
+<br>
+
+ऐसी और जानकारी के लिए Follow करें।
+
+<br>
+
+आप अगली वीडियो किस विषय पर चाहते हैं? Comment करें।
+
+</div>
+
+</div>
+
+
+<!-- FREE PAID -->
+
+<div class="card">
+
+<h2>19. Free और Paid AI Tools</h2>
+
+<p>
+AI Tools में कुछ सेवाएँ मुफ्त होती हैं और कुछ में भुगतान करना पड़ सकता है।
+मुफ्त योजना में अक्सर सीमित Credits, कम वीडियो अवधि या सीमित Features मिल सकते हैं।
+</p>
+
+<table>
+
+<tr>
+<th>Free तरीका</th>
+<th>Paid तरीका</th>
+</tr>
+
+<tr>
+<td>सीमित Credits</td>
+<td>अधिक Credits</td>
+</tr>
+
+<tr>
+<td>कुछ Features उपलब्ध</td>
+<td>अधिक Features</td>
+</tr>
+
+<tr>
+<td>कम Generation Limit</td>
+<td>अधिक Generation Limit</td>
+</tr>
+
+<tr>
+<td>शुरुआत करने के लिए अच्छा</td>
+<td>नियमित काम के लिए उपयोगी हो सकता है</td>
+</tr>
+
+</table>
+
+<div class="important">
+
+<b>शुरुआती सीख:</b>
+
+<br>
+
+पहले उपलब्ध मुफ्त सुविधाओं से सीखना शुरू करें।
+किसी भी सेवा के लिए भुगतान करने से पहले उसकी कीमत, नियम और सुविधाएँ जरूर देखें।
+
+</div>
+
+</div>
+
+
+<!-- IMAGE TO VIDEO PROMPT -->
+
+<div class="card">
+
+<h2>20. Complete Image-to-Video Prompt Example</h2>
+
+<p>
+नीचे एक ऐसा उदाहरण है जिसे अपनी फोटो के साथ प्रयोग किया जा सकता है।
+</p>
+
+<div class="prompt-box">
+
+<pre>
+Use my uploaded photo as the main character.
+Preserve the person's identity and facial features.
+The person is standing on a modern city street at night.
+They slowly walk toward the camera.
+Natural walking movement and realistic body motion.
+Soft city lights in the background.
+Gentle wind moving the clothes.
+Cinematic lighting.
+Slow camera push-in.
+Shallow depth of field.
+Realistic skin texture.
+Smooth natural motion.
+Keep the face consistent throughout the clip.
+Vertical 9:16 video.
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- 3 CLIPS -->
+
+<div class="card">
+
+<h2>21. 3 Clips वाली Cinematic Video का उदाहरण</h2>
+
+<h3>🎬 Clip 1 – Introduction</h3>
+
+<div class="prompt-box">
+
+<pre>
+Use my uploaded photo as the main character.
+Keep the face and identity consistent.
+The person stands on a quiet city street.
+Camera slowly moves toward the person.
+Cinematic evening lighting.
+Realistic movement.
+Vertical 9:16.
+</pre>
+
+</div>
+
+
+<h3>🎬 Clip 2 – Walking Scene</h3>
+
+<div class="prompt-box">
+
+<pre>
+Use the same person from the reference image.
+Keep the face and identity consistent.
+The person walks slowly through the city street.
+Camera follows from the front.
+Natural walking movement.
+Soft background lights.
+Cinematic atmosphere.
+Smooth realistic motion.
+Vertical 9:16.
+</pre>
+
+</div>
+
+
+<h3>🎬 Clip 3 – Ending</h3>
+
+<div class="prompt-box">
+
+<pre>
+Use the same person from the reference image.
+Keep the identity and face consistent.
+The person stops and looks toward the camera.
+Slow cinematic camera push-in.
+Beautiful evening background lights.
+Natural facial expression.
+Strong cinematic ending.
+Smooth realistic motion.
+Vertical 9:16.
+</pre>
+
+</div>
+
+</div>
+
+
+<!-- AI VIDEO EDITING -->
+
+<div class="card">
+
+<h2>22. AI Video Editing का Basic तरीका</h2>
+
+<p>
+AI से Clips बनने के बाद उन्हें वीडियो संपादन कार्यक्रम में जोड़ा जा सकता है।
+</p>
+
+<div class="step">
+
+<b>1.</b> सभी Clips एक जगह रखें।
+
+</div>
+
+<div class="step">
+
+<b>2.</b> संपादन कार्यक्रम खोलें।
+
+</div>
+
+<div class="step">
+
+<b>3.</b> Clips को क्रम से Timeline पर डालें।
+
+</div>
+
+<div class="step">
+
+<b>4.</b> जरूरत के अनुसार Clip को छोटा करें।
+
+</div>
+
+<div class="step">
+
+<b>5.</b> Voice Over जोड़ें।
+
+</div>
+
+<div class="step">
+
+<b>6.</b> Background Music जोड़ें।
+
+</div>
+
+<div class="step">
+
+<b>7.</b> जरूरत के अनुसार Text या Caption जोड़ें।
+
+</div>
+
+<div class="step">
+
+<b>8.</b> पूरी वीडियो देखकर Export करें।
+
+</div>
+
+</div>
+
+
+<!-- VISUAL TIMELINE -->
+
+<div class="card">
+
+<h2>23. Video Timeline को समझें</h2>
+
+<div class="video-box">
+
+<div class="video-screen">
+आपकी AI Video
+</div>
+
+<div class="timeline">
+
+<span class="clip">Intro</span>
+
+<span class="clip">Scene 1</span>
+
+<span class="clip">Scene 2</span>
+
+<span class="clip">Scene 3</span>
+
+<span class="clip">Ending</span>
+
+</div>
+
+</div>
+
+<p>
+Timeline में Clips को सही क्रम में रखने से पूरी कहानी समझने में आसान होती है।
+</p>
+
+</div>
+
+
+<!-- CAPTION -->
+
+<div class="card">
+
+<h2>24. Caption और Text का उपयोग</h2>
+
+<p>
+वीडियो में महत्वपूर्ण शब्दों को Text के रूप में दिखाया जा सकता है।
+लेकिन स्क्रीन पर बहुत ज्यादा Text नहीं रखना चाहिए।
+</p>
+
+<div class="info">
+
+<b>अच्छा तरीका:</b>
+
+<br>
+
+एक समय में छोटा और स्पष्ट वाक्य दिखाएँ।
+
+</div>
+
+</div>
+
+
+<!-- PRACTICAL PROJECT -->
+
+<div class="project">
+
+<h2>🎯 25. Complete Practical Project</h2>
+
+<p>
+अब एक पूरी AI Short Video बनाने का अभ्यास करें।
+</p>
+
+<h3>Project Topic:</h3>
+
+<p><b>“एक साधारण फोटो से Cinematic AI Video”</b></p>
+
+<h3>Project में चाहिए:</h3>
+
+<ul>
+
+<li>1 साफ Reference Photo</li>
+
+<li>3 AI Video Clips</li>
+
+<li>एक छोटी Hindi Voice Over</li>
+
+<li>हल्का Background Music</li>
+
+<li>Vertical 9:16 Video</li>
+
+<li>Strong Ending</li>
+
+</ul>
+
+<h3>Voice Over Example:</h3>
+
+<div class="prompt-box">
+
+<pre>
+“हर तस्वीर सिर्फ एक तस्वीर नहीं होती।
+सही कल्पना और AI की मदद से
+उसे एक कहानी में बदला जा सकता है।”
+</pre>
+
+</div>
+
+<h3>Final Structure:</h3>
+
+<table>
+
+<tr>
+<th>समय</th>
+<th>भाग</th>
+</tr>
+
+<tr>
+<td>0–3 सेकंड</td>
+<td>Hook</td>
+</tr>
+
+<tr>
+<td>3–8 सेकंड</td>
+<td>Scene 1</td>
+</tr>
+
+<tr>
+<td>8–14 सेकंड</td>
+<td>Scene 2</td>
+</tr>
+
+<tr>
+<td>14–20 सेकंड</td>
+<td>Scene 3</td>
+</tr>
+
+<tr>
+<td>20–23 सेकंड</td>
+<td>Ending / CTA</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- PRIVACY -->
+
+<div class="card">
+
+<h2>26. अपनी Photo इस्तेमाल करते समय सावधानी</h2>
+
+<div class="warning">
+
+अपनी फोटो केवल भरोसेमंद AI सेवा में ही अपलोड करें।
+किसी भी वेबसाइट पर फोटो अपलोड करने से पहले उसकी Privacy Policy और Terms को देखना अच्छा अभ्यास है।
+
+</div>
+
+<ul>
+
+<li>बहुत निजी फोटो अनजान वेबसाइट पर अपलोड न करें।</li>
+
+<li>किसी दूसरे व्यक्ति की फोटो बिना अनुमति इस्तेमाल न करें।</li>
+
+<li>AI फोटो को किसी व्यक्ति को धोखा देने के लिए इस्तेमाल न करें।</li>
+
+<li>महत्वपूर्ण निजी जानकारी वाली फोटो शेयर करने से बचें।</li>
+
+</ul>
+
+</div>
+
+
+<!-- SHORTCUTS -->
+
+<div class="card">
+
+<h2>27. Useful Shortcut Keys</h2>
+
+<table>
+
+<tr>
+<th>Shortcut</th>
+<th>काम</th>
+</tr>
+
+<tr>
+<td class="shortcut">Ctrl + C</td>
+<td>Copy</td>
+</tr>
+
+<tr>
+<td class="shortcut">Ctrl + V</td>
+<td>Paste</td>
+</tr>
+
+<tr>
+<td class="shortcut">Ctrl + X</td>
+<td>Cut</td>
+</tr>
+
+<tr>
+<td class="shortcut">Ctrl + Z</td>
+<td>Undo</td>
+</tr>
+
+<tr>
+<td class="shortcut">Ctrl + S</td>
+<td>Save</td>
+</tr>
+
+<tr>
+<td class="shortcut">Ctrl + A</td>
+<td>Select All</td>
+</tr>
+
+<tr>
+<td class="shortcut">Ctrl + C</td>
+<td>Copy</td>
+</tr>
+
+<tr>
+<td class="shortcut">Ctrl + V</td>
+<td>Paste</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- IMPORTANT POINTS -->
+
+<div class="card">
+
+<h2>28. Important Points</h2>
+
+<ul>
+
+<li>AI Video बनाने के लिए अच्छा Prompt जरूरी है।</li>
+
+<li>Photo-to-Video में Reference Image महत्वपूर्ण होती है।</li>
+
+<li>एक ही व्यक्ति के कई Clips में Reference Image का उपयोग करें।</li>
+
+<li>Camera Movement Prompt में लिखा जा सकता है।</li>
+
+<li>AI Voice से बिना अपनी आवाज रिकॉर्ड किए Voice Over बनाया जा सकता है।</li>
+
+<li>Background Music Voice से ज्यादा तेज नहीं होना चाहिए।</li>
+
+<li>कई छोटी Clips को जोड़कर पूरी वीडियो बनाई जा सकती है।</li>
+
+<li>Shorts और Reels के लिए 9:16 उपयोगी Vertical Format है।</li>
+
+<li>वीडियो की शुरुआत में अच्छा Hook रखना उपयोगी है।</li>
+
+<li>अंत में उचित CTA दिया जा सकता है।</li>
+
+<li>AI Tools की मुफ्त और भुगतान वाली सुविधाएँ अलग हो सकती हैं।</li>
+
+<li>अपनी निजी जानकारी और फोटो की सुरक्षा का ध्यान रखें।</li>
+
+</ul>
+
+</div>
+
+
+<!-- PRACTICE QUESTIONS -->
+
+<div class="card">
+
+<h2>29. Practice Questions</h2>
+
+<ol>
+
+<li>AI Video क्या है?</li>
+
+<li>टेक्स्ट से वीडियो कैसे बनाई जाती है?</li>
+
+<li>Photo-to-Video क्या होता है?</li>
+
+<li>Reference Image क्या होती है?</li>
+
+<li>Face Consistency क्यों महत्वपूर्ण है?</li>
+
+<li>Video Prompt क्या होता है?</li>
+
+<li>Cinematic Video क्या होती है?</li>
+
+<li>Camera Movement के कोई चार उदाहरण लिखिए।</li>
+
+<li>AI Voice क्या है?</li>
+
+<li>AI Voice बनाने के मुख्य चरण लिखिए।</li>
+
+<li>Background Music क्यों लगाया जाता है?</li>
+
+<li>Voice और Music का Balance क्यों जरूरी है?</li>
+
+<li>कई Clips को एक Video में कैसे जोड़ा जाता है?</li>
+
+<li>9:16 Format कहाँ उपयोग किया जाता है?</li>
+
+<li>Hook क्या होता है?</li>
+
+<li>CTA क्या होता है?</li>
+
+<li>Free और Paid AI Tools में क्या अंतर हो सकता है?</li>
+
+<li>AI Video बनाने में Prompt का क्या महत्व है?</li>
+
+<li>AI Tools इस्तेमाल करते समय Privacy क्यों जरूरी है?</li>
+
+<li>एक Complete AI Video बनाने के मुख्य चरण लिखिए।</li>
+
+</ol>
+
+</div>
+
+
+<!-- MCQ -->
+
+<div class="card">
+
+<h2>30. MCQs</h2>
+
+<p><b>1. AI Video बनाने के लिए किस चीज का उपयोग किया जा सकता है?</b></p>
+
+<p>A) केवल कागज</p>
+<p>B) Text Prompt</p>
+<p>C) केवल Calculator</p>
+<p>D) केवल Keyboard</p>
+
+<p><b>सही उत्तर: B</b></p>
+
+
+<p><b>2. Photo-to-Video में क्या दिया जा सकता है?</b></p>
+
+<p>A) Photo</p>
+<p>B) केवल Printer</p>
+<p>C) केवल Speaker</p>
+<p>D) केवल Mouse</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>3. Reference Image का उपयोग किसलिए किया जा सकता है?</b></p>
+
+<p>A) व्यक्ति या दृश्य को संदर्भ देने के लिए</p>
+<p>B) कंप्यूटर बंद करने के लिए</p>
+<p>C) फाइल Delete करने के लिए</p>
+<p>D) Internet बंद करने के लिए</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>4. 9:16 किस प्रकार का Video Format है?</b></p>
+
+<p>A) Vertical</p>
+<p>B) केवल Audio</p>
+<p>C) केवल Document</p>
+<p>D) Printer Format</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>5. AI Voice का उपयोग किसलिए होता है?</b></p>
+
+<p>A) Text को आवाज में बदलने के लिए</p>
+<p>B) Computer को साफ करने के लिए</p>
+<p>C) Photo Print करने के लिए</p>
+<p>D) Keyboard बदलने के लिए</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>6. Hook कहाँ उपयोगी होता है?</b></p>
+
+<p>A) Video की शुरुआत में</p>
+<p>B) केवल File Name में</p>
+<p>C) Keyboard में</p>
+<p>D) Folder में</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>7. CTA का उद्देश्य क्या है?</b></p>
+
+<p>A) दर्शक को अगला कार्य करने के लिए कहना</p>
+<p>B) Computer बंद करना</p>
+<p>C) File Rename करना</p>
+<p>D) Internet हटाना</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>8. Background Music कैसा होना चाहिए?</b></p>
+
+<p>A) Voice को दबाने वाला</p>
+<p>B) जरूरत के अनुसार संतुलित</p>
+<p>C) हमेशा बहुत तेज</p>
+<p>D) हमेशा बंद</p>
+
+<p><b>सही उत्तर: B</b></p>
+
+
+<p><b>9. Face Consistency का मतलब क्या है?</b></p>
+
+<p>A) अलग-अलग व्यक्ति बनाना</p>
+<p>B) व्यक्ति की पहचान को समान रखने की कोशिश करना</p>
+<p>C) आवाज बंद करना</p>
+<p>D) Video Delete करना</p>
+
+<p><b>सही उत्तर: B</b></p>
+
+
+<p><b>10. AI Tools इस्तेमाल करते समय किसका ध्यान रखना चाहिए?</b></p>
+
+<p>A) Privacy</p>
+<p>B) केवल रंग</p>
+<p>C) केवल Keyboard</p>
+<p>D) केवल Mouse</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>11. कई Clips को किसमें जोड़कर पूरी Video बनाई जा सकती है?</b></p>
+
+<p>A) Timeline</p>
+<p>B) Calculator</p>
+<p>C) Notepad ही केवल</p>
+<p>D) Paint ही केवल</p>
+
+<p><b>सही उत्तर: A</b></p>
+
+
+<p><b>12. अच्छा Prompt कैसा होना चाहिए?</b></p>
+
+<p>A) अस्पष्ट</p>
+<p>B) स्पष्ट और विवरण वाला</p>
+<p>C) केवल एक शब्द</p>
+<p>D) खाली</p>
+
+<p><b>सही उत्तर: B</b></p>
+
+</div>
+
+
+<!-- FINAL PROJECT -->
+
+<div class="project">
+
+<h2>🏆 Final AI Tools Project</h2>
+
+<p>
+अब आपने AI Tools के इस पूरे पाठ में AI Image और AI Video से संबंधित कई महत्वपूर्ण बातें सीख ली हैं।
+</p>
+
+<h3>आपका Final Task:</h3>
+
+<ol>
+
+<li>अपनी एक साफ फोटो चुनें।</li>
+
+<li>एक छोटा Video Idea लिखें।</li>
+
+<li>तीन अलग-अलग Scene के Prompts लिखें।</li>
+
+<li>तीन AI Video Clips तैयार करें।</li>
+
+<li>AI Voice तैयार करें।</li>
+
+<li>Background Music जोड़ें।</li>
+
+<li>सभी Clips को Timeline में लगाएँ।</li>
+
+<li>शुरुआत में Hook रखें।</li>
+
+<li>अंत में छोटा CTA रखें।</li>
+
+<li>पूरी वीडियो देखकर Export करें।</li>
+
+</ol>
+
+<div class="success">
+
+<b>🎉 AI Tools Course Complete!</b>
+
+<br><br>
+
+अब आप AI की मदद से Images, Videos, Voice और छोटे Social Media Projects बनाने की
+बुनियादी प्रक्रिया समझ चुके हैं।
+
+</div>
+
+</div>
+
+
+<!-- SUMMARY -->
+
+<div class="card">
+
+<h2>📚 Lesson 2 Summary</h2>
+
+<p>
+इस पाठ में हमने सीखा कि AI की मदद से Video कैसे बनाई जा सकती है,
+Photo को Video में कैसे बदला जा सकता है, Prompt कैसे लिखा जाता है,
+Face Consistency कैसे बनाए रखने की कोशिश की जाती है,
+AI Voice और Background Music कैसे जोड़े जाते हैं और कई छोटी Clips को
+एक पूरी Video में कैसे बदला जाता है।
+</p>
+
+<p>
+इसके साथ हमने Shorts/Reels के लिए 9:16 Format, Hook, CTA,
+Privacy और Free तथा Paid AI Tools की मूल जानकारी भी सीखी।
+</p>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="nav-buttons">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="ai-tools-lesson1.html">⬅ AI Lesson 1</a>
+
+<a href="ms-excel-lesson2.html">📈 MS Excel</a>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+© 2026 Computer Siksha
+
+<br>
+
+Learn. Practice. Grow.
+
+</footer>
+
+
+</body>
+</html>
