@@ -1,0 +1,1244 @@
+﻿<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Tally Prime Lesson 4 - GST & Inventory</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#0f2a5f;
+    color:white;
+    padding:25px;
+    text-align:center;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:25px auto;
+}
+
+.box{
+    background:white;
+    padding:22px;
+    margin-bottom:22px;
+    border-radius:10px;
+    box-shadow:0 2px 8px #ccc;
+}
+
+h2{
+    color:#0f2a5f;
+    border-bottom:2px solid #ddd;
+    padding-bottom:8px;
+}
+
+h3{
+    color:#1558a6;
+}
+
+.note{
+    background:#fff4cc;
+    padding:15px;
+    border-left:5px solid #e0a800;
+    margin:15px 0;
+}
+
+.example{
+    background:#eef7ee;
+    padding:15px;
+    border-left:5px solid #299629;
+    margin:15px 0;
+}
+
+.screen{
+    background:#202020;
+    color:#fff;
+    padding:18px;
+    border-radius:8px;
+    font-family:monospace;
+    white-space:pre-line;
+    margin:15px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:15px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:left;
+}
+
+th{
+    background:#0f2a5f;
+    color:white;
+}
+
+.question{
+    background:#eef3ff;
+    padding:15px;
+    border-radius:8px;
+}
+
+footer{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📘 Tally Prime - Lesson 4</h1>
+<p>GST & Inventory - Complete Practical</p>
+</header>
+
+<div class="container">
+
+<div class="box">
+<h2>🎯 Lesson 4 mein kya seekhenge?</h2>
+
+<p>Is lesson mein hum Tally Prime mein GST aur Inventory ko practical example ke saath samjhenge.</p>
+
+<ul>
+<li>GST kya hota hai?</li>
+<li>Tally Prime mein GST enable karna</li>
+<li>GSTIN aur registration details samajhna</li>
+<li>CGST, SGST aur IGST</li>
+<li>GST Tax Ledgers</li>
+<li>Unit banana</li>
+<li>Stock Group banana</li>
+<li>Stock Category ka basic idea</li>
+<li>Stock Item banana</li>
+<li>Opening Stock enter karna</li>
+<li>GST ke saath Purchase Entry</li>
+<li>GST ke saath Sales Entry</li>
+<li>Intra-state aur Inter-state transaction</li>
+<li>Stock Summary dekhna</li>
+<li>GST reports ka basic use</li>
+</ul>
+</div>
+
+
+<div class="box">
+<h2>1️⃣ GST kya hota hai?</h2>
+
+<p><b>GST</b> ka full form <b>Goods and Services Tax</b> hai.</p>
+
+<p>GST ek indirect tax system hai jo goods aur services ki supply par applicable hota hai.</p>
+
+<div class="example">
+<b>Simple Example:</b><br>
+Agar kisi product ki taxable value ₹10,000 hai aur applicable GST rate 18% hai, to GST ₹1,800 hoga.
+</div>
+
+<p>18% GST ko generally do parts mein divide kiya ja sakta hai jab transaction same state ke andar ho:</p>
+
+<ul>
+<li>CGST = 9%</li>
+<li>SGST = 9%</li>
+</ul>
+
+<p>Inter-state transaction mein generally IGST apply hota hai.</p>
+</div>
+
+
+<div class="box">
+<h2>2️⃣ CGST, SGST aur IGST</h2>
+
+<table>
+<tr>
+<th>Tax</th>
+<th>Meaning</th>
+<th>Basic Use</th>
+</tr>
+
+<tr>
+<td>CGST</td>
+<td>Central Goods and Services Tax</td>
+<td>Same-state supply mein central share</td>
+</tr>
+
+<tr>
+<td>SGST</td>
+<td>State Goods and Services Tax</td>
+<td>Same-state supply mein state share</td>
+</tr>
+
+<tr>
+<td>IGST</td>
+<td>Integrated Goods and Services Tax</td>
+<td>Inter-state supply</td>
+</tr>
+</table>
+
+<div class="note">
+<b>Important:</b> Actual GST treatment transaction ki nature, place of supply, registration status aur applicable GST rules par depend karta hai. Website par diye examples learning purpose ke liye hain.
+</div>
+</div>
+
+
+<div class="box">
+<h2>3️⃣ Tally Prime mein GST enable kaise kare?</h2>
+
+<p>Sabse pehle apni company open karo.</p>
+
+<h3>Basic Steps</h3>
+
+<ol>
+<li>Tally Prime open karo.</li>
+<li>Apni company select karo.</li>
+<li>Company Features / F11 open karo.</li>
+<li>Statutory & Taxation section mein jao.</li>
+<li>GST option ko enable karo.</li>
+<li>GST related details enter karo.</li>
+<li>Company ka state aur registration details carefully check karo.</li>
+</ol>
+
+<div class="screen">
+TALLY PRIME
+
+Company Features
+----------------------------
+
+Statutory & Taxation
+
+Enable GST       : Yes
+
+GST Details
+State            : Gujarat
+GST Registration : Regular
+
+Save
+</div>
+
+<p>Screen ka exact layout Tally Prime ke version aur company settings ke according different ho sakta hai.</p>
+</div>
+
+
+<div class="box">
+<h2>4️⃣ GST Tax Ledgers banana</h2>
+
+<p>GST transactions ke liye commonly tax ledgers create kiye jate hain.</p>
+
+<table>
+<tr>
+<th>Ledger Name</th>
+<th>Under Group</th>
+</tr>
+
+<tr>
+<td>CGST</td>
+<td>Duties & Taxes</td>
+</tr>
+
+<tr>
+<td>SGST</td>
+<td>Duties & Taxes</td>
+</tr>
+
+<tr>
+<td>IGST</td>
+<td>Duties & Taxes</td>
+</tr>
+</table>
+
+<h3>CGST Ledger Example</h3>
+
+<p>Gateway of Tally → Create → Ledger</p>
+
+<div class="screen">
+Ledger Name : CGST
+
+Under       : Duties & Taxes
+
+Type of Duty/Tax : GST
+
+Tax Type    : Central Tax
+
+Save
+</div>
+
+<h3>SGST Ledger Example</h3>
+
+<div class="screen">
+Ledger Name : SGST
+
+Under       : Duties & Taxes
+
+Type of Duty/Tax : GST
+
+Tax Type    : State Tax
+
+Save
+</div>
+
+<h3>IGST Ledger Example</h3>
+
+<div class="screen">
+Ledger Name : IGST
+
+Under       : Duties & Taxes
+
+Type of Duty/Tax : GST
+
+Tax Type    : Integrated Tax
+
+Save
+</div>
+</div>
+
+
+<div class="box">
+<h2>5️⃣ Inventory kya hoti hai?</h2>
+
+<p><b>Inventory</b> ka matlab business mein available goods/products ka record maintain karna.</p>
+
+<p>Example:</p>
+
+<ul>
+<li>Mobile</li>
+<li>Keyboard</li>
+<li>Mouse</li>
+<li>Printer</li>
+<li>Pen Drive</li>
+</ul>
+
+<p>Agar shop ke paas 50 mouse hain aur 5 mouse sell ho gaye, to stock balance 45 mouse ho jayega.</p>
+
+<div class="example">
+<b>Inventory ka main purpose:</b><br>
+Business ke paas kitna stock hai, kitna purchase hua aur kitna sell hua — iska record maintain karna.
+</div>
+</div>
+
+
+<div class="box">
+<h2>6️⃣ Inventory ke important terms</h2>
+
+<table>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td>Stock Group</td>
+<td>Similar products ka group</td>
+</tr>
+
+<tr>
+<td>Stock Category</td>
+<td>Common characteristics ke basis par stock ko classify karna</td>
+</tr>
+
+<tr>
+<td>Stock Item</td>
+<td>Actual product/item jiska stock maintain hota hai</td>
+</tr>
+
+<tr>
+<td>Unit</td>
+<td>Product ki measurement unit jaise Nos, Kg, Box</td>
+</tr>
+
+<tr>
+<td>Godown</td>
+<td>Stock rakhne ki location</td>
+</tr>
+</table>
+</div>
+
+
+<div class="box">
+<h2>7️⃣ Unit of Measurement banana</h2>
+
+<p>Sabse pehle product ki unit create kar sakte hain.</p>
+
+<p>Example: Mouse ko hum <b>Nos</b> mein maintain karenge.</p>
+
+<h3>Steps</h3>
+
+<ol>
+<li>Gateway of Tally open karo.</li>
+<li>Create → Unit select karo.</li>
+<li>Simple Unit select karo.</li>
+<li>Symbol mein <b>Nos</b> likho.</li>
+<li>Formal Name mein <b>Numbers</b> likh sakte ho.</li>
+<li>Save karo.</li>
+</ol>
+
+<div class="screen">
+Create Unit
+
+Type          : Simple
+Symbol        : Nos
+Formal Name   : Numbers
+Number of Decimal Places : 0
+
+Save
+</div>
+</div>
+
+
+<div class="box">
+<h2>8️⃣ Stock Group banana</h2>
+
+<p>Ab hum computer accessories ka Stock Group banayenge.</p>
+
+<h3>Example</h3>
+
+<p><b>Stock Group Name:</b> Computer Accessories</p>
+
+<div class="screen">
+Create Stock Group
+
+Name          : Computer Accessories
+
+Under         : Primary
+
+Should quantities be added?
+              : Yes
+
+Save
+</div>
+
+<p>Is group ke andar hum Mouse, Keyboard, Pen Drive jaise products rakh sakte hain.</p>
+</div>
+
+
+<div class="box">
+<h2>9️⃣ Stock Item banana</h2>
+
+<p>Ab actual product create karenge.</p>
+
+<h3>Example 1 - Mouse</h3>
+
+<div class="screen">
+Stock Item
+
+Name          : USB Mouse
+Under         : Computer Accessories
+
+Units         : Nos
+
+Opening Qty   : 20
+Rate          : ₹500
+
+GST Details:
+Applicable    : Yes
+
+Save
+</div>
+
+<h3>Example 2 - Keyboard</h3>
+
+<div class="screen">
+Stock Item
+
+Name          : USB Keyboard
+Under         : Computer Accessories
+
+Units         : Nos
+
+Opening Qty   : 10
+Rate          : ₹800
+
+GST Details:
+Applicable    : Yes
+
+Save
+</div>
+
+<h3>Example 3 - Pen Drive</h3>
+
+<div class="screen">
+Stock Item
+
+Name          : 64GB Pen Drive
+Under         : Computer Accessories
+
+Units         : Nos
+
+Opening Qty   : 15
+Rate          : ₹600
+
+GST Details:
+Applicable    : Yes
+
+Save
+</div>
+</div>
+
+
+<div class="box">
+<h2>🔟 GST Rate Stock Item mein set karna</h2>
+
+<p>Agar kisi product par applicable GST rate 18% hai, to stock item ke GST details mein applicable rate configure kiya ja sakta hai.</p>
+
+<div class="screen">
+Stock Item : USB Mouse
+
+GST Details
+
+GST Applicable : Yes
+Taxability     : Taxable
+GST Rate       : 18%
+
+Save
+</div>
+
+<div class="note">
+GST rate product ke HSN/SAC aur applicable rules ke according verify karna chahiye. Website ke practice example mein 18% sirf learning example hai.
+</div>
+</div>
+
+
+<div class="box">
+<h2>1️⃣1️⃣ HSN Code kya hota hai?</h2>
+
+<p><b>HSN</b> ka full form <b>Harmonized System of Nomenclature</b> hai.</p>
+
+<p>Goods ko classify karne ke liye HSN codes use kiye jate hain.</p>
+
+<p>Actual product ka correct HSN code product ki nature aur applicable GST rules ke according verify karna chahiye.</p>
+</div>
+
+
+<div class="box">
+<h2>1️⃣2️⃣ Practical Purchase Entry with GST</h2>
+
+<p>Ab sabse important practical example karte hain.</p>
+
+<div class="example">
+
+<b>Transaction:</b><br><br>
+
+ABC Traders se 10 USB Mouse credit par purchase kiye.<br>
+Rate = ₹500 per Mouse<br>
+Taxable Value = ₹5,000<br>
+Practice GST Rate = 18%<br>
+CGST = ₹450<br>
+SGST = ₹450<br>
+Total = ₹5,900
+</div>
+
+<h3>Entry ka basic calculation</h3>
+
+<table>
+<tr>
+<th>Particular</th>
+<th>Amount</th>
+</tr>
+
+<tr>
+<td>10 × ₹500</td>
+<td>₹5,000</td>
+</tr>
+
+<tr>
+<td>CGST 9%</td>
+<td>₹450</td>
+</tr>
+
+<tr>
+<td>SGST 9%</td>
+<td>₹450</td>
+</tr>
+
+<tr>
+<td><b>Total</b></td>
+<td><b>₹5,900</b></td>
+</tr>
+</table>
+
+<h3>Tally mein basic process</h3>
+
+<ol>
+<li>Purchase Voucher open karo.</li>
+<li>Supplier invoice details enter karo.</li>
+<li>Party A/C select karo - ABC Traders.</li>
+<li>Purchase ledger select karo.</li>
+<li>Stock Item - USB Mouse select karo.</li>
+<li>Quantity = 10 Nos.</li>
+<li>Rate = ₹500.</li>
+<li>Applicable GST details check karo.</li>
+<li>CGST aur SGST calculate/check karo.</li>
+<li>Voucher save karo.</li>
+</ol>
+
+<div class="screen">
+PURCHASE VOUCHER
+
+Party A/C     : ABC Traders
+
+Item          : USB Mouse
+Quantity      : 10 Nos
+Rate          : ₹500
+Taxable Value : ₹5,000
+
+CGST 9%       : ₹450
+SGST 9%       : ₹450
+
+Invoice Total : ₹5,900
+
+Save
+</div>
+</div>
+
+
+<div class="box">
+<h2>1️⃣3️⃣ Purchase Entry - Cash Purchase</h2>
+
+<div class="example">
+<b>Transaction:</b><br>
+Cash se 5 USB Keyboard purchase kiye.<br>
+Rate = ₹800 per Keyboard<br>
+Taxable Value = ₹4,000<br>
+Practice GST = 18%
+</div>
+
+<table>
+<tr>
+<th>Calculation</th>
+<th>Amount</th>
+</tr>
+
+<tr>
+<td>5 × ₹800</td>
+<td>₹4,000</td>
+</tr>
+
+<tr>
+<td>CGST 9%</td>
+<td>₹360</td>
+</tr>
+
+<tr>
+<td>SGST 9%</td>
+<td>₹360</td>
+</tr>
+
+<tr>
+<td>Total</td>
+<td>₹4,720</td>
+</tr>
+</table>
+
+<p>Purchase Voucher mein Cash/Bank ya appropriate payment/party details transaction ke actual nature ke according select karo.</p>
+</div>
+
+
+<div class="box">
+<h2>1️⃣4️⃣ Practical Sales Entry with GST</h2>
+
+<div class="example">
+<b>Transaction:</b><br><br>
+
+Rahul Traders ko 4 USB Mouse credit par sell kiye.<br>
+Rate = ₹700 per Mouse<br>
+Taxable Value = ₹2,800<br>
+Practice GST = 18%
+</div>
+
+<table>
+<tr>
+<th>Particular</th>
+<th>Amount</th>
+</tr>
+
+<tr>
+<td>4 × ₹700</td>
+<td>₹2,800</td>
+</tr>
+
+<tr>
+<td>CGST 9%</td>
+<td>₹252</td>
+</tr>
+
+<tr>
+<td>SGST 9%</td>
+<td>₹252</td>
+</tr>
+
+<tr>
+<td><b>Total Invoice</b></td>
+<td><b>₹3,304</b></td>
+</tr>
+</table>
+
+<h3>Tally Process</h3>
+
+<ol>
+<li>Sales Voucher open karo.</li>
+<li>Party A/C select karo - Rahul Traders.</li>
+<li>Sales ledger select karo.</li>
+<li>USB Mouse select karo.</li>
+<li>Quantity = 4 Nos.</li>
+<li>Rate = ₹700.</li>
+<li>GST details check karo.</li>
+<li>CGST + SGST verify karo.</li>
+<li>Invoice total check karo.</li>
+<li>Save karo.</li>
+</ol>
+
+<div class="screen">
+SALES VOUCHER
+
+Party A/C     : Rahul Traders
+
+Item          : USB Mouse
+Quantity      : 4 Nos
+Rate          : ₹700
+
+Taxable Value : ₹2,800
+
+CGST 9%       : ₹252
+SGST 9%       : ₹252
+
+Invoice Total : ₹3,304
+
+Save
+</div>
+</div>
+
+
+<div class="box">
+<h2>1️⃣5️⃣ Cash Sales Example</h2>
+
+<div class="example">
+<b>Transaction:</b><br>
+Cash customer ko 3 Keyboard sell kiye.<br>
+Rate = ₹1,000 per Keyboard<br>
+Taxable Value = ₹3,000<br>
+Practice GST = 18%
+</div>
+
+<table>
+<tr>
+<th>Calculation</th>
+<th>Amount</th>
+</tr>
+
+<tr>
+<td>3 × ₹1,000</td>
+<td>₹3,000</td>
+</tr>
+
+<tr>
+<td>CGST 9%</td>
+<td>₹270</td>
+</tr>
+
+<tr>
+<td>SGST 9%</td>
+<td>₹270</td>
+</tr>
+
+<tr>
+<td>Total</td>
+<td>₹3,540</td>
+</tr>
+</table>
+</div>
+
+
+<div class="box">
+<h2>1️⃣6️⃣ Inter-State Purchase/Sales mein IGST</h2>
+
+<p>Agar transaction different states ke beech hai, to applicable conditions ke according IGST use ho sakta hai.</p>
+
+<div class="example">
+<b>Example:</b><br>
+Gujarat ki company ne Maharashtra ke registered customer ko taxable value ₹10,000 ka product sell kiya.<br><br>
+
+Practice GST Rate = 18%<br>
+IGST = ₹1,800<br>
+Invoice Total = ₹11,800
+</div>
+
+<p>Is example mein CGST + SGST ke badle IGST treatment use kiya jayega, subject to actual GST rules.</p>
+
+<div class="screen">
+SALES
+
+Party        : Maharashtra Customer
+
+Taxable Value: ₹10,000
+
+IGST 18%     : ₹1,800
+
+Total        : ₹11,800
+</div>
+</div>
+
+
+<div class="box">
+<h2>1️⃣7️⃣ Inventory mein Stock kaise check kare?</h2>
+
+<p>Purchase aur Sales entries ke baad stock automatically update ho sakta hai jab inventory details correctly maintain ki gayi hon.</p>
+
+<h3>Stock Summary</h3>
+
+<p>Gateway of Tally → Stock Summary</p>
+
+<div class="screen">
+STOCK SUMMARY
+
+Computer Accessories
+
+USB Mouse
+Opening       : 20 Nos
+Purchase      : 10 Nos
+Sales         : 4 Nos
+Closing       : 26 Nos
+
+USB Keyboard
+Opening       : 10 Nos
+Purchase      : 5 Nos
+Sales         : 3 Nos
+Closing       : 12 Nos
+</div>
+
+<p><b>Formula:</b></p>
+
+<p>Closing Stock = Opening Stock + Purchase - Sales</p>
+</div>
+
+
+<div class="box">
+<h2>1️⃣8️⃣ Stock Summary ka Practical Example</h2>
+
+<table>
+<tr>
+<th>Product</th>
+<th>Opening</th>
+<th>Purchase</th>
+<th>Sales</th>
+<th>Closing</th>
+</tr>
+
+<tr>
+<td>USB Mouse</td>
+<td>20</td>
+<td>10</td>
+<td>4</td>
+<td>26</td>
+</tr>
+
+<tr>
+<td>Keyboard</td>
+<td>10</td>
+<td>5</td>
+<td>3</td>
+<td>12</td>
+</tr>
+
+<tr>
+<td>Pen Drive</td>
+<td>15</td>
+<td>10</td>
+<td>5</td>
+<td>20</td>
+</tr>
+</table>
+</div>
+
+
+<div class="box">
+<h2>1️⃣9️⃣ Godown kya hota hai?</h2>
+
+<p><b>Godown</b> business ke stock ko store karne ki location hoti hai.</p>
+
+<p>Agar business ke do storage locations hain:</p>
+
+<ul>
+<li>Ahmedabad Godown</li>
+<li>Odhav Godown</li>
+</ul>
+
+<p>To inventory ko location-wise maintain kiya ja sakta hai, agar company ko aisi tracking ki requirement ho.</p>
+
+<div class="screen">
+Godown
+
+Main Godown
+Odhav Godown
+Ahmedabad Godown
+</div>
+</div>
+
+
+<div class="box">
+<h2>2️⃣0️⃣ Purchase Return ka Inventory Effect</h2>
+
+<div class="example">
+<b>Example:</b><br>
+ABC Traders se purchase kiye gaye 2 Mouse defective nikle aur supplier ko return kar diye.
+</div>
+
+<p>Is transaction mein purchase return ka accounting treatment aur stock movement record kiya jata hai.</p>
+
+<p>Lesson 3 mein humne Debit Note ka basic concept padha tha. GST aur inventory setup ke saath actual entry company configuration aur transaction details ke according record ki jati hai.</p>
+
+<div class="screen">
+PURCHASE RETURN
+
+Supplier : ABC Traders
+
+Item     : USB Mouse
+Qty      : 2 Nos
+
+Reason   : Purchase Return
+
+Save
+</div>
+</div>
+
+
+<div class="box">
+<h2>2️⃣1️⃣ Sales Return ka Inventory Effect</h2>
+
+<div class="example">
+<b>Example:</b><br>
+Rahul Traders ne 1 Mouse return kar diya.
+</div>
+
+<p>Sales return hone par returned stock inventory mein wapas add ho sakta hai, provided transaction ko correctly record kiya gaya ho.</p>
+
+<div class="screen">
+SALES RETURN
+
+Customer : Rahul Traders
+
+Item     : USB Mouse
+Qty      : 1 Nos
+
+Reason   : Sales Return
+
+Save
+</div>
+</div>
+
+
+<div class="box">
+<h2>2️⃣2️⃣ GST aur Inventory ka Connection</h2>
+
+<p>Tally mein accounting aur inventory ek saath maintain kiye ja sakte hain.</p>
+
+<div class="example">
+<b>Example:</b><br><br>
+
+Purchase Entry → Stock increase + Purchase accounting + GST details<br><br>
+
+Sales Entry → Stock decrease + Sales accounting + GST details
+</div>
+
+<p>Isliye product ki quantity, rate, tax details aur ledger selection carefully check karna important hai.</p>
+</div>
+
+
+<div class="box">
+<h2>2️⃣3️⃣ Complete Practical Business Example</h2>
+
+<p>Ab ek small business ka complete practice set karte hain.</p>
+
+<h3>Business: Computer Accessories Shop</h3>
+
+<table>
+<tr>
+<th>Transaction</th>
+<th>Details</th>
+</tr>
+
+<tr>
+<td>Opening Stock</td>
+<td>20 Mouse @ ₹500</td>
+</tr>
+
+<tr>
+<td>Purchase</td>
+<td>10 Mouse @ ₹500 from ABC Traders</td>
+</tr>
+
+<tr>
+<td>Purchase</td>
+<td>5 Keyboard @ ₹800</td>
+</tr>
+
+<tr>
+<td>Sales</td>
+<td>4 Mouse @ ₹700 to Rahul Traders</td>
+</tr>
+
+<tr>
+<td>Sales</td>
+<td>3 Keyboard @ ₹1,000</td>
+</tr>
+
+<tr>
+<td>Purchase Return</td>
+<td>2 Mouse to ABC Traders</td>
+</tr>
+
+<tr>
+<td>Sales Return</td>
+<td>1 Mouse from Rahul Traders</td>
+</tr>
+</table>
+
+<h3>Practice Flow</h3>
+
+<ol>
+<li>Company create/open karo.</li>
+<li>GST enable karo.</li>
+<li>CGST, SGST, IGST tax ledgers check/create karo.</li>
+<li>Unit - Nos create karo.</li>
+<li>Stock Group - Computer Accessories create karo.</li>
+<li>Mouse stock item create karo.</li>
+<li>Keyboard stock item create karo.</li>
+<li>Opening stock enter karo.</li>
+<li>Purchase entries karo.</li>
+<li>Sales entries karo.</li>
+<li>Purchase Return record karo.</li>
+<li>Sales Return record karo.</li>
+<li>Stock Summary check karo.</li>
+<li>GST-related reports check karo.</li>
+</ol>
+</div>
+
+
+<div class="box">
+<h2>2️⃣4️⃣ Important Reports</h2>
+
+<p>Practice ke baad reports check karna bahut important hai.</p>
+
+<table>
+<tr>
+<th>Report</th>
+<th>Use</th>
+</tr>
+
+<tr>
+<td>Stock Summary</td>
+<td>Available stock check karne ke liye</td>
+</tr>
+
+<tr>
+<td>Day Book</td>
+<td>Day ke transactions dekhne ke liye</td>
+</tr>
+
+<tr>
+<td>Ledger</td>
+<td>Kisi particular account ka record dekhne ke liye</td>
+</tr>
+
+<tr>
+<td>Sales Register</td>
+<td>Sales transactions dekhne ke liye</td>
+</tr>
+
+<tr>
+<td>Purchase Register</td>
+<td>Purchase transactions dekhne ke liye</td>
+</tr>
+
+<tr>
+<td>GST Reports</td>
+<td>GST-related transaction/report information review karne ke liye</td>
+</tr>
+</table>
+</div>
+
+
+<div class="box">
+<h2>2️⃣5️⃣ Common Mistakes</h2>
+
+<ul>
+<li>Wrong GST rate select karna</li>
+<li>Wrong party ledger select karna</li>
+<li>CGST/SGST ki jagah wrong tax treatment use karna</li>
+<li>Inter-state transaction ko incorrectly record karna</li>
+<li>Stock item ki wrong unit select karna</li>
+<li>Quantity wrong enter karna</li>
+<li>Rate wrong enter karna</li>
+<li>Purchase aur Sales ledger mein confusion karna</li>
+<li>Stock Summary check na karna</li>
+<li>Invoice save karne se pehle total verify na karna</li>
+</ul>
+</div>
+
+
+<div class="box">
+<h2>📝 Student Practical Task</h2>
+
+<p>Ab khud Tally Prime mein ye practice karo:</p>
+
+<ol>
+<li>Computer Accessories Stock Group banao.</li>
+<li>Nos unit banao.</li>
+<li>USB Mouse item banao.</li>
+<li>USB Keyboard item banao.</li>
+<li>Opening Stock enter karo.</li>
+<li>ABC Traders naam ka supplier ledger banao.</li>
+<li>Rahul Traders naam ka customer ledger banao.</li>
+<li>CGST ledger check/create karo.</li>
+<li>SGST ledger check/create karo.</li>
+<li>IGST ledger check/create karo.</li>
+<li>10 Mouse purchase entry karo.</li>
+<li>4 Mouse sales entry karo.</li>
+<li>5 Keyboard purchase entry karo.</li>
+<li>3 Keyboard sales entry karo.</li>
+<li>Stock Summary check karo.</li>
+</ol>
+</div>
+
+
+<div class="box">
+<h2>❓ Lesson 4 Questions</h2>
+
+<div class="question">
+
+<p><b>Q1.</b> GST ka full form kya hai?</p>
+
+<p><b>Q2.</b> CGST aur SGST ka use kab hota hai?</p>
+
+<p><b>Q3.</b> IGST kya hota hai?</p>
+
+<p><b>Q4.</b> Inventory kya hoti hai?</p>
+
+<p><b>Q5.</b> Stock Group kya hota hai?</p>
+
+<p><b>Q6.</b> Stock Item kya hota hai?</p>
+
+<p><b>Q7.</b> Unit of Measurement kya hota hai?</p>
+
+<p><b>Q8.</b> HSN ka full form kya hai?</p>
+
+<p><b>Q9.</b> Stock Summary ka kya use hai?</p>
+
+<p><b>Q10.</b> Purchase ke baad stock par kya effect hota hai?</p>
+
+<p><b>Q11.</b> Sales ke baad stock par kya effect hota hai?</p>
+
+<p><b>Q12.</b> Same-state aur inter-state transaction mein GST treatment ka basic difference kya hai?</p>
+
+</div>
+</div>
+
+
+<div class="box">
+<h2>📌 Quick Revision</h2>
+
+<table>
+<tr>
+<th>Topic</th>
+<th>Yaad Rakho</th>
+</tr>
+
+<tr>
+<td>GST</td>
+<td>Goods and Services Tax</td>
+</tr>
+
+<tr>
+<td>CGST</td>
+<td>Central Tax</td>
+</tr>
+
+<tr>
+<td>SGST</td>
+<td>State Tax</td>
+</tr>
+
+<tr>
+<td>IGST</td>
+<td>Integrated Tax</td>
+</tr>
+
+<tr>
+<td>Inventory</td>
+<td>Stock ka record</td>
+</tr>
+
+<tr>
+<td>Stock Group</td>
+<td>Similar products ka group</td>
+</tr>
+
+<tr>
+<td>Stock Item</td>
+<td>Actual product</td>
+</tr>
+
+<tr>
+<td>Unit</td>
+<td>Nos, Kg, Box etc.</td>
+</tr>
+
+<tr>
+<td>Stock Summary</td>
+<td>Stock position check karne ke liye</td>
+</tr>
+</table>
+</div>
+
+
+<div class="box">
+<h2>🎓 Lesson 4 Summary</h2>
+
+<p>Aaj humne Tally Prime mein GST aur Inventory ka practical concept samjha.</p>
+
+<ul>
+<li>GST ka basic concept</li>
+<li>CGST, SGST aur IGST</li>
+<li>GST tax ledgers</li>
+<li>Inventory ka meaning</li>
+<li>Stock Group</li>
+<li>Stock Item</li>
+<li>Unit</li>
+<li>Opening Stock</li>
+<li>Purchase with GST</li>
+<li>Sales with GST</li>
+<li>Purchase Return</li>
+<li>Sales Return</li>
+<li>Stock Summary</li>
+<li>GST-related reports</li>
+</ul>
+
+<p><b>Next Lesson:</b> Tally Prime ka Complete Business Project + Reports.</p>
+
+</div>
+
+</div>
+
+<footer>
+<h2>Computer Siksha</h2>
+<p>Learn Computer Skills Step by Step</p>
+<p>📚 Tally Prime Course - Lesson 4 Completed</p>
+</footer>
+
+</body>
+</html>

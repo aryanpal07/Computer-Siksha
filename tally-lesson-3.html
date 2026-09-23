@@ -1,0 +1,1607 @@
+﻿```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tally Prime Lesson 3 - Voucher Entries | Computer Siksha</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header p{
+    margin:7px 0;
+}
+
+.container{
+    width:92%;
+    max-width:1050px;
+    margin:25px auto;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:22px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+h2{
+    color:#0f2a5f;
+    border-left:5px solid #0f2a5f;
+    padding-left:12px;
+}
+
+h3{
+    color:#174a9c;
+}
+
+.example{
+    background:#eef6ff;
+    border-left:5px solid #2878d7;
+    padding:15px;
+    margin:15px 0;
+    border-radius:7px;
+}
+
+.note{
+    background:#fff5d8;
+    border-left:5px solid #e5a500;
+    padding:15px;
+    margin:15px 0;
+    border-radius:7px;
+}
+
+.success{
+    background:#edf8ed;
+    border-left:5px solid #3c963c;
+    padding:15px;
+    margin:15px 0;
+    border-radius:7px;
+}
+
+.step{
+    background:#f7f7f7;
+    padding:14px;
+    margin:9px 0;
+    border-radius:7px;
+}
+
+.visual{
+    background:#fafafa;
+    border:2px solid #d5dbe5;
+    padding:20px;
+    margin:18px 0;
+    border-radius:9px;
+    text-align:center;
+}
+
+.visual-title{
+    font-size:19px;
+    font-weight:bold;
+    color:#174a9c;
+    margin-bottom:12px;
+}
+
+.screen{
+    max-width:750px;
+    margin:15px auto;
+    border:3px solid #555;
+    border-radius:8px;
+    background:#e9e9e9;
+    text-align:left;
+    overflow:hidden;
+}
+
+.screen-top{
+    background:#333;
+    color:white;
+    padding:9px 12px;
+    font-weight:bold;
+}
+
+.screen-body{
+    padding:18px;
+    background:white;
+}
+
+.field{
+    border:1px solid #aaa;
+    padding:8px 10px;
+    margin:7px 0;
+    background:#f8f8f8;
+}
+
+.flow{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.flow-box{
+    background:#eaf2ff;
+    border:2px solid #2878d7;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.arrow{
+    font-size:25px;
+}
+
+.entry-box{
+    background:#f8f8f8;
+    border:1px solid #ccc;
+    padding:15px;
+    margin:15px 0;
+    border-radius:8px;
+}
+
+.debit{
+    border-left:5px solid #2878d7;
+}
+
+.credit{
+    border-left:5px solid #777;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:11px;
+    vertical-align:top;
+}
+
+th{
+    background:#e8eef8;
+    color:#0f2a5f;
+}
+
+.quiz{
+    background:#f0f8f0;
+    border-left:5px solid #3b8d3b;
+    padding:18px;
+    border-radius:7px;
+}
+
+.highlight{
+    background:#f1edff;
+    border-left:5px solid #7048c6;
+    padding:15px;
+    border-radius:7px;
+}
+
+footer{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:22px;
+    margin-top:30px;
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:24px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    table{
+        font-size:13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+<h1>Tally Prime – Lesson 3</h1>
+
+<p>Voucher Entries – Complete Practical</p>
+
+<p>Computer Siksha</p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+
+<h2>1. Voucher Kya Hai?</h2>
+
+<div class="highlight">
+
+<strong>Simple Definition:</strong>
+
+<p>
+Voucher Tally me kisi business transaction ko record karne ka method hai.
+Business me jo financial transaction hota hai, usko appropriate Voucher
+ke through Tally me enter kiya jata hai.
+</p>
+
+</div>
+
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+Business ne ₹5,000 rent pay kiya.
+</p>
+
+<p>
+Ye ek Payment transaction hai, isliye isko Payment Voucher me record
+kiya jayega.
+</p>
+
+</div>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Transaction → Voucher → Tally Record
+</div>
+
+<div class="flow">
+
+<div class="flow-box">
+Business Transaction
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Voucher
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Accounting Record
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- VOUCHER LIST -->
+
+<div class="card">
+
+<h2>2. Important Voucher Types</h2>
+
+<table>
+
+<tr>
+<th>Voucher</th>
+<th>Basic Use</th>
+</tr>
+
+<tr>
+<td>Contra</td>
+<td>Cash aur Bank ke beech transactions ke liye.</td>
+</tr>
+
+<tr>
+<td>Payment</td>
+<td>Business se payment jane par.</td>
+</tr>
+
+<tr>
+<td>Receipt</td>
+<td>Business ko payment receive hone par.</td>
+</tr>
+
+<tr>
+<td>Journal</td>
+<td>Adjustment aur accounting entries ke liye.</td>
+</tr>
+
+<tr>
+<td>Purchase</td>
+<td>Goods purchase karne ke liye.</td>
+</tr>
+
+<tr>
+<td>Sales</td>
+<td>Goods sell karne ke liye.</td>
+</tr>
+
+<tr>
+<td>Debit Note</td>
+<td>Purchase return ya related adjustment ke liye commonly use hota hai.</td>
+</tr>
+
+<tr>
+<td>Credit Note</td>
+<td>Sales return ya related adjustment ke liye commonly use hota hai.</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+<!-- CONTRA -->
+
+<div class="card">
+
+<h2>3. Contra Voucher – Practical Entry</h2>
+
+<div class="highlight">
+
+<strong>Contra ka Simple Meaning:</strong>
+
+<p>
+Contra Voucher ka use mainly Cash aur Bank ke beech money transfer
+jaise transactions ko record karne ke liye hota hai.
+</p>
+
+</div>
+
+
+<h3>Practical Example 1 – Cash Bank me Deposit</h3>
+
+<div class="example">
+
+<p>
+Business ne Cash se ₹10,000 SBI Bank me deposit kiye.
+</p>
+
+<strong>Amount: ₹10,000</strong>
+
+</div>
+
+
+<h3>Entry Samjhein</h3>
+
+<div class="entry-box debit">
+
+<strong>Debit:</strong> SBI Bank – ₹10,000
+
+<br><br>
+
+Bank balance increase hua.
+
+</div>
+
+<div class="entry-box credit">
+
+<strong>Credit:</strong> Cash – ₹10,000
+
+<br><br>
+
+Cash balance decrease hua.
+
+</div>
+
+
+<h3>Tally me Steps</h3>
+
+<div class="step">
+1. Voucher screen open karein.
+</div>
+
+<div class="step">
+2. Contra Voucher select karein.
+</div>
+
+<div class="step">
+3. Bank account select karein.
+</div>
+
+<div class="step">
+4. Amount ₹10,000 enter karein.
+</div>
+
+<div class="step">
+5. Cash account select karein.
+</div>
+
+<div class="step">
+6. Amount ₹10,000 enter karein.
+</div>
+
+<div class="step">
+7. Entry check karke save karein.
+</div>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Contra Entry – Learning Visual
+</div>
+
+<div class="screen">
+
+<div class="screen-top">
+Contra Voucher
+</div>
+
+<div class="screen-body">
+
+<div class="field">
+Bank: SBI Bank — ₹10,000
+</div>
+
+<div class="field">
+Cash: ₹10,000
+</div>
+
+<div class="field">
+Narration: Cash deposited into bank
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<h3>Practical Example 2 – Bank se Cash Withdraw</h3>
+
+<div class="example">
+
+Bank se ₹5,000 cash withdraw kiya.
+
+<br><br>
+
+<strong>Debit:</strong> Cash ₹5,000
+
+<br>
+
+<strong>Credit:</strong> SBI Bank ₹5,000
+
+</div>
+
+</div>
+
+
+
+<!-- PAYMENT -->
+
+<div class="card">
+
+<h2>4. Payment Voucher – Practical Entries</h2>
+
+<div class="highlight">
+
+<strong>Payment ka Simple Meaning:</strong>
+
+<p>
+Jab business ki taraf se kisi expense, supplier ya other purpose ke
+liye payment ki jati hai, to Payment Voucher use kiya jata hai.
+</p>
+
+</div>
+
+
+<h3>Practical Example 1 – Rent Payment</h3>
+
+<div class="example">
+
+Shop ka rent ₹5,000 cash me pay kiya.
+
+<br><br>
+
+<strong>Amount: ₹5,000</strong>
+
+</div>
+
+
+<div class="entry-box debit">
+
+<strong>Debit:</strong> Rent ₹5,000
+
+<br><br>
+
+Business ka expense increase hua.
+
+</div>
+
+<div class="entry-box credit">
+
+<strong>Credit:</strong> Cash ₹5,000
+
+<br><br>
+
+Cash decrease hua.
+
+</div>
+
+
+<h3>Tally Steps</h3>
+
+<div class="step">
+1. Payment Voucher open karein.
+</div>
+
+<div class="step">
+2. Particular me Rent Ledger select karein.
+</div>
+
+<div class="step">
+3. Amount ₹5,000 enter karein.
+</div>
+
+<div class="step">
+4. Cash Ledger select karein.
+</div>
+
+<div class="step">
+5. Narration likhein.
+</div>
+
+<div class="step">
+6. Entry save karein.
+</div>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Payment Entry – Rent
+</div>
+
+<div class="screen">
+
+<div class="screen-top">
+Payment Voucher
+</div>
+
+<div class="screen-body">
+
+<div class="field">
+Expense: Rent — ₹5,000
+</div>
+
+<div class="field">
+Paid From: Cash — ₹5,000
+</div>
+
+<div class="field">
+Narration: Rent paid in cash
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<h3>Practical Example 2 – Salary Payment</h3>
+
+<div class="example">
+
+Employees ko ₹15,000 salary cash me pay ki.
+
+<br><br>
+
+<strong>Debit:</strong> Salary ₹15,000
+
+<br>
+
+<strong>Credit:</strong> Cash ₹15,000
+
+</div>
+
+
+<h3>Practical Example 3 – Supplier ko Payment</h3>
+
+<div class="example">
+
+ABC Traders ko ₹8,000 bank se pay kiye.
+
+<br><br>
+
+<strong>Debit:</strong> ABC Traders ₹8,000
+
+<br>
+
+<strong>Credit:</strong> SBI Bank ₹8,000
+
+</div>
+
+</div>
+
+
+
+<!-- RECEIPT -->
+
+<div class="card">
+
+<h2>5. Receipt Voucher – Practical Entries</h2>
+
+<div class="highlight">
+
+<strong>Receipt ka Simple Meaning:</strong>
+
+<p>
+Jab business ko kisi customer, debtor ya other source se money receive
+hoti hai, to Receipt Voucher use kiya jata hai.
+</p>
+
+</div>
+
+
+<h3>Practical Example 1 – Customer se Cash Receive</h3>
+
+<div class="example">
+
+Rahul Traders se ₹8,000 cash receive hue.
+
+<br><br>
+
+<strong>Amount: ₹8,000</strong>
+
+</div>
+
+
+<div class="entry-box debit">
+
+<strong>Debit:</strong> Cash ₹8,000
+
+<br><br>
+
+Cash increase hua.
+
+</div>
+
+<div class="entry-box credit">
+
+<strong>Credit:</strong> Rahul Traders ₹8,000
+
+<br><br>
+
+Customer ka outstanding amount decrease hua.
+
+</div>
+
+
+<h3>Tally Steps</h3>
+
+<div class="step">
+1. Receipt Voucher open karein.
+</div>
+
+<div class="step">
+2. Cash/Bank account select karein.
+</div>
+
+<div class="step">
+3. Amount ₹8,000 enter karein.
+</div>
+
+<div class="step">
+4. Rahul Traders Ledger select karein.
+</div>
+
+<div class="step">
+5. Narration add karein.
+</div>
+
+<div class="step">
+6. Entry save karein.
+</div>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Receipt Entry – Learning Visual
+</div>
+
+<div class="screen">
+
+<div class="screen-top">
+Receipt Voucher
+</div>
+
+<div class="screen-body">
+
+<div class="field">
+Received In: Cash — ₹8,000
+</div>
+
+<div class="field">
+From: Rahul Traders — ₹8,000
+</div>
+
+<div class="field">
+Narration: Amount received from customer
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PURCHASE -->
+
+<div class="card">
+
+<h2>6. Purchase Voucher – Practical Entries</h2>
+
+<div class="highlight">
+
+<strong>Purchase ka Simple Meaning:</strong>
+
+<p>
+Jab business resale ya business purpose ke liye goods purchase karta hai,
+to Purchase Voucher ka use kiya jata hai.
+</p>
+
+</div>
+
+
+<h3>Practical Example 1 – Cash Purchase</h3>
+
+<div class="example">
+
+Business ne ₹20,000 ke goods cash me purchase kiye.
+
+<br><br>
+
+<strong>Amount: ₹20,000</strong>
+
+</div>
+
+
+<div class="entry-box debit">
+
+<strong>Debit:</strong> Purchase ₹20,000
+
+</div>
+
+<div class="entry-box credit">
+
+<strong>Credit:</strong> Cash ₹20,000
+
+</div>
+
+
+<h3>Steps</h3>
+
+<div class="step">
+1. Purchase Voucher open karein.
+</div>
+
+<div class="step">
+2. Supplier/details ke according required party select karein.
+</div>
+
+<div class="step">
+3. Purchase item enter karein.
+</div>
+
+<div class="step">
+4. Quantity/Rate/Amount enter karein, agar inventory maintain kar rahe hain.
+</div>
+
+<div class="step">
+5. Appropriate purchase details complete karein.
+</div>
+
+<div class="step">
+6. Entry save karein.
+</div>
+
+
+<h3>Practical Example 2 – Credit Purchase</h3>
+
+<div class="example">
+
+ABC Traders se ₹25,000 ke goods credit par purchase kiye.
+
+<br><br>
+
+<strong>Debit:</strong> Purchase ₹25,000
+
+<br>
+
+<strong>Credit:</strong> ABC Traders ₹25,000
+
+</div>
+
+
+<div class="note">
+
+Credit purchase me supplier ka Ledger use hota hai.
+GST aur inventory ke detailed purchase examples Lesson 4 me karenge.
+
+</div>
+
+</div>
+
+
+
+<!-- SALES -->
+
+<div class="card">
+
+<h2>7. Sales Voucher – Practical Entries</h2>
+
+<div class="highlight">
+
+<strong>Sales ka Simple Meaning:</strong>
+
+<p>
+Jab business apne goods customer ko sell karta hai, to Sales Voucher
+ka use kiya jata hai.
+</p>
+
+</div>
+
+
+<h3>Practical Example 1 – Cash Sale</h3>
+
+<div class="example">
+
+Business ne ₹30,000 ke goods cash me sell kiye.
+
+<br><br>
+
+<strong>Amount: ₹30,000</strong>
+
+</div>
+
+
+<div class="entry-box debit">
+
+<strong>Debit:</strong> Cash ₹30,000
+
+</div>
+
+<div class="entry-box credit">
+
+<strong>Credit:</strong> Sales ₹30,000
+
+</div>
+
+
+<h3>Practical Example 2 – Credit Sale</h3>
+
+<div class="example">
+
+Rahul Traders ko ₹18,000 ke goods credit par sell kiye.
+
+<br><br>
+
+<strong>Debit:</strong> Rahul Traders ₹18,000
+
+<br>
+
+<strong>Credit:</strong> Sales ₹18,000
+
+</div>
+
+
+<h3>Basic Steps</h3>
+
+<div class="step">
+1. Sales Voucher open karein.
+</div>
+
+<div class="step">
+2. Customer/party select karein.
+</div>
+
+<div class="step">
+3. Sales item/details enter karein.
+</div>
+
+<div class="step">
+4. Quantity/Rate/Amount enter karein, agar inventory maintain kar rahe hain.
+</div>
+
+<div class="step">
+5. Required details check karein.
+</div>
+
+<div class="step">
+6. Entry save karein.
+</div>
+
+</div>
+
+
+
+<!-- JOURNAL -->
+
+<div class="card">
+
+<h2>8. Journal Voucher – Practical Entries</h2>
+
+<div class="highlight">
+
+<strong>Journal ka Simple Meaning:</strong>
+
+<p>
+Journal Voucher ka use generally adjustment aur aisi accounting entries
+ke liye hota hai jo normal Payment, Receipt, Contra, Purchase ya Sales
+transaction se directly cover nahi hoti.
+</p>
+
+</div>
+
+
+<h3>Practical Example 1 – Outstanding Salary</h3>
+
+<div class="example">
+
+Month end par ₹10,000 salary due hai, lekin abhi payment nahi ki gayi.
+
+<br><br>
+
+<strong>Debit:</strong> Salary ₹10,000
+
+<br>
+
+<strong>Credit:</strong> Salary Payable ₹10,000
+
+</div>
+
+
+<div class="note">
+
+Is example ke liye "Salary Payable" naam ka suitable liability Ledger
+business ki requirement ke according create kiya ja sakta hai.
+
+</div>
+
+
+<h3>Practical Example 2 – Depreciation</h3>
+
+<div class="example">
+
+Computer par ₹2,000 depreciation record karna hai.
+
+<br><br>
+
+<strong>Debit:</strong> Depreciation ₹2,000
+
+<br>
+
+<strong>Credit:</strong> Computer / Accumulated Depreciation related account ₹2,000
+
+</div>
+
+
+<div class="note">
+
+Depreciation ki exact accounting treatment business ki accounting policy
+aur applicable accounting requirements ke according maintain ki ja sakti hai.
+</div>
+
+</div>
+
+
+
+<!-- DEBIT NOTE -->
+
+<div class="card">
+
+<h2>9. Debit Note – Purchase Return Practical</h2>
+
+<div class="highlight">
+
+<strong>Debit Note ka Simple Meaning:</strong>
+
+<p>
+Debit Note ka use kai accounting situations me hota hai. Purchase return
+ke case me supplier ko goods return karne par commonly Debit Note use kiya
+ja sakta hai.
+</p>
+
+</div>
+
+
+<h3>Practical Example</h3>
+
+<div class="example">
+
+ABC Traders se ₹5,000 ke goods purchase kiye the.
+Goods me problem hone ke karan ₹2,000 ke goods supplier ko return kar diye.
+
+<br><br>
+
+<strong>Purchase Return Amount: ₹2,000</strong>
+
+</div>
+
+
+<div class="entry-box debit">
+
+<strong>Debit:</strong> ABC Traders ₹2,000
+
+</div>
+
+<div class="entry-box credit">
+
+<strong>Credit:</strong> Purchase Return ₹2,000
+
+</div>
+
+
+<h3>Basic Steps</h3>
+
+<div class="step">
+1. Debit Note Voucher open karein.
+</div>
+
+<div class="step">
+2. Supplier ABC Traders select karein.
+</div>
+
+<div class="step">
+3. Return hone wale goods/details enter karein.
+</div>
+
+<div class="step">
+4. Amount ₹2,000 enter karein.
+</div>
+
+<div class="step">
+5. Reason/narration add karein.
+</div>
+
+<div class="step">
+6. Entry save karein.
+</div>
+
+</div>
+
+
+
+<!-- CREDIT NOTE -->
+
+<div class="card">
+
+<h2>10. Credit Note – Sales Return Practical</h2>
+
+<div class="highlight">
+
+<strong>Credit Note ka Simple Meaning:</strong>
+
+<p>
+Credit Note ka use kai accounting situations me hota hai. Sales return
+ke case me customer goods return karta hai to commonly Credit Note use
+kiya ja sakta hai.
+</p>
+
+</div>
+
+
+<h3>Practical Example</h3>
+
+<div class="example">
+
+Rahul Traders ko ₹10,000 ke goods sell kiye the.
+Customer ne ₹3,000 ke goods return kar diye.
+
+<br><br>
+
+<strong>Sales Return Amount: ₹3,000</strong>
+
+</div>
+
+
+<div class="entry-box debit">
+
+<strong>Debit:</strong> Sales Return ₹3,000
+
+</div>
+
+<div class="entry-box credit">
+
+<strong>Credit:</strong> Rahul Traders ₹3,000
+
+</div>
+
+
+<h3>Basic Steps</h3>
+
+<div class="step">
+1. Credit Note Voucher open karein.
+</div>
+
+<div class="step">
+2. Customer Rahul Traders select karein.
+</div>
+
+<div class="step">
+3. Return goods/details enter karein.
+</div>
+
+<div class="step">
+4. Amount ₹3,000 enter karein.
+</div>
+
+<div class="step">
+5. Narration add karein.
+</div>
+
+<div class="step">
+6. Entry save karein.
+</div>
+
+</div>
+
+
+
+<!-- PURCHASE RETURN -->
+
+<div class="card">
+
+<h2>11. Purchase Return – Easy Revision</h2>
+
+<table>
+
+<tr>
+<th>Situation</th>
+<th>Voucher</th>
+<th>Example</th>
+</tr>
+
+<tr>
+<td>Supplier ko goods return</td>
+<td>Debit Note</td>
+<td>₹2,000 goods return</td>
+</tr>
+
+<tr>
+<td>Customer goods return karta hai</td>
+<td>Credit Note</td>
+<td>₹3,000 sales return</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+<!-- COMPLETE TRANSACTIONS -->
+
+<div class="card">
+
+<h2>12. Complete Business Transaction Practice</h2>
+
+<p>
+Ab ek hi business ke kuch transactions ko sequence me samjhte hain.
+</p>
+
+
+<table>
+
+<tr>
+<th>No.</th>
+<th>Transaction</th>
+<th>Voucher</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Owner ne ₹1,00,000 business me cash lagaya.</td>
+<td>Receipt</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>₹20,000 cash bank me deposit kiya.</td>
+<td>Contra</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>₹20,000 ke goods purchase kiye.</td>
+<td>Purchase</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>₹30,000 ke goods cash me sell kiye.</td>
+<td>Sales</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>₹5,000 rent pay kiya.</td>
+<td>Payment</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Customer se ₹8,000 receive hue.</td>
+<td>Receipt</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Supplier ko ₹8,000 payment ki.</td>
+<td>Payment</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>₹2,000 purchase return hua.</td>
+<td>Debit Note</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>₹3,000 sales return hua.</td>
+<td>Credit Note</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Adjustment entry ki requirement hui.</td>
+<td>Journal</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+<!-- VOUCHER REVISION TABLE -->
+
+<div class="card">
+
+<h2>13. Voucher Quick Revision</h2>
+
+<table>
+
+<tr>
+<th>Voucher</th>
+<th>Example</th>
+<th>Basic Entry Idea</th>
+</tr>
+
+<tr>
+<td>Contra</td>
+<td>Cash → Bank ₹10,000</td>
+<td>Bank Dr. / Cash Cr.</td>
+</tr>
+
+<tr>
+<td>Payment</td>
+<td>Rent paid ₹5,000</td>
+<td>Rent Dr. / Cash Cr.</td>
+</tr>
+
+<tr>
+<td>Receipt</td>
+<td>Customer se ₹8,000 receive</td>
+<td>Cash Dr. / Customer Cr.</td>
+</tr>
+
+<tr>
+<td>Purchase</td>
+<td>Goods purchased ₹20,000</td>
+<td>Purchase Dr. / Cash or Supplier Cr.</td>
+</tr>
+
+<tr>
+<td>Sales</td>
+<td>Goods sold ₹30,000</td>
+<td>Cash or Customer Dr. / Sales Cr.</td>
+</tr>
+
+<tr>
+<td>Journal</td>
+<td>Adjustment entry</td>
+<td>Situation ke according Debit/Credit.</td>
+</tr>
+
+<tr>
+<td>Debit Note</td>
+<td>Purchase return</td>
+<td>Supplier Dr. / Purchase Return Cr.</td>
+</tr>
+
+<tr>
+<td>Credit Note</td>
+<td>Sales return</td>
+<td>Sales Return Dr. / Customer Cr.</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+<!-- IMPORTANT -->
+
+<div class="card">
+
+<h2>14. Important Points</h2>
+
+<ul>
+
+<li>Har transaction ke liye appropriate Voucher select karna important hai.</li>
+
+<li>Payment ka matlab business se money outflow hona.</li>
+
+<li>Receipt ka matlab business ko money receive hona.</li>
+
+<li>Contra mainly Cash aur Bank ke beech transfer ke liye use hota hai.</li>
+
+<li>Purchase Voucher goods purchase ke liye use hota hai.</li>
+
+<li>Sales Voucher goods sale ke liye use hota hai.</li>
+
+<li>Journal mainly adjustment type accounting entries ke liye use hota hai.</li>
+
+<li>Purchase return ke liye commonly Debit Note use hota hai.</li>
+
+<li>Sales return ke liye commonly Credit Note use hota hai.</li>
+
+<li>Entry save karne se pehle date, Ledger aur amount carefully check karein.</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- PRACTICE SET -->
+
+<div class="card">
+
+<h2>15. Student Practical – Khud Entry Karein</h2>
+
+<p>
+Ab student ko Tally Prime me khud ye transactions enter karne hain.
+</p>
+
+
+<table>
+
+<tr>
+<th>No.</th>
+<th>Transaction</th>
+<th>Voucher</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Owner ne business me ₹80,000 cash lagaya.</td>
+<td>Receipt</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>₹20,000 cash bank me deposit kiya.</td>
+<td>Contra</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>₹15,000 ke goods cash me purchase kiye.</td>
+<td>Purchase</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>₹25,000 ke goods cash me sell kiye.</td>
+<td>Sales</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>₹4,000 rent cash me pay kiya.</td>
+<td>Payment</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Customer se ₹7,000 cash receive hue.</td>
+<td>Receipt</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Supplier ko ₹6,000 cash pay kiye.</td>
+<td>Payment</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>₹2,000 ke purchased goods supplier ko return kiye.</td>
+<td>Debit Note</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Customer ne ₹1,500 ke goods return kiye.</td>
+<td>Credit Note</td>
+</tr>
+
+</table>
+
+<div class="success">
+
+<strong>Practice Rule:</strong>
+
+<p>
+Har transaction ko enter karne se pehle pehle ye identify karo:
+<strong>Transaction kya hua? → Kaunsa Voucher? → Kaunsa Ledger? → Debit/Credit kya hoga?</strong>
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- QUESTIONS -->
+
+<div class="card">
+
+<h2>16. Lesson 3 – Practice Questions</h2>
+
+<div class="quiz">
+
+<h3>Question 1</h3>
+<p>Voucher kya hota hai?</p>
+
+<h3>Question 2</h3>
+<p>Contra Voucher ka use kab hota hai?</p>
+
+<h3>Question 3</h3>
+<p>Payment Voucher ka use kab hota hai?</p>
+
+<h3>Question 4</h3>
+<p>Receipt Voucher ka use kab hota hai?</p>
+
+<h3>Question 5</h3>
+<p>₹10,000 cash bank me deposit karne ke liye kaunsa Voucher use hoga?</p>
+
+<h3>Question 6</h3>
+<p>₹5,000 rent pay karne ki entry kaunsi hogi?</p>
+
+<h3>Question 7</h3>
+<p>Customer se ₹8,000 receive hone par kaunsa Voucher use hoga?</p>
+
+<h3>Question 8</h3>
+<p>Goods purchase karne ke liye kaunsa Voucher use hota hai?</p>
+
+<h3>Question 9</h3>
+<p>Goods sell karne ke liye kaunsa Voucher use hota hai?</p>
+
+<h3>Question 10</h3>
+<p>Purchase return ke liye commonly kaunsa Note use hota hai?</p>
+
+<h3>Question 11</h3>
+<p>Sales return ke liye commonly kaunsa Note use hota hai?</p>
+
+<h3>Question 12</h3>
+<p>Journal Voucher ka basic use kya hai?</p>
+
+</div>
+
+</div>
+
+
+
+<!-- SUMMARY -->
+
+<div class="card">
+
+<h2>17. Lesson 3 Summary</h2>
+
+<p>
+Is lesson me humne Tally Prime ke important Voucher Types ko
+practical examples ke saath samjha.
+</p>
+
+<p>
+Humne Contra, Payment, Receipt, Purchase, Sales, Journal,
+Debit Note aur Credit Note ki entries dekhi.
+</p>
+
+<p>
+Har practical me transaction ko identify karke Voucher,
+Ledger aur Debit/Credit ko samajhne ki practice ki.
+</p>
+
+
+<div class="success">
+
+<strong>Next Lesson – Lesson 4:</strong>
+
+<p>
+Ab hum <strong>GST + Inventory</strong> ko practical way me seekhenge.
+</p>
+
+<p>
+Stock Group, Stock Item, Unit, Purchase with GST,
+Sales with GST, CGST, SGST, IGST aur inventory transactions
+ko examples ke saath cover kiya jayega.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p><strong>Computer Siksha</strong></p>
+
+<p>Tally Prime – Lesson 3</p>
+
+<p>Voucher Entries – Complete Practical</p>
+
+<p>Learn • Practice • Improve</p>
+
+</footer>
+
+
+</body>
+</html>
+```

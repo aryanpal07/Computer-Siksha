@@ -1,0 +1,1874 @@
+﻿```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tally Prime Lesson 2 - Groups & Ledgers | Computer Siksha</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header p{
+    margin:8px 0;
+}
+
+.container{
+    width:92%;
+    max-width:1050px;
+    margin:25px auto;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:22px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+h2{
+    color:#0f2a5f;
+    border-left:5px solid #0f2a5f;
+    padding-left:12px;
+}
+
+h3{
+    color:#174a9c;
+}
+
+p{
+    margin:10px 0;
+}
+
+.example{
+    background:#eef6ff;
+    border-left:5px solid #2878d7;
+    padding:15px;
+    margin:15px 0;
+    border-radius:7px;
+}
+
+.note{
+    background:#fff5d8;
+    border-left:5px solid #e5a500;
+    padding:15px;
+    margin:15px 0;
+    border-radius:7px;
+}
+
+.success{
+    background:#edf8ed;
+    border-left:5px solid #3c963c;
+    padding:15px;
+    margin:15px 0;
+    border-radius:7px;
+}
+
+.step{
+    background:#f7f7f7;
+    padding:14px;
+    margin:9px 0;
+    border-radius:7px;
+}
+
+.visual{
+    background:#fafafa;
+    border:2px solid #d5dbe5;
+    padding:20px;
+    margin:18px 0;
+    border-radius:9px;
+    text-align:center;
+}
+
+.visual-title{
+    font-size:19px;
+    font-weight:bold;
+    color:#174a9c;
+    margin-bottom:12px;
+}
+
+.screen{
+    max-width:700px;
+    margin:15px auto;
+    border:3px solid #555;
+    border-radius:8px;
+    background:#e9e9e9;
+    text-align:left;
+    overflow:hidden;
+}
+
+.screen-top{
+    background:#333;
+    color:white;
+    padding:9px 12px;
+    font-weight:bold;
+}
+
+.screen-body{
+    padding:18px;
+    background:white;
+}
+
+.field{
+    border:1px solid #aaa;
+    padding:8px 10px;
+    margin:7px 0;
+    background:#f8f8f8;
+}
+
+.arrow{
+    font-size:26px;
+    margin:8px;
+}
+
+.flow{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.flow-box{
+    background:#eaf2ff;
+    border:2px solid #2878d7;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:11px;
+    vertical-align:top;
+}
+
+th{
+    background:#e8eef8;
+    color:#0f2a5f;
+}
+
+.quiz{
+    background:#f0f8f0;
+    border-left:5px solid #3b8d3b;
+    padding:18px;
+    border-radius:7px;
+}
+
+.highlight{
+    background:#f1edff;
+    border-left:5px solid #7048c6;
+    padding:15px;
+    border-radius:7px;
+}
+
+footer{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:22px;
+    margin-top:30px;
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:24px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+    .screen{
+        width:100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+<h1>Tally Prime – Lesson 2</h1>
+
+<p>Groups & Ledgers – Complete Practical</p>
+
+<p>Computer Siksha</p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+
+<h2>1. Is Lesson Me Kya Seekhenge?</h2>
+
+<p>
+Lesson 1 me humne Tally Prime ka introduction aur company creation
+seekha tha. Ab hum Tally ke sabse important concepts me se ek
+<strong>Groups aur Ledgers</strong> ko practically samjhenge.
+</p>
+
+<p>
+Is lesson ke end tak student ko ye samajh aa jana chahiye ki:
+</p>
+
+<ul>
+
+<li>Group kya hota hai?</li>
+
+<li>Ledger kya hota hai?</li>
+
+<li>Group aur Ledger me kya difference hai?</li>
+
+<li>Kaunsa Ledger kis Group me banana hai?</li>
+
+<li>Ledger kaise create karna hai?</li>
+
+<li>Customer aur Supplier ka Ledger kaise banana hai?</li>
+
+<li>Expense aur Income ke Ledgers kaise banana hai?</li>
+
+<li>Bank aur Cash Ledger kaise banana hai?</li>
+
+</ul>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Group → Ledger → Transaction
+</div>
+
+<div class="flow">
+
+<div class="flow-box">
+Group
+</div>
+
+<div class="arrow">
+→
+</div>
+
+<div class="flow-box">
+Ledger
+</div>
+
+<div class="arrow">
+→
+</div>
+
+<div class="flow-box">
+Voucher Entry
+</div>
+
+</div>
+
+<p>
+Sabse pehle Group aur Ledger banenge, uske baad in Ledgers ka use
+Voucher Entries me kiya jayega.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- GROUP DEFINITION -->
+
+<div class="card">
+
+<h2>2. Group Kya Hai?</h2>
+
+<div class="highlight">
+
+<strong>Simple Definition:</strong>
+
+<p>
+Group ek category hoti hai jisme same nature ke related Ledgers ko
+arrange kiya jata hai.
+</p>
+
+</div>
+
+<p>
+Tally me Group ka main purpose accounts ko properly classify karna hai.
+Isse business ke accounts aur reports ko samajhna easy hota hai.
+</p>
+
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+Agar business ke paas Rent, Salary aur Electricity jaise expenses hain,
+to inke Ledgers ko appropriate expense group ke andar maintain kiya ja sakta hai.
+</p>
+
+</div>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Group ka Easy Visual
+</div>
+
+<div class="flow">
+
+<div class="flow-box">
+Indirect Expenses
+</div>
+
+<div class="arrow">
+→
+</div>
+
+<div class="flow-box">
+Rent
+</div>
+
+<div class="flow-box">
+Salary
+</div>
+
+<div class="flow-box">
+Electricity
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- LEDGER DEFINITION -->
+
+<div class="card">
+
+<h2>3. Ledger Kya Hai?</h2>
+
+<div class="highlight">
+
+<strong>Simple Definition:</strong>
+
+<p>
+Ledger kisi particular account ka detailed record hota hai jisme us
+account se related transactions maintain kiye jate hain.
+</p>
+
+</div>
+
+
+<p>
+Business me jis particular account ka record maintain karna hota hai,
+uske liye Ledger create kiya jata hai.
+</p>
+
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+Agar business har month ₹5,000 rent pay karta hai, to
+<strong>Rent</strong> naam ka Ledger banaya jayega.
+</p>
+
+<p>
+Us Ledger me Rent se related transactions record honge.
+</p>
+
+</div>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Ledger ka Easy Visual
+</div>
+
+<div class="screen">
+
+<div class="screen-top">
+Ledger: Rent
+</div>
+
+<div class="screen-body">
+
+<div class="field">
+Date: 05-04-2026
+</div>
+
+<div class="field">
+Particular: Cash
+</div>
+
+<div class="field">
+Amount: ₹5,000
+</div>
+
+</div>
+
+</div>
+
+<p>
+Ye sirf learning ke liye simplified visual hai.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- DIFFERENCE -->
+
+<div class="card">
+
+<h2>4. Group aur Ledger Me Difference</h2>
+
+<table>
+
+<tr>
+<th>Group</th>
+<th>Ledger</th>
+</tr>
+
+<tr>
+<td>Group ek category hoti hai.</td>
+<td>Ledger ek particular account hota hai.</td>
+</tr>
+
+<tr>
+<td>Related Ledgers ko classify karta hai.</td>
+<td>Actual transactions ka record maintain karta hai.</td>
+</tr>
+
+<tr>
+<td>Example: Indirect Expenses</td>
+<td>Example: Rent</td>
+</tr>
+
+<tr>
+<td>Group ke andar multiple Ledgers ho sakte hain.</td>
+<td>Ek Ledger ek particular account ko represent karta hai.</td>
+</tr>
+
+</table>
+
+
+<div class="example">
+
+<strong>Easy Formula:</strong>
+
+<p>
+<strong>Group = Category</strong>
+</p>
+
+<p>
+<strong>Ledger = Particular Account</strong>
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- IMPORTANT GROUPS -->
+
+<div class="card">
+
+<h2>5. Important Groups aur Unka Use</h2>
+
+<p>
+Tally me Groups ki exact number business ke according change ho sakti hai.
+Hum yahan accounting me commonly used Groups ko samajh rahe hain.
+</p>
+
+
+<table>
+
+<tr>
+<th>Group</th>
+<th>Simple Meaning / Use</th>
+</tr>
+
+<tr>
+<td>Capital Account</td>
+<td>Owner ke business me investment/capital se related accounts.</td>
+</tr>
+
+<tr>
+<td>Current Assets</td>
+<td>Business ke current assets se related accounts.</td>
+</tr>
+
+<tr>
+<td>Current Liabilities</td>
+<td>Business ki short-term liabilities.</td>
+</tr>
+
+<tr>
+<td>Direct Expenses</td>
+<td>Goods/product ki direct cost se related expenses.</td>
+</tr>
+
+<tr>
+<td>Indirect Expenses</td>
+<td>Business ke general expenses.</td>
+</tr>
+
+<tr>
+<td>Direct Incomes</td>
+<td>Business ki main activity se directly related income.</td>
+</tr>
+
+<tr>
+<td>Indirect Incomes</td>
+<td>Main business activity ke alawa other income.</td>
+</tr>
+
+<tr>
+<td>Fixed Assets</td>
+<td>Long-term business assets.</td>
+</tr>
+
+<tr>
+<td>Investments</td>
+<td>Business ke investment related accounts.</td>
+</tr>
+
+<tr>
+<td>Loans (Liability)</td>
+<td>Business ke loans ko maintain karne ke liye.</td>
+</tr>
+
+<tr>
+<td>Purchase Accounts</td>
+<td>Purchase related Ledgers ke liye.</td>
+</tr>
+
+<tr>
+<td>Sales Accounts</td>
+<td>Sales related Ledgers ke liye.</td>
+</tr>
+
+<tr>
+<td>Sundry Creditors</td>
+<td>Suppliers jinhe business ko payment deni hoti hai.</td>
+</tr>
+
+<tr>
+<td>Sundry Debtors</td>
+<td>Customers jinse business ko payment leni hoti hai.</td>
+</tr>
+
+<tr>
+<td>Bank Accounts</td>
+<td>Bank accounts ko maintain karne ke liye.</td>
+</tr>
+
+<tr>
+<td>Cash-in-Hand</td>
+<td>Cash account ke liye.</td>
+</tr>
+
+<tr>
+<td>Duties & Taxes</td>
+<td>GST aur applicable taxes ke accounts ke liye.</td>
+</tr>
+
+<tr>
+<td>Stock-in-Hand</td>
+<td>Stock/inventory se related accounts ke liye.</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+<!-- LEDGER LIST -->
+
+<div class="card">
+
+<h2>6. Important Ledgers – Name + Group</h2>
+
+<table>
+
+<tr>
+<th>No.</th>
+<th>Ledger Name</th>
+<th>Group</th>
+<th>Use</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Cash</td>
+<td>Cash-in-Hand</td>
+<td>Business ke cash ko maintain karne ke liye.</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>SBI Bank</td>
+<td>Bank Accounts</td>
+<td>SBI bank transactions ke liye.</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Capital</td>
+<td>Capital Account</td>
+<td>Owner ke capital ke liye.</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Purchase</td>
+<td>Purchase Accounts</td>
+<td>Goods purchase ke liye.</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Sales</td>
+<td>Sales Accounts</td>
+<td>Goods sales ke liye.</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Rent</td>
+<td>Indirect Expenses</td>
+<td>Office/shop rent ke liye.</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Salary</td>
+<td>Indirect Expenses</td>
+<td>Employee salary ke liye.</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Electricity Expense</td>
+<td>Indirect Expenses</td>
+<td>Electricity bill ke liye.</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Computer</td>
+<td>Fixed Assets</td>
+<td>Business computer asset ke liye.</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Furniture</td>
+<td>Fixed Assets</td>
+<td>Business furniture ke liye.</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>ABC Traders</td>
+<td>Sundry Creditors</td>
+<td>Supplier ke transactions ke liye.</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>XYZ Customer</td>
+<td>Sundry Debtors</td>
+<td>Customer ke transactions ke liye.</td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>CGST</td>
+<td>Duties & Taxes</td>
+<td>CGST amount ke liye.</td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>SGST</td>
+<td>Duties & Taxes</td>
+<td>SGST amount ke liye.</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+<!-- LEDGER CREATION -->
+
+<div class="card">
+
+<h2>7. Ledger Create Karne Ka Basic Method</h2>
+
+<p>
+Ab hum Tally Prime me ek Ledger create karna practically samjhenge.
+</p>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Ledger Creation ka Basic Flow
+</div>
+
+<div class="flow">
+
+<div class="flow-box">
+Gateway
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Create
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Ledger
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Name + Group
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Save
+</div>
+
+</div>
+
+</div>
+
+
+<h3>Basic Steps</h3>
+
+<div class="step">
+<strong>Step 1:</strong> Tally Prime me apni company open karein.
+</div>
+
+<div class="step">
+<strong>Step 2:</strong> Create/Masters section me Ledger option select karein.
+</div>
+
+<div class="step">
+<strong>Step 3:</strong> Ledger ka naam enter karein.
+</div>
+
+<div class="step">
+<strong>Step 4:</strong> Under me correct Group select karein.
+</div>
+
+<div class="step">
+<strong>Step 5:</strong> Required details fill karein.
+</div>
+
+<div class="step">
+<strong>Step 6:</strong> Ledger ko save/accept karein.
+</div>
+
+</div>
+
+
+
+<!-- CASH LEDGER -->
+
+<div class="card">
+
+<h2>8. Practical 1 – Cash Ledger</h2>
+
+<p>
+Sabse basic Ledger hota hai <strong>Cash</strong>.
+</p>
+
+
+<div class="example">
+
+<strong>Ledger Details:</strong>
+
+<br><br>
+
+Ledger Name: <strong>Cash</strong>
+
+<br>
+
+Under Group: <strong>Cash-in-Hand</strong>
+
+</div>
+
+
+<h3>Kaise Banaye?</h3>
+
+<div class="step">
+1. Ledger Creation screen open karein.
+</div>
+
+<div class="step">
+2. Name me <strong>Cash</strong> likhein.
+</div>
+
+<div class="step">
+3. Under me <strong>Cash-in-Hand</strong> select karein.
+</div>
+
+<div class="step">
+4. Details check karein.
+</div>
+
+<div class="step">
+5. Ledger save karein.
+</div>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Cash Ledger – Learning Visual
+</div>
+
+<div class="screen">
+
+<div class="screen-top">
+Create Ledger
+</div>
+
+<div class="screen-body">
+
+<div class="field">
+Name: Cash
+</div>
+
+<div class="field">
+Under: Cash-in-Hand
+</div>
+
+<div class="field">
+Opening Balance: As Required
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- BANK LEDGER -->
+
+<div class="card">
+
+<h2>9. Practical 2 – Bank Ledger</h2>
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+Business ka SBI me bank account hai.
+</p>
+
+<p>
+Ledger Name: <strong>SBI Bank</strong>
+</p>
+
+<p>
+Group: <strong>Bank Accounts</strong>
+</p>
+
+</div>
+
+
+<h3>Steps</h3>
+
+<div class="step">
+1. Ledger Creation open karein.
+</div>
+
+<div class="step">
+2. Name me <strong>SBI Bank</strong> enter karein.
+</div>
+
+<div class="step">
+3. Under me <strong>Bank Accounts</strong> select karein.
+</div>
+
+<div class="step">
+4. Required bank details fill karein.
+</div>
+
+<div class="step">
+5. Save karein.
+</div>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Bank Ledger – Learning Visual
+</div>
+
+<div class="screen">
+
+<div class="screen-top">
+Create Ledger
+</div>
+
+<div class="screen-body">
+
+<div class="field">
+Name: SBI Bank
+</div>
+
+<div class="field">
+Under: Bank Accounts
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- CAPITAL -->
+
+<div class="card">
+
+<h2>10. Practical 3 – Capital Ledger</h2>
+
+<div class="example">
+
+<strong>Situation:</strong>
+
+<p>
+Owner ne business start karne ke liye ₹1,00,000 lagaye.
+</p>
+
+<p>
+Ledger Name: <strong>Capital</strong>
+</p>
+
+<p>
+Group: <strong>Capital Account</strong>
+</p>
+
+</div>
+
+
+<h3>Ledger Create Karne ke Steps</h3>
+
+<div class="step">
+1. Ledger Creation open karein.
+</div>
+
+<div class="step">
+2. Name: <strong>Capital</strong>
+</div>
+
+<div class="step">
+3. Under: <strong>Capital Account</strong>
+</div>
+
+<div class="step">
+4. Details verify karein.
+</div>
+
+<div class="step">
+5. Save karein.
+</div>
+
+
+<div class="note">
+
+₹1,00,000 ki actual capital entry hum Voucher wale lesson me
+practically karenge.
+
+</div>
+
+</div>
+
+
+
+<!-- PURCHASE -->
+
+<div class="card">
+
+<h2>11. Practical 4 – Purchase Ledger</h2>
+
+<div class="example">
+
+<strong>Situation:</strong>
+
+<p>
+Business goods purchase karta hai.
+</p>
+
+<p>
+Ledger Name: <strong>Purchase</strong>
+</p>
+
+<p>
+Group: <strong>Purchase Accounts</strong>
+</p>
+
+</div>
+
+
+<div class="step">
+1. Ledger Creation open karein.
+</div>
+
+<div class="step">
+2. Name: <strong>Purchase</strong>
+</div>
+
+<div class="step">
+3. Under: <strong>Purchase Accounts</strong>
+</div>
+
+<div class="step">
+4. Save karein.
+</div>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Purchase Ledger
+</div>
+
+<div class="screen">
+
+<div class="screen-top">
+Create Ledger
+</div>
+
+<div class="screen-body">
+
+<div class="field">
+Name: Purchase
+</div>
+
+<div class="field">
+Under: Purchase Accounts
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- SALES -->
+
+<div class="card">
+
+<h2>12. Practical 5 – Sales Ledger</h2>
+
+<div class="example">
+
+<strong>Situation:</strong>
+
+<p>
+Business apne goods customers ko sell karta hai.
+</p>
+
+<p>
+Ledger Name: <strong>Sales</strong>
+</p>
+
+<p>
+Group: <strong>Sales Accounts</strong>
+</p>
+
+</div>
+
+
+<div class="step">
+1. Ledger Creation open karein.
+</div>
+
+<div class="step">
+2. Name me <strong>Sales</strong> enter karein.
+</div>
+
+<div class="step">
+3. Under me <strong>Sales Accounts</strong> select karein.
+</div>
+
+<div class="step">
+4. Ledger save karein.
+</div>
+
+</div>
+
+
+
+<!-- EXPENSE -->
+
+<div class="card">
+
+<h2>13. Practical 6 – Rent Ledger</h2>
+
+<div class="example">
+
+<strong>Situation:</strong>
+
+<p>
+Business ne shop ka ₹5,000 rent pay kiya.
+</p>
+
+<p>
+Ledger Name: <strong>Rent</strong>
+</p>
+
+<p>
+Group: <strong>Indirect Expenses</strong>
+</p>
+
+</div>
+
+
+<div class="step">
+1. Ledger Creation open karein.
+</div>
+
+<div class="step">
+2. Name: <strong>Rent</strong>
+</div>
+
+<div class="step">
+3. Under: <strong>Indirect Expenses</strong>
+</div>
+
+<div class="step">
+4. Save karein.
+</div>
+
+
+<div class="note">
+
+Rent ki ₹5,000 Payment Entry Lesson 3 me practically karenge.
+
+</div>
+
+</div>
+
+
+
+<!-- SALARY -->
+
+<div class="card">
+
+<h2>14. Practical 7 – Salary Ledger</h2>
+
+<div class="example">
+
+<strong>Situation:</strong>
+
+<p>
+Business employees ko salary pay karta hai.
+</p>
+
+<p>
+Ledger Name: <strong>Salary</strong>
+</p>
+
+<p>
+Group: <strong>Indirect Expenses</strong>
+</p>
+
+</div>
+
+
+<div class="step">
+1. Ledger Creation open karein.
+</div>
+
+<div class="step">
+2. Name: <strong>Salary</strong>
+</div>
+
+<div class="step">
+3. Under: <strong>Indirect Expenses</strong>
+</div>
+
+<div class="step">
+4. Save karein.
+</div>
+
+</div>
+
+
+
+<!-- CUSTOMER -->
+
+<div class="card">
+
+<h2>15. Practical 8 – Customer Ledger</h2>
+
+<p>
+Agar customer se business ko payment receive karni hai, to customer ka
+Ledger generally <strong>Sundry Debtors</strong> group me maintain kiya jata hai.
+</p>
+
+
+<div class="example">
+
+<strong>Customer Details:</strong>
+
+<br><br>
+
+Name: <strong>Rahul Traders</strong>
+
+<br>
+
+Group: <strong>Sundry Debtors</strong>
+
+</div>
+
+
+<h3>Steps</h3>
+
+<div class="step">
+1. Ledger Creation open karein.
+</div>
+
+<div class="step">
+2. Name: <strong>Rahul Traders</strong>
+</div>
+
+<div class="step">
+3. Under: <strong>Sundry Debtors</strong>
+</div>
+
+<div class="step">
+4. Required details fill karein.
+</div>
+
+<div class="step">
+5. Save karein.
+</div>
+
+
+<div class="visual">
+
+<div class="visual-title">
+Customer Ledger – Learning Visual
+</div>
+
+<div class="screen">
+
+<div class="screen-top">
+Create Ledger
+</div>
+
+<div class="screen-body">
+
+<div class="field">
+Name: Rahul Traders
+</div>
+
+<div class="field">
+Under: Sundry Debtors
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- SUPPLIER -->
+
+<div class="card">
+
+<h2>16. Practical 9 – Supplier Ledger</h2>
+
+<p>
+Jis supplier ko business ko payment deni hoti hai, uska Ledger
+generally <strong>Sundry Creditors</strong> group me maintain kiya jata hai.
+</p>
+
+
+<div class="example">
+
+<strong>Supplier Details:</strong>
+
+<br><br>
+
+Name: <strong>ABC Traders</strong>
+
+<br>
+
+Group: <strong>Sundry Creditors</strong>
+
+</div>
+
+
+<h3>Steps</h3>
+
+<div class="step">
+1. Ledger Creation open karein.
+</div>
+
+<div class="step">
+2. Name: <strong>ABC Traders</strong>
+</div>
+
+<div class="step">
+3. Under: <strong>Sundry Creditors</strong>
+</div>
+
+<div class="step">
+4. Required details fill karein.
+</div>
+
+<div class="step">
+5. Save karein.
+</div>
+
+</div>
+
+
+
+<!-- FIXED ASSET -->
+
+<div class="card">
+
+<h2>17. Practical 10 – Computer Asset Ledger</h2>
+
+<div class="example">
+
+<strong>Situation:</strong>
+
+<p>
+Business ne accounting ke kaam ke liye ek computer kharida.
+</p>
+
+<p>
+Ledger Name: <strong>Computer</strong>
+</p>
+
+<p>
+Group: <strong>Fixed Assets</strong>
+</p>
+
+</div>
+
+
+<div class="step">
+1. Ledger Creation open karein.
+</div>
+
+<div class="step">
+2. Name: <strong>Computer</strong>
+</div>
+
+<div class="step">
+3. Under: <strong>Fixed Assets</strong>
+</div>
+
+<div class="step">
+4. Save karein.
+</div>
+
+</div>
+
+
+
+<!-- GST LEDGER -->
+
+<div class="card">
+
+<h2>18. Practical 11 – GST Ledgers</h2>
+
+<p>
+GST ki detailed configuration aur entries hum Lesson 4 me karenge.
+Abhi basic Ledger concept samjho.
+</p>
+
+
+<table>
+
+<tr>
+<th>Ledger</th>
+<th>Group</th>
+</tr>
+
+<tr>
+<td>CGST</td>
+<td>Duties & Taxes</td>
+</tr>
+
+<tr>
+<td>SGST</td>
+<td>Duties & Taxes</td>
+</tr>
+
+<tr>
+<td>IGST</td>
+<td>Duties & Taxes</td>
+</tr>
+
+</table>
+
+
+<div class="note">
+
+GST ke actual rates aur tax entries business transaction aur applicable
+tax rules ke according depend karte hain. Isliye GST practical Lesson 4
+me separately detail me kiya jayega.
+
+</div>
+
+</div>
+
+
+
+<!-- COMPLETE LEDGER LIST -->
+
+<div class="card">
+
+<h2>19. Hamari Practice Company ke Important Ledgers</h2>
+
+<p>
+Ab tak jo Ledgers humne seekhe, unki complete practice list:
+</p>
+
+
+<table>
+
+<tr>
+<th>No.</th>
+<th>Ledger</th>
+<th>Group</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Cash</td>
+<td>Cash-in-Hand</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>SBI Bank</td>
+<td>Bank Accounts</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Capital</td>
+<td>Capital Account</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Purchase</td>
+<td>Purchase Accounts</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Sales</td>
+<td>Sales Accounts</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Rent</td>
+<td>Indirect Expenses</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Salary</td>
+<td>Indirect Expenses</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Electricity Expense</td>
+<td>Indirect Expenses</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Computer</td>
+<td>Fixed Assets</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Furniture</td>
+<td>Fixed Assets</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>Rahul Traders</td>
+<td>Sundry Debtors</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>ABC Traders</td>
+<td>Sundry Creditors</td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>CGST</td>
+<td>Duties & Taxes</td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>SGST</td>
+<td>Duties & Taxes</td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>IGST</td>
+<td>Duties & Taxes</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+<!-- PRACTICAL PROJECT -->
+
+<div class="card">
+
+<h2>20. Complete Practical Task</h2>
+
+<p>
+Ab student ko apni practice company me neeche diye gaye Ledgers create karne hain.
+</p>
+
+
+<table>
+
+<tr>
+<th>Ledger Name</th>
+<th>Group</th>
+</tr>
+
+<tr>
+<td>Cash</td>
+<td>Cash-in-Hand</td>
+</tr>
+
+<tr>
+<td>SBI Bank</td>
+<td>Bank Accounts</td>
+</tr>
+
+<tr>
+<td>Capital</td>
+<td>Capital Account</td>
+</tr>
+
+<tr>
+<td>Purchase</td>
+<td>Purchase Accounts</td>
+</tr>
+
+<tr>
+<td>Sales</td>
+<td>Sales Accounts</td>
+</tr>
+
+<tr>
+<td>Rent</td>
+<td>Indirect Expenses</td>
+</tr>
+
+<tr>
+<td>Salary</td>
+<td>Indirect Expenses</td>
+</tr>
+
+<tr>
+<td>Electricity Expense</td>
+<td>Indirect Expenses</td>
+</tr>
+
+<tr>
+<td>Computer</td>
+<td>Fixed Assets</td>
+</tr>
+
+<tr>
+<td>Furniture</td>
+<td>Fixed Assets</td>
+</tr>
+
+<tr>
+<td>Rahul Traders</td>
+<td>Sundry Debtors</td>
+</tr>
+
+<tr>
+<td>ABC Traders</td>
+<td>Sundry Creditors</td>
+</tr>
+
+</table>
+
+
+<div class="success">
+
+<strong>Practical Challenge:</strong>
+
+<p>
+Student ko bina dekhe kam se kam 10 Ledgers khud create karne ki
+practice karni hai aur har Ledger ka correct Group select karna hai.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- IMPORTANT POINTS -->
+
+<div class="card">
+
+<h2>21. Important Points Yaad Rakhein</h2>
+
+<ul>
+
+<li>Group ek category hoti hai.</li>
+
+<li>Ledger ek particular account ka record hota hai.</li>
+
+<li>Har Ledger ko correct Group me rakhna important hai.</li>
+
+<li>Customer ke liye appropriate Sundry Debtors classification use hoti hai.</li>
+
+<li>Supplier ke liye appropriate Sundry Creditors classification use hoti hai.</li>
+
+<li>Cash aur Bank ke Ledgers alag maintain kiye jate hain.</li>
+
+<li>Purchase aur Sales ke Ledgers alag hote hain.</li>
+
+<li>Rent aur Salary jaise general business expenses ko appropriate expense group me maintain kiya jata hai.</li>
+
+<li>Fixed assets ke liye Fixed Assets group use hota hai.</li>
+
+<li>GST Ledgers ko Duties & Taxes classification me maintain kiya jata hai.</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- QUESTIONS -->
+
+<div class="card">
+
+<h2>22. Lesson 2 – Practice Questions</h2>
+
+<div class="quiz">
+
+<h3>Question 1</h3>
+<p>Group kya hota hai?</p>
+
+<h3>Question 2</h3>
+<p>Ledger kya hota hai?</p>
+
+<h3>Question 3</h3>
+<p>Group aur Ledger me kya difference hai?</p>
+
+<h3>Question 4</h3>
+<p>Cash Ledger kis Group me banega?</p>
+
+<h3>Question 5</h3>
+<p>SBI Bank Ledger kis Group me banega?</p>
+
+<h3>Question 6</h3>
+<p>Capital Ledger kis Group me banega?</p>
+
+<h3>Question 7</h3>
+<p>Purchase Ledger kis Group me banega?</p>
+
+<h3>Question 8</h3>
+<p>Sales Ledger kis Group me banega?</p>
+
+<h3>Question 9</h3>
+<p>Rent Ledger kis Group me banega?</p>
+
+<h3>Question 10</h3>
+<p>Salary Ledger kis Group me banega?</p>
+
+<h3>Question 11</h3>
+<p>Customer Ledger ke liye kaunsa Group use hota hai?</p>
+
+<h3>Question 12</h3>
+<p>Supplier Ledger ke liye kaunsa Group use hota hai?</p>
+
+<h3>Question 13</h3>
+<p>Computer asset ke Ledger ko kis Group me rakhenge?</p>
+
+<h3>Question 14</h3>
+<p>CGST aur SGST Ledgers kis Group me maintain kiye jate hain?</p>
+
+</div>
+
+</div>
+
+
+
+<!-- SUMMARY -->
+
+<div class="card">
+
+<h2>23. Lesson 2 Summary</h2>
+
+<p>
+Is lesson me humne Group aur Ledger ki definitions ko Hinglish me samjha.
+</p>
+
+<p>
+Humne important Groups ke names aur unka basic use dekha.
+</p>
+
+<p>
+Uske baad important Ledgers ke names ke saath unke Groups ko samjha.
+</p>
+
+<p>
+Cash, Bank, Capital, Purchase, Sales, Rent, Salary, Customer,
+Supplier, Fixed Asset aur GST Ledgers ke practical examples bhi dekhe.
+</p>
+
+
+<div class="success">
+
+<strong>Next Lesson – Lesson 3:</strong>
+
+<p>
+Ab hum inhi Ledgers ka use karke Tally Prime ke
+<strong>Voucher Entries ka complete practical</strong> karenge.
+</p>
+
+<p>
+Purchase, Sales, Payment, Receipt, Contra, Journal,
+Debit Note, Credit Note, Purchase Return aur Sales Return
+jaise important vouchers ko practical examples ke saath samjhenge.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p><strong>Computer Siksha</strong></p>
+
+<p>Tally Prime – Lesson 2</p>
+
+<p>Groups & Ledgers – Complete Practical</p>
+
+<p>Learn • Practice • Improve</p>
+
+</footer>
+
+
+</body>
+</html>
+```

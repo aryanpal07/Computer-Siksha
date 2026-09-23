@@ -1,0 +1,1036 @@
+﻿```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tally Prime Lesson 1 - Computer Siksha</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+header{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header p{
+    margin:8px 0 0;
+    font-size:16px;
+}
+
+.container{
+    width:92%;
+    max-width:1050px;
+    margin:25px auto;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:22px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+h2{
+    color:#0f2a5f;
+    border-left:5px solid #0f2a5f;
+    padding-left:12px;
+    margin-top:0;
+}
+
+h3{
+    color:#174a9c;
+}
+
+.example{
+    background:#eef6ff;
+    border-left:5px solid #2878d7;
+    padding:15px;
+    margin:15px 0;
+    border-radius:6px;
+}
+
+.note{
+    background:#fff5d8;
+    border-left:5px solid #e5a500;
+    padding:15px;
+    margin:15px 0;
+    border-radius:6px;
+}
+
+.success{
+    background:#edf8ed;
+    border-left:5px solid #3c963c;
+    padding:15px;
+    margin:15px 0;
+    border-radius:6px;
+}
+
+.step{
+    background:#f7f7f7;
+    padding:14px;
+    margin:10px 0;
+    border-radius:7px;
+}
+
+ .diagram{
+    background:#f7f9fc;
+    border:1px solid #d8e0ec;
+    padding:20px;
+    margin:18px 0;
+    text-align:center;
+    border-radius:8px;
+}
+
+.diagram-title{
+    font-size:18px;
+    font-weight:bold;
+    color:#174a9c;
+    margin-bottom:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:11px;
+    vertical-align:top;
+}
+
+th{
+    background:#e8eef8;
+    color:#0f2a5f;
+}
+
+ul,ol{
+    padding-left:25px;
+}
+
+.quiz{
+    background:#f0f8f0;
+    border-left:5px solid #3b8d3b;
+    padding:18px;
+    border-radius:6px;
+}
+
+.highlight{
+    background:#f1edff;
+    border-left:5px solid #7048c6;
+    padding:15px;
+    border-radius:6px;
+}
+
+footer{
+    background:#0f2a5f;
+    color:white;
+    text-align:center;
+    padding:22px;
+    margin-top:30px;
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:24px;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    table{
+        font-size:13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+<h1>Tally Prime – Lesson 1</h1>
+
+<p>
+Tally Introduction, Group, Ledger & Company Creation
+</p>
+
+<p>
+Computer Siksha | Complete Practical Lesson
+</p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- INTRODUCTION -->
+
+<div class="card">
+
+<h2>1. Tally Prime Kya Hai?</h2>
+
+<p>
+Tally Prime ek accounting software hai jiska use business ke
+financial transactions ko record aur manage karne ke liye kiya jata hai.
+</p>
+
+<p>
+Tally ki help se hum Purchase, Sales, Payment, Receipt, Expenses,
+Income, GST, Inventory aur business ki different reports ko manage kar
+sakte hain.
+</p>
+
+<div class="example">
+
+<strong>Simple Example:</strong>
+
+<p>
+Agar kisi shop ne ₹20,000 ka maal purchase kiya aur ₹30,000 ka maal
+sell kiya, to in transactions ko Tally Prime me properly record kiya
+ja sakta hai.
+</p>
+
+</div><div class="diagram">
+    <div class="diagram-title">Tally Prime की मुख्य स्क्रीन को ऐसे समझें</div>
+    <p><strong>मुख्य भाग:</strong> Company Information → Gateway of Tally → Reports और अन्य विकल्प</p>
+    <p>अलग-अलग Tally संस्करणों में स्क्रीन का रूप थोड़ा बदल सकता है, लेकिन मुख्य काम करने का तरीका इसी प्रकार होता है।</p>
+</div>
+
+
+<h3>Tally Prime me hum kya seekhenge?</h3>
+
+<ul>
+
+<li>Company Creation</li>
+
+<li>Groups</li>
+
+<li>Ledgers</li>
+
+<li>Purchase Entry</li>
+
+<li>Sales Entry</li>
+
+<li>Payment Entry</li>
+
+<li>Receipt Entry</li>
+
+<li>Contra Entry</li>
+
+<li>Journal Entry</li>
+
+<li>Debit Note</li>
+
+<li>Credit Note</li>
+
+<li>GST</li>
+
+<li>Inventory</li>
+
+<li>Business Reports</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- ACCOUNTING BASIC -->
+
+<div class="card">
+
+<h2>2. Accounting ka Basic Concept</h2>
+
+<p>
+Tally seekhne se pehle accounting ka basic concept samajhna important hai.
+Tally me hum business ke transactions ko accounts ke through record karte hain.
+</p>
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+Aryan ne business start karne ke liye ₹50,000 cash lagaya.
+</p>
+
+<p>
+Yeh business ke liye ek transaction hai aur ise Tally me record kiya jayega.
+</p>
+
+</div>
+
+
+<h3>Transaction kya hota hai?</h3>
+
+<p>
+Business me hone wali koi bhi financial activity jiska money value se
+relation ho, use generally transaction kaha ja sakta hai.
+</p>
+
+<p>
+Jaise:
+</p>
+
+<ul>
+
+<li>Goods Purchase karna</li>
+
+<li>Goods Sale karna</li>
+
+<li>Rent pay karna</li>
+
+<li>Customer se payment receive karna</li>
+
+<li>Supplier ko payment dena</li>
+
+<li>Bank me cash deposit karna</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- GROUP AND LEDGER DEFINITIONS -->
+
+<div class="card">
+<h2>3. Group aur Ledger ki Basic Samajh</h2>
+<p><strong>Group:</strong> Group Tally me accounts ko unki nature aur type ke according classify karne wali ek category hoti hai. Group ke andar same nature ke related Ledgers ko rakha jata hai.</p>
+<p><strong>Ledger:</strong> Ledger kisi particular account ka detailed record hota hai, jisme us account se related transactions record kiye jate hain.</p>
+<div class="example"><strong>Easy Example:</strong><p><strong>Indirect Expenses</strong> ek Group hai. Iske andar <strong>Rent, Salary aur Electricity Expense</strong> jaise Ledgers rakhe ja sakte hain.</p></div>
+<div class="diagram"><div class="diagram-title">Group → Ledger → Transaction</div><p><strong>Group:</strong> Indirect Expenses</p><p>↓</p><p><strong>Ledger:</strong> Rent A/c</p><p>↓</p><p><strong>Transaction:</strong> ₹8,000 Rent Paid</p></div>
+</div>
+
+<div class="card">
+<h2>4. Tally Prime me 34 Important Definitions</h2>
+<p>Ab hum Tally ke important Groups aur Ledgers ko <strong>paribhasha + practical example</strong> ke saath samjhenge. Har point ko beginner ke liye simple language me diya gaya hai.</p>
+
+<h3>1. Capital Account — पूंजी खाता</h3>
+<p><strong>परिभाषा:</strong> Capital Account वह Group है जिसमें व्यवसाय के मालिक द्वारा व्यवसाय में लगाई गई पूंजी और उससे संबंधित खातों को रखा जाता है.</p>
+<div class="example"><strong>Example:</strong> Aryan ne business shuru karne ke liye ₹1,00,000 lagaye → <strong>Capital A/c</strong>.</div>
+
+<h3>2. Drawings — आहरण</h3>
+<p><strong>परिभाषा:</strong> Drawings वह खाता है जिसमें मालिक द्वारा व्यवसाय की राशि या वस्तु को अपने व्यक्तिगत उपयोग के लिए निकालने का रिकॉर्ड रखा जाता है.</p>
+<div class="example"><strong>Example:</strong> Owner ne personal kharch ke liye ₹5,000 business se nikale → <strong>Drawings A/c</strong>.</div>
+
+<h3>3. Current Assets — चालू परिसंपत्तियाँ</h3>
+<p><strong>परिभाषा:</strong> Current Assets वह Group है जिसमें ऐसी परिसंपत्तियाँ रखी जाती हैं जिन्हें सामान्य व्यापारिक गतिविधियों में कम समय में नकद में बदला या उपयोग किया जा सकता है.</p>
+<div class="example"><strong>Example:</strong> Business ke paas ₹20,000 cash available hai → <strong>Cash A/c</strong>.</div>
+
+<h3>4. Cash-in-Hand — हाथ में नकद</h3>
+<p><strong>परिभाषा:</strong> Cash-in-Hand वह Group है जिसमें व्यवसाय के पास उपलब्ध नकद राशि का रिकॉर्ड रखा जाता है.</p>
+<div class="example"><strong>Example:</strong> Shop ki cash drawer me ₹15,000 hain → <strong>Cash A/c</strong>.</div>
+
+<h3>5. Bank Accounts — बैंक खाते</h3>
+<p><strong>परिभाषा:</strong> Bank Accounts वह Group है जिसमें व्यवसाय के बैंक खातों और उनसे होने वाले लेन-देन का रिकॉर्ड रखा जाता है.</p>
+<div class="example"><strong>Example:</strong> Business ke SBI account me ₹50,000 hain → <strong>SBI Bank A/c</strong>.</div>
+
+<h3>6. Fixed Assets — स्थायी परिसंपत्तियाँ</h3>
+<p><strong>परिभाषा:</strong> Fixed Assets वह Group है जिसमें ऐसी परिसंपत्तियाँ रखी जाती हैं जिनका व्यवसाय में लंबे समय तक उपयोग किया जाता है.</p>
+<div class="example"><strong>Example:</strong> Business ne ₹40,000 ka computer kharida → <strong>Computer A/c</strong>.</div>
+
+<h3>7. Investments — निवेश</h3>
+<p><strong>परिभाषा:</strong> Investments वह Group है जिसमें भविष्य में लाभ या आय प्राप्त करने के उद्देश्य से व्यवसाय द्वारा किए गए निवेशों का रिकॉर्ड रखा जाता है.</p>
+<div class="example"><strong>Example:</strong> Business ne ₹50,000 ki fixed deposit ki → <strong>Fixed Deposit A/c</strong>.</div>
+
+<h3>8. Loans (Liability) — ऋण</h3>
+<p><strong>परिभाषा:</strong> Loans (Liability) वह Group है जिसमें व्यवसाय द्वारा लिए गए ऋण और उनसे संबंधित देय राशि का रिकॉर्ड रखा जाता है.</p>
+<div class="example"><strong>Example:</strong> Bank se ₹2,00,000 ka business loan liya → <strong>Bank Loan A/c</strong>.</div>
+
+<h3>9. Current Liabilities — चालू देनदारियाँ</h3>
+<p><strong>परिभाषा:</strong> Current Liabilities वह Group है जिसमें व्यवसाय की ऐसी देनदारियाँ रखी जाती हैं जिनका भुगतान सामान्यतः कम समय में करना होता है.</p>
+<div class="example"><strong>Example:</strong> ₹10,000 ka electricity bill abhi pay karna baki hai → <strong>Outstanding Electricity A/c</strong>.</div>
+
+<h3>10. Sundry Debtors — विविध देनदार</h3>
+<p><strong>परिभाषा:</strong> Sundry Debtors वह Group है जिसमें उन ग्राहकों के खाते रखे जाते हैं जिनसे व्यवसाय को पैसा प्राप्त करना है.</p>
+<div class="example"><strong>Example:</strong> Rahul Traders ne ₹20,000 ka maal udhaar kharida aur payment baki hai → <strong>Rahul Traders A/c</strong>.</div>
+
+<h3>11. Sundry Creditors — विविध लेनदार</h3>
+<p><strong>परिभाषा:</strong> Sundry Creditors वह Group है जिसमें उन suppliers के खाते रखे जाते हैं जिन्हें व्यवसाय को पैसा देना है.</p>
+<div class="example"><strong>Example:</strong> ABC Traders se ₹25,000 ka maal udhaar kharida → <strong>ABC Traders A/c</strong>.</div>
+
+<h3>12. Purchase Accounts — क्रय खाते</h3>
+<p><strong>परिभाषा:</strong> Purchase Accounts वह Group है जिसमें व्यवसाय द्वारा खरीदे गए माल से संबंधित खातों का रिकॉर्ड रखा जाता है.</p>
+<div class="example"><strong>Example:</strong> ₹30,000 ka business maal kharida → <strong>Purchase A/c</strong>.</div>
+
+<h3>13. Sales Accounts — बिक्री खाते</h3>
+<p><strong>परिभाषा:</strong> Sales Accounts वह Group है जिसमें व्यवसाय द्वारा बेचे गए माल से संबंधित खातों का रिकॉर्ड रखा जाता है.</p>
+<div class="example"><strong>Example:</strong> ₹45,000 ka maal customer ko becha → <strong>Sales A/c</strong>.</div>
+
+<h3>14. Direct Expenses — प्रत्यक्ष खर्च</h3>
+<p><strong>परिभाषा:</strong> Direct Expenses वह Group है जिसमें ऐसे खर्च रखे जाते हैं जिनका सीधा संबंध माल के उत्पादन या खरीद से होता है.</p>
+<div class="example"><strong>Example:</strong> Maal ko business tak lane me ₹2,000 lage → <strong>Carriage Inward A/c</strong>.</div>
+
+<h3>15. Indirect Expenses — अप्रत्यक्ष खर्च</h3>
+<p><strong>परिभाषा:</strong> Indirect Expenses वह Group है जिसमें व्यवसाय चलाने से संबंधित ऐसे खर्च रखे जाते हैं जिनका किसी एक वस्तु के उत्पादन से सीधा संबंध नहीं होता.</p>
+<div class="example"><strong>Example:</strong> Shop ka monthly rent ₹8,000 hai → <strong>Rent A/c</strong>.</div>
+
+<h3>16. Direct Incomes — प्रत्यक्ष आय</h3>
+<p><strong>परिभाषा:</strong> Direct Incomes वह Group है जिसमें व्यवसाय की मुख्य गतिविधि से सीधे प्राप्त होने वाली आय रखी जाती है.</p>
+<div class="example"><strong>Example:</strong> Customer ke liye job work karke ₹10,000 mile → <strong>Job Work Income A/c</strong>.</div>
+
+<h3>17. Indirect Incomes — अप्रत्यक्ष आय</h3>
+<p><strong>परिभाषा:</strong> Indirect Incomes वह Group है जिसमें व्यवसाय की मुख्य बिक्री के अलावा अन्य स्रोतों से प्राप्त होने वाली आय रखी जाती है.</p>
+<div class="example"><strong>Example:</strong> Bank se ₹1,000 interest mila → <strong>Interest Received A/c</strong>.</div>
+
+<h3>18. Duties & Taxes — शुल्क और कर</h3>
+<p><strong>परिभाषा:</strong> Duties & Taxes वह Group है जिसमें व्यवसाय से संबंधित करों और सरकारी शुल्कों के खातों का रिकॉर्ड रखा जाता है.</p>
+<div class="example"><strong>Example:</strong> Applicable GST amount ₹900 hai → <strong>GST related Ledger</strong>.</div>
+
+<h3>19. Stock-in-Hand — हाथ में माल</h3>
+<p><strong>परिभाषा:</strong> Stock-in-Hand वह Group है जिसमें व्यवसाय के पास उपलब्ध माल या वस्तुओं के स्टॉक से संबंधित रिकॉर्ड रखा जाता है.</p>
+<div class="example"><strong>Example:</strong> Shop me 20 keyboards available hain → <strong>Keyboard Stock</strong>.</div>
+
+<h3>20. Ledger — खाता</h3>
+<p><strong>परिभाषा:</strong> Ledger किसी विशेष खाते का विस्तृत रिकॉर्ड होता है, जिसमें उस खाते से संबंधित सभी लेन-देन दर्ज किए जाते हैं.</p>
+<div class="example"><strong>Example:</strong> Shop ke rent ka पूरा हिसाब रखने के लिए → <strong>Rent A/c Ledger</strong>.</div>
+
+<h3>21. Cash A/c — नकद खाता</h3>
+<p><strong>परिभाषा:</strong> Cash A/c व्यवसाय में उपलब्ध नकद राशि और नकद लेन-देन का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> Customer se ₹5,000 cash receive hue → <strong>Cash A/c</strong>.</div>
+
+<h3>22. Bank A/c — बैंक खाता</h3>
+<p><strong>परिभाषा:</strong> Bank A/c बैंक में जमा राशि तथा बैंक से होने वाले लेन-देन का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> Bank me ₹10,000 deposit kiye → <strong>Bank A/c</strong>.</div>
+
+<h3>23. Capital A/c — पूंजी खाता</h3>
+<p><strong>परिभाषा:</strong> Capital A/c मालिक द्वारा व्यवसाय में लगाई गई पूंजी का विस्तृत रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> Owner ne ₹1,00,000 business me lagaye → <strong>Capital A/c</strong>.</div>
+
+<h3>24. Purchase A/c — क्रय खाता</h3>
+<p><strong>परिभाषा:</strong> Purchase A/c व्यवसाय द्वारा खरीदे गए माल की राशि का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> ₹15,000 ka maal kharida → <strong>Purchase A/c</strong>.</div>
+
+<h3>25. Sales A/c — बिक्री खाता</h3>
+<p><strong>परिभाषा:</strong> Sales A/c व्यवसाय द्वारा बेचे गए माल की बिक्री राशि का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> ₹25,000 ka maal customer ko becha → <strong>Sales A/c</strong>.</div>
+
+<h3>26. Rent A/c — किराया खाता</h3>
+<p><strong>परिभाषा:</strong> Rent A/c दुकान, कार्यालय या अन्य व्यावसायिक स्थान के किराए से संबंधित खर्च का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> Mahine ka ₹8,000 rent pay kiya → <strong>Rent A/c</strong>.</div>
+
+<h3>27. Salary A/c — वेतन खाता</h3>
+<p><strong>परिभाषा:</strong> Salary A/c कर्मचारियों को दिए गए वेतन की राशि का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> Employees ko ₹20,000 salary di → <strong>Salary A/c</strong>.</div>
+
+<h3>28. Electricity Expense A/c — बिजली खर्च खाता</h3>
+<p><strong>परिभाषा:</strong> Electricity Expense A/c व्यवसाय में उपयोग की गई बिजली के खर्च का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> Electricity bill ₹3,000 aaya → <strong>Electricity Expense A/c</strong>.</div>
+
+<h3>29. Furniture A/c — फर्नीचर खाता</h3>
+<p><strong>परिभाषा:</strong> Furniture A/c व्यवसाय में उपयोग किए जाने वाले फर्नीचर की लागत का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> ₹25,000 ki tables aur chairs kharidi → <strong>Furniture A/c</strong>.</div>
+
+<h3>30. Computer A/c — कंप्यूटर खाता</h3>
+<p><strong>परिभाषा:</strong> Computer A/c व्यवसाय में उपयोग किए जाने वाले कंप्यूटर की लागत का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> ₹40,000 ka computer kharida → <strong>Computer A/c</strong>.</div>
+
+<h3>31. Commission Received A/c — प्राप्त कमीशन खाता</h3>
+<p><strong>परिभाषा:</strong> Commission Received A/c व्यवसाय को प्राप्त हुए कमीशन की राशि का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> Kisi sale par ₹2,000 commission mila → <strong>Commission Received A/c</strong>.</div>
+
+<h3>32. Interest Received A/c — प्राप्त ब्याज खाता</h3>
+<p><strong>परिभाषा:</strong> Interest Received A/c बैंक, निवेश या अन्य स्रोतों से प्राप्त ब्याज की राशि का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> Bank se ₹1,500 interest mila → <strong>Interest Received A/c</strong>.</div>
+
+<h3>33. CGST A/c — केंद्रीय वस्तु एवं सेवा कर खाता</h3>
+<p><strong>परिभाषा:</strong> CGST A/c लागू होने वाले केंद्रीय वस्तु एवं सेवा कर की राशि का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> Local taxable sale par ₹500 CGST laga → <strong>CGST A/c</strong>.</div>
+
+<h3>34. SGST A/c — राज्य वस्तु एवं सेवा कर खाता</h3>
+<p><strong>परिभाषा:</strong> SGST A/c लागू होने वाले राज्य वस्तु एवं सेवा कर की राशि का रिकॉर्ड है.</p>
+<div class="example"><strong>Example:</strong> Local taxable sale par ₹500 SGST laga → <strong>SGST A/c</strong>.</div>
+
+<div class="success"><strong>याद रखें:</strong> Group एक category है, जबकि Ledger किसी particular account का detailed record है.</div>
+</div>
+
+<div class="card">
+<h2>5. Group aur Ledger me Difference</h2>
+<table><tr><th>Group</th><th>Ledger</th></tr><tr><td>Accounts ko category me classify karta hai.</td><td>Kisi particular account ka detailed record rakhta hai.</td></tr><tr><td>Example: Indirect Expenses</td><td>Example: Rent A/c</td></tr><tr><td>Ek Group ke andar multiple related Ledgers ho sakte hain.</td><td>Ledger ke andar us account ke transactions record hote hain.</td></tr></table>
+<div class="example"><strong>Example:</strong> <strong>Indirect Expenses</strong> = Group, <strong>Rent A/c</strong> = Ledger, aur ₹8,000 rent payment = Transaction.</div>
+</div>
+
+<!-- COMPANY CREATION -->
+
+
+<div class="card">
+
+<h2>8. Company Creation – First Practical</h2>
+
+<p>
+Ab hum Tally Prime me ek imaginary business ki company create karenge.
+Ye hamara first practical hai.
+</p>
+
+
+<div class="example">
+
+<strong>Business Details:</strong>
+
+<br><br>
+
+Company Name: <strong>Computer Siksha Traders</strong>
+
+<br>
+
+Country: <strong>India</strong>
+
+<br>
+
+State: <strong>Gujarat</strong>
+
+<br>
+
+Financial Year: <strong>2026-27</strong>
+
+<br>
+
+Books Beginning From: <strong>01-04-2026</strong>
+
+</div>
+
+
+
+<h3>Step 1 – Tally Prime Open Karein</h3>
+
+<div class="step">
+
+1. Computer me Tally Prime open karein.
+
+</div>
+
+<div class="step">
+
+2. Company Creation option par jayein.
+
+</div><div class="diagram">
+    <div class="diagram-title">📌 Company Creation Screen को समझें</div>
+    <p>Company Creation में सामान्यतः Company Name, Country, State, Financial Year और Books Beginning From जैसी जानकारी भरी जाती है।</p>
+</div>
+
+
+
+<h3>Step 2 – Company Details Fill Karein</h3>
+
+<table>
+
+<tr>
+
+<th>Field</th>
+
+<th>Value</th>
+
+</tr>
+
+
+<tr>
+
+<td>Company Name</td>
+
+<td>Computer Siksha Traders</td>
+
+</tr>
+
+
+<tr>
+
+<td>Mailing Name</td>
+
+<td>Computer Siksha Traders</td>
+
+</tr>
+
+
+<tr>
+
+<td>Country</td>
+
+<td>India</td>
+
+</tr>
+
+
+<tr>
+
+<td>State</td>
+
+<td>Gujarat</td>
+
+</tr>
+
+
+<tr>
+
+<td>Financial Year Beginning From</td>
+
+<td>01-04-2026</td>
+
+</tr>
+
+
+<tr>
+
+<td>Books Beginning From</td>
+
+<td>01-04-2026</td>
+
+</tr>
+
+</table><div class="diagram">
+    <div class="diagram-title">📌 Company Details भरने का तरीका</div>
+    <p>ऊपर दी गई तालिका के अनुसार एक-एक field भरें और Save/Accept करके आगे बढ़ें।</p>
+</div>
+
+
+
+<h3>Step 3 – Company Save Karein</h3>
+
+<div class="step">
+
+1. Sabhi details ko dobara check karein.
+
+</div>
+
+<div class="step">
+
+2. Save/Accept karne ke liye screen par diye gaye option ko use karein.
+
+</div>
+
+<div class="step">
+
+3. Confirmation aaye to Yes/Accept karein.
+
+</div>
+
+
+<div class="success">
+
+<strong>Practical Complete!</strong>
+
+<p>
+Ab Computer Siksha Traders ki company Tally Prime me create ho chuki hai.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- FINANCIAL YEAR -->
+
+<div class="card">
+
+<h2>9. Financial Year Kya Hai?</h2>
+
+<p>
+Financial Year business ki accounting ke liye use hone wali 12 months ki
+period hoti hai.
+</p>
+
+<p>
+India me normal financial year <strong>1 April se 31 March</strong> tak hota hai.
+</p>
+
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<br><br>
+
+Financial Year: <strong>2026-27</strong>
+
+<br>
+
+Starting Date: <strong>01-04-2026</strong>
+
+<br>
+
+Ending Date: <strong>31-03-2027</strong>
+
+</div><div class="diagram">
+    <div class="diagram-title">Financial Year Timeline</div>
+    <p><strong>01 April 2026</strong> → Accounting Year 2026-27 → <strong>31 March 2027</strong></p>
+</div>
+
+</div>
+
+
+
+<!-- BOOKS BEGINNING -->
+
+<div class="card">
+
+<h2>10. Books Beginning From Kya Hai?</h2>
+
+<p>
+Books Beginning From ka matlab hai ki company ke accounting books me
+transactions kis date se start kiye ja rahe hain.
+</p>
+
+
+<div class="example">
+
+<strong>Example:</strong>
+
+<p>
+Agar business ki accounting 01-04-2026 se start ho rahi hai,
+to Books Beginning From me:
+</p>
+
+<h3>01-04-2026</h3>
+
+<p>
+enter kiya jayega.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- SETTINGS -->
+
+<div class="card">
+
+<h2>11. Basic Company Settings</h2>
+
+<p>
+Company create karne ke baad Tally me different settings hoti hain.
+In settings ko business ki requirement ke according manage kiya jata hai.
+</p>
+
+
+<h3>Main Settings</h3>
+
+<ul>
+
+<li>Accounting Features</li>
+
+<li>Inventory Features</li>
+
+<li>Taxation Features</li>
+
+<li>Company Details</li>
+
+</ul><div class="diagram">
+    <div class="diagram-title">📌 Company Settings को समझें</div>
+    <p>Accounting, Inventory और Taxation से जुड़ी सुविधाएँ business की जरूरत के अनुसार चालू/बंद की जाती हैं। GST और Inventory की detailed practical setting आगे के lessons में की जाएगी।</p>
+</div>
+
+
+<div class="note">
+
+<strong>Note:</strong>
+
+<p>
+GST aur Inventory ki detailed settings hum aage ke lessons me
+practical example ke saath karenge.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- PRACTICAL BUSINESS -->
+
+<div class="card">
+
+<h2>12. Complete Company Creation Practical</h2>
+
+<p>
+Ab student khud ek company create karega.
+</p>
+
+
+<div class="example">
+
+<strong>Practice Company:</strong>
+
+<br><br>
+
+Company Name: <strong>Aryan Computer Traders</strong>
+
+<br>
+
+Country: <strong>India</strong>
+
+<br>
+
+State: <strong>Gujarat</strong>
+
+<br>
+
+Financial Year: <strong>2026-27</strong>
+
+<br>
+
+Books Beginning From: <strong>01-04-2026</strong>
+
+</div>
+
+
+<h3>Student ko kya karna hai?</h3>
+
+<ol>
+
+<li>Tally Prime open karein.</li>
+
+<li>New Company create karein.</li>
+
+<li>Upar di gayi details fill karein.</li>
+
+<li>Financial Year check karein.</li>
+
+<li>Books Beginning From check karein.</li>
+
+<li>Company save karein.</li>
+
+<li>Company ko open karke details verify karein.</li>
+
+</ol><div class="diagram">
+    <div class="diagram-title">📌 Practical Result को पहचानें</div>
+    <p>Company save होने के बाद बनाई गई company Tally में दिखाई देनी चाहिए। उसे खोलकर Company Name और बाकी details दोबारा जाँचें।</p>
+</div>
+
+</div>
+
+
+
+<!-- SHORTCUTS -->
+
+<div class="card">
+
+<h2>13. Useful Basic Shortcuts</h2>
+
+<table>
+
+<tr>
+
+<th>Shortcut</th>
+
+<th>Basic Use</th>
+
+</tr>
+
+
+<tr>
+
+<td>Esc</td>
+
+<td>
+Current screen se back/exit karne ke liye commonly use hota hai.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Ctrl + A</td>
+
+<td>
+Accept/Save karne ke liye kai screens par use hota hai.
+</td>
+
+</tr>
+
+</table>
+
+
+<div class="note">
+
+Shortcut ka actual behaviour current screen aur Tally version ke
+according change ho sakta hai. Isliye screen par available options ko
+bhi check karna chahiye.
+
+</div>
+
+</div>
+
+
+
+<!-- PRACTICE QUESTIONS -->
+
+<div class="card">
+
+<h2>14. Practice Questions</h2>
+
+<div class="quiz">
+
+<h3>Question 1</h3>
+
+<p>
+Tally Prime kya hai?
+</p>
+
+
+<h3>Question 2</h3>
+
+<p>
+Group kya hota hai?
+</p>
+
+
+<h3>Question 3</h3>
+
+<p>
+Ledger kya hota hai?
+</p>
+
+
+<h3>Question 4</h3>
+
+<p>
+Group aur Ledger me basic difference kya hai?
+</p>
+
+
+<h3>Question 5</h3>
+
+<p>
+Cash Ledger kis Group me banaya jata hai?
+</p>
+
+
+<h3>Question 6</h3>
+
+<p>
+Rent Ledger ka commonly kaunsa Group hota hai?
+</p>
+
+
+<h3>Question 7</h3>
+
+<p>
+Purchase Ledger ka Group kya hota hai?
+</p>
+
+
+<h3>Question 8</h3>
+
+<p>
+Sales Ledger ka Group kya hota hai?
+</p>
+
+
+<h3>Question 9</h3>
+
+<p>
+Financial Year 2026-27 kab start aur kab end hoga?
+</p>
+
+
+<h3>Question 10</h3>
+
+<p>
+Books Beginning From ka kya meaning hai?
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- LESSON SUMMARY -->
+
+<div class="card">
+
+<h2>15. Lesson 1 Summary</h2>
+
+<p>
+Is lesson me humne Tally Prime ka basic introduction samjha aur
+accounting ke important concepts se shuruaat ki.
+</p>
+
+<p>
+Humne Group aur Ledger ki sahi paribhasha samjhi aur dono ke
+beech ka difference practical examples ke saath dekha.
+</p>
+
+<p>
+Iske baad Tally me commonly used Groups aur practical Ledgers ke
+names ko samjha.
+</p>
+
+<p>
+Finally humne Tally Prime me ek company create karne ka complete
+practical example kiya.
+</p>
+
+
+<div class="success">
+
+<strong>Next Lesson:</strong>
+
+<p>
+Lesson 2 me hum Groups aur Ledgers ko aur detail me practically seekhenge.
+</p>
+
+<p>
+Hum Cash, Bank, Capital, Purchase, Sales, Rent, Salary, Customer,
+Supplier aur other important Ledgers ko create karenge aur dekhenge ki
+har Ledger ko kis Group me banana hai.
+</p>
+
+<p>
+Uske baad Lesson 3 me inhi Ledgers ka use karke different Voucher
+Entries ka practical karenge.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+<p><strong>Computer Siksha</strong></p>
+
+<p>Tally Prime – Lesson 1</p>
+
+<p>Learn • Practice • Improve</p>
+
+</footer>
+
+
+</body>
+</html>
+```
