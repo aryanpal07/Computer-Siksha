@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -15,12 +16,10 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:#f5f7fb;
     color:#222;
 }
-
-/* HEADER */
 
 header{
     background:#0f2a5f;
@@ -39,8 +38,6 @@ header p{
     color:#dbe7ff;
 }
 
-/* NAVIGATION */
-
 nav{
     background:white;
     padding:14px;
@@ -58,8 +55,6 @@ nav a{
 nav a:hover{
     color:#2563eb;
 }
-
-/* MAIN */
 
 .container{
     width:92%;
@@ -81,15 +76,11 @@ nav a:hover{
     margin-bottom:35px;
 }
 
-/* TUTORIAL GRID */
-
 .tutorial-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
-
-/* TUTORIAL CARD */
 
 .tutorial-card{
     background:white;
@@ -153,8 +144,6 @@ nav a:hover{
     background:#0f2a5f;
 }
 
-/* INFORMATION BOX */
-
 .info-box{
     margin-top:45px;
     background:white;
@@ -173,8 +162,6 @@ nav a:hover{
     line-height:1.7;
 }
 
-/* FOOTER */
-
 footer{
     margin-top:50px;
     background:#0f2a5f;
@@ -187,7 +174,15 @@ footer p{
     margin:6px 0;
 }
 
-/* MOBILE */
+footer a{
+    color:white;
+    text-decoration:none;
+    margin:0 8px;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
 
 @media(max-width:900px){
 
@@ -223,273 +218,212 @@ footer p{
 }
 
 </style>
+
 </head>
 
 <body>
 
-
-<!-- HEADER -->
-
 <header>
 
-    <h1>💻 Computer Siksha</h1>
+```
+<h1>💻 Computer Siksha</h1>
 
-    <p>Learn. Practice. Grow.</p>
+<p>Learn. Practice. Grow.</p>
+```
 
 </header>
 
-
-<!-- NAVIGATION -->
-
 <nav>
 
-    <a href="index.html">Home</a>
+```
+<a href="index.html">Home</a>
 
-    <a href="courses.html">Courses</a>
+<a href="courses.html">Courses</a>
 
-    <a href="tutorials.html">Tutorials</a>
+<a href="tutorials.html">Tutorials</a>
 
-    <a href="#">About</a>
+<a href="about.html">About</a>
 
-    <a href="#">Contact</a>
+<a href="contact.html">Contact</a>
+```
 
 </nav>
 
-
-<!-- MAIN CONTENT -->
-
 <div class="container">
 
-    <h1 class="page-title">
-        🛠️ Practical Tutorials
-    </h1>
+```
+<h1 class="page-title">
+    🛠️ Practical Tutorials
+</h1>
 
-    <p class="page-description">
-        कंप्यूटर के जरूरी काम आसान तरीके से सीखें
-    </p>
+<p class="page-description">
+    कंप्यूटर के जरूरी काम आसान तरीके से सीखें
+</p>
 
+<div class="tutorial-grid">
 
-    <div class="tutorial-grid">
+    <div class="tutorial-card">
 
+        <div class="tutorial-icon">💻</div>
 
-        <!-- TUTORIAL 1 -->
+        <h2>Computer Practical</h2>
 
-        <div class="tutorial-card">
+        <p>
+            कंप्यूटर को सही तरीके से इस्तेमाल करना,
+            फाइल और फोल्डर बनाना, कॉपी, पेस्ट, सेव
+            और दूसरी जरूरी Practical जानकारी सीखें।
+        </p>
 
-            <div class="tutorial-icon">
-                💻
-            </div>
+        <div class="tutorial-tag">Beginner</div>
 
-            <h2>
-                Computer Practical
-            </h2>
-
-            <p>
-                कंप्यूटर को सही तरीके से इस्तेमाल करना,
-                फाइल और फोल्डर बनाना, कॉपी, पेस्ट, सेव
-                और दूसरी जरूरी Practical जानकारी सीखें।
-            </p>
-
-            <div class="tutorial-tag">
-                Beginner
-            </div>
-
-            <a href="computer-basics.html" class="tutorial-btn">
-                Start Tutorial →
-            </a>
-
-        </div>
-
-
-        <!-- TUTORIAL 2 -->
-
-        <div class="tutorial-card">
-
-            <div class="tutorial-icon">
-                📝
-            </div>
-
-            <h2>
-                MS Word Practical
-            </h2>
-
-            <p>
-                डॉक्यूमेंट बनाना, Typing, Formatting,
-                Table, Image, Page Setup और Resume
-                तैयार करने का Practical तरीका सीखें।
-            </p>
-
-            <div class="tutorial-tag">
-                Practical
-            </div>
-
-            <a href="ms-word-lesson2.html" class="tutorial-btn">
-                Start Tutorial →
-            </a>
-
-        </div>
-
-
-        <!-- TUTORIAL 3 -->
-
-        <div class="tutorial-card">
-
-            <div class="tutorial-icon">
-                📊
-            </div>
-
-            <h2>
-                PowerPoint Practical
-            </h2>
-
-            <p>
-                सुंदर Presentation बनाना, Images,
-                Shapes, Tables, Animations, Transitions
-                और Slide Show का Practical सीखें।
-            </p>
-
-            <div class="tutorial-tag">
-                Practical
-            </div>
-
-            <a href="powerpoint-lesson2.html" class="tutorial-btn">
-                Start Tutorial →
-            </a>
-
-        </div>
-
-
-        <!-- TUTORIAL 4 -->
-
-        <div class="tutorial-card">
-
-            <div class="tutorial-icon">
-                📈
-            </div>
-
-            <h2>
-                MS Excel Practical
-            </h2>
-
-            <p>
-                Excel में Marksheet, Salary Statement,
-                Formula, Result, Bonus और Charts
-                बनाना Practical तरीके से सीखें।
-            </p>
-
-            <div class="tutorial-tag">
-                Practical
-            </div>
-
-            <a href="ms-excel-lesson2.html" class="tutorial-btn">
-                Start Tutorial →
-            </a>
-
-        </div>
-
-
-        <!-- TUTORIAL 5 -->
-
-        <div class="tutorial-card">
-
-            <div class="tutorial-icon">
-                🌐
-            </div>
-
-            <h2>
-                Internet Practical
-            </h2>
-
-            <p>
-                इंटरनेट पर जानकारी खोजना, वेबसाइट खोलना,
-                डाउनलोड, अपलोड, ईमेल और सुरक्षित इंटरनेट
-                उपयोग करना सीखें।
-            </p>
-
-            <div class="tutorial-tag">
-                Beginner
-            </div>
-
-            <a href="internet-basics-lesson2.html" class="tutorial-btn">
-                Start Tutorial →
-            </a>
-
-        </div>
-
-
-        <!-- TUTORIAL 6 -->
-
-        <div class="tutorial-card">
-
-            <div class="tutorial-icon">
-                🤖
-            </div>
-
-            <h2>
-                AI Tools Practical
-            </h2>
-
-            <p>
-                AI की मदद से Image, Video, Notes,
-                Questions और Creative Content बनाने
-                का Practical तरीका सीखें।
-            </p>
-
-            <div class="tutorial-tag">
-                Advanced
-            </div>
-
-            <a href="ai-tools-lesson2.html" class="tutorial-btn">
-                Start Tutorial →
-            </a>
-
-        </div>
-
+        <a href="computer-basics.html" class="tutorial-btn">
+            Start Tutorial →
+        </a>
 
     </div>
 
+    <div class="tutorial-card">
 
-    <!-- INFORMATION -->
+        <div class="tutorial-icon">📝</div>
 
-    <div class="info-box">
-
-        <h2>
-            🎯 Tutorials से क्या सीखेंगे?
-        </h2>
+        <h2>MS Word Practical</h2>
 
         <p>
-            इन Practical Tutorials में आपको केवल
-            जानकारी ही नहीं बल्कि कंप्यूटर पर काम
-            करने का तरीका भी समझाया जाएगा।
+            डॉक्यूमेंट बनाना, Typing, Formatting,
+            Table, Image, Page Setup और Resume
+            तैयार करने का Practical तरीका सीखें।
         </p>
 
-        <br>
+        <div class="tutorial-tag">Practical</div>
+
+        <a href="ms-word-lesson2.html" class="tutorial-btn">
+            Start Tutorial →
+        </a>
+
+    </div>
+
+    <div class="tutorial-card">
+
+        <div class="tutorial-icon">📊</div>
+
+        <h2>PowerPoint Practical</h2>
 
         <p>
-            आप पहले Tutorial को पढ़ें, फिर उसी काम को
-            अपने कंप्यूटर पर Practice करें। इस तरह
-            धीरे-धीरे आपकी Computer Skills बेहतर होंगी।
+            सुंदर Presentation बनाना, Images,
+            Shapes, Tables, Animations, Transitions
+            और Slide Show का Practical सीखें।
         </p>
+
+        <div class="tutorial-tag">Practical</div>
+
+        <a href="powerpoint-lesson2.html" class="tutorial-btn">
+            Start Tutorial →
+        </a>
+
+    </div>
+
+    <div class="tutorial-card">
+
+        <div class="tutorial-icon">📈</div>
+
+        <h2>MS Excel Practical</h2>
+
+        <p>
+            Excel में Marksheet, Salary Statement,
+            Formula, Result, Bonus और Charts
+            बनाना Practical तरीके से सीखें।
+        </p>
+
+        <div class="tutorial-tag">Practical</div>
+
+        <a href="ms-excel-lesson2.html" class="tutorial-btn">
+            Start Tutorial →
+        </a>
+
+    </div>
+
+    <div class="tutorial-card">
+
+        <div class="tutorial-icon">🌐</div>
+
+        <h2>Internet Practical</h2>
+
+        <p>
+            इंटरनेट पर जानकारी खोजना, वेबसाइट खोलना,
+            डाउनलोड, अपलोड, ईमेल और सुरक्षित इंटरनेट
+            उपयोग करना सीखें।
+        </p>
+
+        <div class="tutorial-tag">Beginner</div>
+
+        <a href="internet-basics-lesson2.html" class="tutorial-btn">
+            Start Tutorial →
+        </a>
+
+    </div>
+
+    <div class="tutorial-card">
+
+        <div class="tutorial-icon">🤖</div>
+
+        <h2>AI Tools Practical</h2>
+
+        <p>
+            AI की मदद से Image, Video, Notes,
+            Questions और Creative Content बनाने
+            का Practical तरीका सीखें।
+        </p>
+
+        <div class="tutorial-tag">Advanced</div>
+
+        <a href="ai-tools-lesson2.html" class="tutorial-btn">
+            Start Tutorial →
+        </a>
 
     </div>
 
 </div>
 
+<div class="info-box">
 
-<!-- FOOTER -->
+    <h2>
+        🎯 Tutorials से क्या सीखेंगे?
+    </h2>
+
+    <p>
+        इन Practical Tutorials में आपको केवल
+        जानकारी ही नहीं बल्कि कंप्यूटर पर काम
+        करने का तरीका भी समझाया जाएगा।
+    </p>
+
+    <br>
+
+    <p>
+        आप पहले Tutorial को पढ़ें, फिर उसी काम को
+        अपने कंप्यूटर पर Practice करें। इस तरह
+        धीरे-धीरे आपकी Computer Skills बेहतर होंगी।
+    </p>
+
+</div>
+```
+
+</div>
 
 <footer>
 
-    <p>
-        © 2026 Computer Siksha
-    </p>
+```
+<p>© 2026 Computer Siksha</p>
 
-    <p>
-        Learn. Practice. Grow.
-    </p>
+<p>Learn. Practice. Grow.</p>
+
+<p>
+    <a href="about.html">About</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="privacy.html">Privacy Policy</a>
+</p>
+```
 
 </footer>
-
 
 </body>
 </html>
